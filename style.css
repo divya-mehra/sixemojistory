@@ -24,10 +24,15 @@ body {
     height: 100vh;
   /* border: dashed 1px red; */
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 48px;
 
+}
+
+hr {
+    width: 100%;
 }
 
 /* this is where the height & number of panels change */
@@ -101,7 +106,7 @@ h4 {
 .rect {
     opacity: 1;
     background-color: transparent;
-    border: 0.5px #000 solid;
+    /* border: 0.5px #000 solid; */
     transition: background-color 0.2s;
     text-align: center;
   }

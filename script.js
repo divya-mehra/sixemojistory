@@ -180,6 +180,7 @@ const bee = [
 // const thumb = ['28', '29', '33', '34', '39', '40', '41', '42', '44', '45', '46', '47', '51', '52', '53', '54', '55', '56', '57', '58', '59', '63', '64', '65', '66', '67', '68', '69', '70', '71', '76', '77', '78', '79', '80', '81', '82', '88', '89', '90', '91', '92', '93', '94', '101', '102', '103', '104', '105', '114', '115', '116', '127'];
 
 let current_emoji;
+let panels = document.querySelectorAll(".textPanel");
 
 // make grid
 
@@ -196,6 +197,25 @@ for (let i = 1; i <= 144; i++) {
 const gridPanels = document.querySelector(".gridPanel");
 
 gridPanels.append(fragment);
+
+// scroll behavior
+
+const scrollToDiv = (number) => {
+  let targetPanel;
+  console.log(number);
+  Array.from(panels).forEach((p) => {
+    if (p.id === number) targetPanel = p;
+  });
+  targetPanel.scrollIntoView({ behavior: "smooth" });
+};
+
+let chapters = document.querySelectorAll(".chapter");
+chapters.forEach((chapter) => {
+  let number = chapter.firstElementChild.innerHTML.slice(-1);
+  chapter.addEventListener("click", () => {
+    scrollToDiv(number);
+  });
+});
 
 // intersection observer
 
@@ -218,7 +238,7 @@ const changeGrid = (emoji) => {
   clearGrid();
   emoji.forEach((e) => {
     let id = `rect-${e}`;
-    console.log(id);
+
     document.getElementById(id).classList.add("filled");
   });
 };
@@ -245,8 +265,6 @@ const handleIntersection = (entries) => {
 };
 
 let observer = new IntersectionObserver(handleIntersection, options);
-
-let panels = document.querySelectorAll(".textPanel");
 
 console.log(panels);
 
