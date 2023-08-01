@@ -217,6 +217,13 @@ chapters.forEach((chapter) => {
   });
 });
 
+let backToTopIcons = document.querySelectorAll(".iconBackToTop");
+backToTopIcons.forEach((i) => {
+  i.addEventListener("click", () => {
+    scrollToDiv("0");
+  });
+});
+
 // intersection observer
 
 let options = {
