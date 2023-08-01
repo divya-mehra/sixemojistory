@@ -11,13 +11,23 @@ body {
   width: 100vw;
 }
 
-.section {
+.sectionLeft {
   height: 100vh;
   /* border: dashed 1px red; */
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 48px;
+}
+
+.sectionRight {
+    height: 100vh;
+  /* border: dashed 1px red; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 48px;
+
 }
 
 /* this is where the height & number of panels change */
@@ -88,4 +98,8 @@ h2 {
 h4 {
     font-weight: 300;
     font-size: 1.5rem;
+}
+
+.sectionTitle {
+    text-align: left;
 }
