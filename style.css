@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Bowlby+One&family=Changa+One&family=Major+Mono+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 body {
   font-family: "Space Grotesk", sans-serif;
@@ -71,23 +71,68 @@ hr {
   grid-template-rows: repeat(12, 40px);
 }
 
+/* section parent of panel */
+.userGridSection {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+/* panel inside section */
+.userGridPanel {
+    top: 25%;
+    width: 480px; /* 12 columns * 40px */
+    height: 480px;
+    display: grid;
+    grid-template-columns: repeat(12, 40px);
+    grid-template-rows: repeat(12, 40px);
+  }
+
+  .gridPanelButtons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+
+  }
+
 .textIntro {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   background-color: rgb(0, 145, 249);
+}
+
+.visualIntro {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    flex-direction: column;
+    background-color: white;
+    /* text-align: left; */
+    padding: 32px;
 }
 
 .lastTextSection {
     height: 100vh;
-    background-color: rgb(0, 145, 249);
+    background-color: #000;
+    /* background-color: rgb(0, 145, 249); */
+}
+
+.lastVisualSection {
+    height: 100vh;
 }
 
 /* Typography Styles */
 
 h1 {
-  font-weight: 400;
-  font-size: 4rem;
+    font-family: 'Changa One';
+  font-weight: 800;
+  font-size: 10rem;
+  margin-bottom:16px;
 }
 
 h2 {
@@ -95,7 +140,7 @@ h2 {
 }
 
 h4 {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5rem;
 }
 
@@ -126,6 +171,15 @@ h4 {
     border: 0.5px #000 solid;
     transition: background-color 0.2s;
     text-align: center;
+  }
+
+  .userRect {
+    opacity: 1;
+    background-color: transparent;
+    border: 0.5px #000 solid;
+    transition: background-color 0.2s;
+    text-align: center;
+    height: 40px;
   }
 
   .filled {

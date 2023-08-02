@@ -112,7 +112,24 @@ const hand = [
   "141",
   "142",
 ];
-const bomb = ['8', '18', '23', '45', '51', '52', '53', '54', '56', '60', '62', '63', '64', '65', '66', '67']
+const bomb = [
+  "8",
+  "18",
+  "23",
+  "45",
+  "51",
+  "52",
+  "53",
+  "54",
+  "56",
+  "60",
+  "62",
+  "63",
+  "64",
+  "65",
+  "66",
+  "67",
+];
 const bee = [
   "1",
   "2",
@@ -198,6 +215,127 @@ const gridPanels = document.querySelector(".gridPanel");
 
 gridPanels.append(fragment);
 
+// make user grid
+
+const userFragment = document.createDocumentFragment();
+
+for (let i = 1; i <= 144; i++) {
+  let userRect = document.createElement("div");
+  let userDivId = "userRect-" + i;
+  userRect.classList.add("userRect");
+  userRect.setAttribute("id", userDivId);
+  userFragment.append(userRect);
+}
+
+const userPanel = document.querySelector(".userGridPanel");
+console.log(userPanel);
+
+userPanel.append(userFragment);
+
+// edit user grid
+
+// event handlers
+
+let drag = false;
+let erase = false;
+let click = false;
+
+document.addEventListener("click", function (e) {
+  if (e.target.matches(".dragButton")) {
+    drag = !drag;
+    if (drag) {
+      console.log("drag!");
+    } else {
+      console.log("no drag!");
+    }
+  } else if (e.target.matches(".eraseButton")) {
+    erase = !erase;
+    if (erase) {
+      console.log("erase!");
+    } else {
+      console.log("no erase!");
+    }
+  } else if (e.target.matches(".clickButton")) {
+    click = !click;
+    if (click) {
+      console.log("click!");
+    } else {
+      console.log("no click!");
+    }
+  }
+});
+
+let userAllRects = document.querySelectorAll(".userRect");
+
+let mousePressed;
+
+const startFillonDrag = (r) => {
+    mousePressed = true;
+
+    if(drag && !erase) {
+    r.classList.add("filled")
+    } else if (erase && drag) {
+        r.classList.remove("filled")
+    } else {
+        // do nothing
+    }
+    
+    console.log(drag);
+  };
+
+  const checkFillonDrag = (r) => {
+    if (drag && !erase) {
+    mousePressed ? r.classList.add("filled") : doNothing();
+    } else if (erase && drag) {
+        mousePressed ? r.classList.remove("filled") : doNothing();
+    } else {
+        // do nothing
+    }
+    
+  };
+
+  const stopFillonDrag = (r) => {
+    console.log("mouse is up");
+    mousePressed = false;
+  };
+
+  const doNothing = () => null;
+
+userAllRects.forEach((r) => {
+
+    // on click
+
+  r.addEventListener("click", () => {
+    console.log(r.classList);
+    console.log("rectangle clicked");
+
+    if (click) {
+      r.classList.contains("filled")
+        ? r.classList.remove("filled")
+        : r.classList.add("filled");
+    }
+    
+  });
+
+    // all drag events 
+
+
+  r.addEventListener("mousedown", () => {
+    console.log("mousedown");
+    (drag || erase) ? startFillonDrag(r) : doNothing;
+  })
+
+  r.addEventListener("mouseup", () => {
+    (drag || erase) ? stopFillonDrag(r) : doNothing
+  })
+
+  r.addEventListener("mouseenter", () => {
+    (drag || erase) ? checkFillonDrag(r) : doNothing
+  })
+
+
+});
+
 // scroll behavior
 
 const scrollToDiv = (number) => {
@@ -277,7 +415,7 @@ const handleIntersection = (entries) => {
           break;
         case "6":
           // change to bomb
-          current_emoji = thumb;
+          current_emoji = heart;
           break;
         default:
           current_emoji = heart;
