@@ -3,7 +3,7 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   margin: 0;
-  color: white;
+  
 }
 
 .contentWrapper {
@@ -12,6 +12,7 @@ body {
 }
 
 .sectionLeft {
+    color: black;
   height: 100vh;
   /* border: dashed 1px red; */
   display: flex;
@@ -21,6 +22,7 @@ body {
 }
 
 .sectionRight {
+    color: white;
     height: 100vh;
   /* border: dashed 1px red; */
   display: flex;

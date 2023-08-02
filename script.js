@@ -112,7 +112,7 @@ const hand = [
   "141",
   "142",
 ];
-// const bomb = ['28', '29', '33', '34', '39', '40', '41', '42', '44', '45', '46', '47', '51', '52', '53', '54', '55', '56', '57', '58', '59', '63', '64', '65', '66', '67', '68', '69', '70', '71', '76', '77', '78', '79', '80', '81', '82', '88', '89', '90', '91', '92', '93', '94', '101', '102', '103', '104', '105', '114', '115', '116', '127'];
+const bomb = ['8', '18', '23', '45', '51', '52', '53', '54', '56', '60', '62', '63', '64', '65', '66', '67']
 const bee = [
   "1",
   "2",
@@ -229,7 +229,7 @@ backToTopIcons.forEach((i) => {
 let options = {
   // root: document.querySelector("#scrollArea"),
   // rootMargin: "100% 0% 100% 0%",
-  threshold: 0.9,
+  threshold: 0.35,
 };
 
 const clearGrid = () => {
@@ -256,14 +256,32 @@ const handleIntersection = (entries) => {
       let id = entry.target.id;
       console.log("Element with ID " + entry.target.id + " is intersecting!");
 
-      if (id === "1") {
-        current_emoji = heart;
-      } else if (id === "2") {
-        current_emoji = hand;
-      } else if (id === "3") {
-        current_emoji = bee;
-      } else {
-        current_emoji = heart;
+      switch (id) {
+        case "1":
+          current_emoji = heart;
+          break;
+        case "2":
+          // change to poop
+          current_emoji = bomb;
+          break;
+        case "3":
+          current_emoji = hand;
+          break;
+        case "4":
+          // change to bomb
+          current_emoji = heart;
+          break;
+        case "5":
+          // change to bomb
+          current_emoji = bee;
+          break;
+        case "6":
+          // change to bomb
+          current_emoji = thumb;
+          break;
+        default:
+          current_emoji = heart;
+          break;
       }
 
       changeGrid(current_emoji);
