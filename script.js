@@ -1,3 +1,20 @@
+// title animation
+
+const titleEmoji = document.querySelector(".titleEmoji");
+
+let emoji = false;
+
+const changeEmoji = () => {
+  emoji = !emoji;
+  if (emoji) {
+    titleEmoji.innerHTML = "😜";
+  } else {
+    titleEmoji.innerHTML = "😀";
+  }
+};
+
+setInterval(changeEmoji, 4000);
+
 // emoji data
 
 const heart = [
@@ -238,31 +255,22 @@ userPanel.append(userFragment);
 
 let drag = false;
 let erase = false;
-let click = false;
 
-document.addEventListener("click", function (e) {
-  if (e.target.matches(".dragButton")) {
-    drag = !drag;
-    if (drag) {
-      console.log("drag!");
-    } else {
-      console.log("no drag!");
-    }
-  } else if (e.target.matches(".eraseButton")) {
-    erase = !erase;
-    if (erase) {
-      console.log("erase!");
-    } else {
-      console.log("no erase!");
-    }
-  } else if (e.target.matches(".clickButton")) {
-    click = !click;
-    if (click) {
-      console.log("click!");
-    } else {
-      console.log("no click!");
-    }
-  }
+const dragButton = document.querySelector(".dragButton");
+const eraseButton = document.querySelector(".eraseButton");
+
+dragButton.addEventListener("click", () => {
+  drag = !drag;
+  erase = false;
+  dragButton.classList.toggle("buttonActive", drag);
+  eraseButton.classList.remove("buttonActive");
+});
+
+eraseButton.addEventListener("click", () => {
+  erase = !erase;
+  drag = false;
+  eraseButton.classList.toggle("buttonActive", erase);
+  dragButton.classList.remove("buttonActive");
 });
 
 let userAllRects = document.querySelectorAll(".userRect");
@@ -270,70 +278,49 @@ let userAllRects = document.querySelectorAll(".userRect");
 let mousePressed;
 
 const startFillonDrag = (r) => {
-    mousePressed = true;
+  mousePressed = true;
 
-    if(drag && !erase) {
-    r.classList.add("filled")
-    } else if (erase && drag) {
-        r.classList.remove("filled")
-    } else {
-        // do nothing
-    }
-    
-    console.log(drag);
-  };
+  if (drag) {
+    r.classList.add("filled");
+  } else if (erase) {
+    r.classList.remove("filled");
+  } else {
+    // do nothing
+  }
 
-  const checkFillonDrag = (r) => {
-    if (drag && !erase) {
+  console.log(drag);
+};
+
+const checkFillonDrag = (r) => {
+  if (drag) {
     mousePressed ? r.classList.add("filled") : doNothing();
-    } else if (erase && drag) {
-        mousePressed ? r.classList.remove("filled") : doNothing();
-    } else {
-        // do nothing
-    }
-    
-  };
+  } else if (erase) {
+    mousePressed ? r.classList.remove("filled") : doNothing();
+  } else {
+    // do nothing
+  }
+};
 
-  const stopFillonDrag = (r) => {
-    console.log("mouse is up");
-    mousePressed = false;
-  };
+const stopFillonDrag = (r) => {
+  console.log("mouse is up");
+  mousePressed = false;
+};
 
-  const doNothing = () => null;
+const doNothing = () => null;
 
 userAllRects.forEach((r) => {
-
-    // on click
-
-  r.addEventListener("click", () => {
-    console.log(r.classList);
-    console.log("rectangle clicked");
-
-    if (click) {
-      r.classList.contains("filled")
-        ? r.classList.remove("filled")
-        : r.classList.add("filled");
-    }
-    
-  });
-
-    // all drag events 
-
-
   r.addEventListener("mousedown", () => {
     console.log("mousedown");
-    (drag || erase) ? startFillonDrag(r) : doNothing;
-  })
+    drag || erase ? startFillonDrag(r) : doNothing;
+  });
 
   r.addEventListener("mouseup", () => {
-    (drag || erase) ? stopFillonDrag(r) : doNothing
-  })
+    drag || erase ? stopFillonDrag(r) : doNothing;
+  });
 
   r.addEventListener("mouseenter", () => {
-    (drag || erase) ? checkFillonDrag(r) : doNothing
-  })
-
-
+    drag || erase ? checkFillonDrag(r) : doNothing;
+  });
 });
 
 // scroll behavior
