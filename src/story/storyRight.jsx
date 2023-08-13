@@ -3,12 +3,12 @@ import styles from "./story.module.css";
 
 const StoryRight = ({ currentEmoji, setCurrentEmoji }) => {
   const emojis = [
-    { name: "heart",  title: "Young ♥️" },
-    { name: "poop",  title: "asd <3" },
-    { name: "hand",  title: "d <3" },
-    { name: "bomb",  title: "sdsdf <3" },
-    { name: "bee",  title: "sd <3" },
-    { name: "hand",  title: "Yofffung <3" },
+    { name: "heart",  number: '01', title: "Young ♥️" },
+    { name: "poop",  number: '02', title: "asd <3" },
+    { name: "hand",  number: '03', title: "d <3" },
+    { name: "bomb",  number: '04', title: "sdsdf <3" },
+    { name: "bee",  number: '05', title: "sd <3" },
+    { name: "hand",  number: '06', title: "Yofffung <3" },
   ];
 
   console.log(currentEmoji);
@@ -21,6 +21,7 @@ const StoryRight = ({ currentEmoji, setCurrentEmoji }) => {
             <TextPanel
               emoji={emoji.name}
               title={emoji.title}
+              number={emoji.number}
               currentEmoji={currentEmoji}
               setCurrentEmoji={setCurrentEmoji}
             />

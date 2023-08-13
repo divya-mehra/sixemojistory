@@ -1,3 +1,33 @@
+/* Bookend Panels */
+
+.startPanelLeft {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+    padding-left: 48px;
+    padding-right: 48px;
+
+}
+
+.startPanelRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(0, 145, 249);
+    height: 100vh;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .chapter {
+    cursor: pointer;
+  }
+
+
+ /* Story Panels  */
+
 .textPanel {
     color: white;
     height: 100vh;
