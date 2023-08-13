@@ -88,3 +88,13 @@ hr {
     transition: background-color 0.5s;
   }
 
+  .gridInterface {
+    position: sticky;
+    top: calc(100vh - 120px); 
+    width: 480px; /* 12 columns * 40px */
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+

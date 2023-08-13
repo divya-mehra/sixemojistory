@@ -16,13 +16,17 @@ const GridPanel = ({ currentEmoji, user }) => {
   
 
   return (
-    
+    <>
     <div className={`${styles.gridPanel}`}>
       {divArr.map((item) => {
         return <GridRect key={item.id} id={item.id} currentEmoji={currentEmoji} />;
       })}
-        {user ? <UserInterface/> : null}
+      
       </div>
+      <div className={styles.gridInterface}>
+      {user ? <UserInterface/> : null}
+      </div>
+      </>
     
     
   );
