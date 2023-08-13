@@ -34,7 +34,7 @@ const TextPanel = ({ emoji, title, number, currentEmoji, setCurrentEmoji, }) => 
     };
 
   return (
-      <div className={`${styles.textPanel}`} data-panel-number={number}>
+      <div className={`${styles.textPanel}`} data-panel-number={number} ref={ref}>
         <div className={styles.panelHeader}>
           <h4 className={styles.panelTitle}>
             <b>{number}</b> | {title}

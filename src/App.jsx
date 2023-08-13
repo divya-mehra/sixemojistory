@@ -16,6 +16,10 @@ function App() {
   ];
 
   const [currentEmoji, setCurrentEmoji] = useState(null);
+  
+  const [userEmojis, setuserEmojis] = useState([]);
+  const [currentUserEmoji, setCurrentUserEmoji] = useState(null);
+
 
   return (
     <>
@@ -23,6 +27,8 @@ function App() {
         <div className="leftSide">
           <StartPanelLeft />
           <StoryLeft currentEmoji={currentEmoji} emojis={emojis} />
+          {/* User Story */}
+          <StoryLeft currentEmoji={currentUserEmoji} emojis={userEmojis} user={true} />
         </div>
         <div className="rightSide">
           <StartPanelRight emojis={emojis}  />
@@ -30,6 +36,14 @@ function App() {
             currentEmoji={currentEmoji}
             setCurrentEmoji={setCurrentEmoji}
             emojis={emojis}
+          />
+          {/* User Story */}
+          <StoryRight
+            currentEmoji={currentUserEmoji}
+            setCurrentEmoji={setCurrentUserEmoji}
+            emojis={userEmojis}
+            user={true}
+            
           />
         </div>
       </div>

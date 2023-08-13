@@ -1,13 +1,15 @@
 import TextPanel from "../panel/TextPanel";
 import styles from "./story.module.css";
 
-const StoryRight = ({ emojis, currentEmoji, setCurrentEmoji }) => {
-
+const StoryRight = ({ emojis, currentEmoji, setCurrentEmoji, user }) => {
   console.log(currentEmoji);
 
   return (
     <>
-      <div className={styles.scrollArea}>
+      <div
+        className={styles.scrollArea}
+        style={{ backgroundColor: user ? "yellow" : "black" }}
+      >
         {emojis.map((emoji) => {
           return (
             <TextPanel
