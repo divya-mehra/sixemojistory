@@ -1,0 +1,11 @@
+.gridSection {
+    height: 600vh;
+  }
+
+  .scrollArea {
+    height: 600vh;
+    display: flex;
+    flex-direction: column;
+  }  
+
+  

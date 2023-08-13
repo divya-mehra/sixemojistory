@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Bowlby+One&family=Changa+One&family=Major+Mono+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+.contentWrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+.leftSide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* bottom: 0; */
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  
+}
+
+.rightSide {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* bottom: 0; */
+  width: 50%;
+  background-color: black;
+}
+
+
+/* Move this */
+
+.chapter {
+  cursor: pointer;
+}
