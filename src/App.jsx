@@ -4,16 +4,16 @@ import StoryLeft from "./story/storyLeft";
 import StoryRight from "./story/storyRight";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [currentEmoji, setCurrentEmoji] = useState(null);
 
   return (
     <>
       <div className="contentWrapper">
         <div className="leftSide">
-          <StoryLeft />
+          <StoryLeft currentEmoji={currentEmoji} />
         </div>
         <div className="rightSide">
-          <StoryRight />
+          <StoryRight currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji}/>
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import styles from "./panel.module.css";
 import GridRect from "./GridRect";
 
-const GridPanel = () => {
+const GridPanel = ({ currentEmoji }) => {
   // make grid
 
   const divArr = [];
@@ -10,13 +10,15 @@ const GridPanel = () => {
     divArr.push({ id: i });
   }
 
+  
 
-  return <div className={`${styles.gridPanel}`}>
-{divArr.map((item) => {
-        return <GridRect id={item.id} />;
+  return (
+    <div className={`${styles.gridPanel}`}>
+      {divArr.map((item) => {
+        return <GridRect key={item.id} id={item.id} currentEmoji={currentEmoji} />;
       })}
-
-  </div>;
+    </div>
+  );
 };
 
 export default GridPanel;

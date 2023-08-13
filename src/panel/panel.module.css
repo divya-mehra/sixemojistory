@@ -30,6 +30,7 @@ hr {
 /* Grid Side */
 
 .gridPanel {
+    margin: 0 auto;
     /* change this amount */
     top: calc(50vh - 240px); 
     padding-top: 96px;
@@ -48,5 +49,6 @@ hr {
 
   .gridRect {
     border: 0.5px black solid;
+    transition: background-color 0.5s;
   }
 
