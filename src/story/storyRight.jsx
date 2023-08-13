@@ -8,7 +8,7 @@ const StoryRight = ({ emojis, currentEmoji, setCurrentEmoji, user }) => {
     <>
       <div
         className={styles.scrollArea}
-        style={{ backgroundColor: user ? "yellow" : "black" }}
+        style={{ backgroundColor: user ? "#ffde34" : "black" }}
       >
         {emojis.map((emoji) => {
           return (

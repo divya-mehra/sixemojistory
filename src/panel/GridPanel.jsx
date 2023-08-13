@@ -1,7 +1,10 @@
 import styles from "./panel.module.css";
 import GridRect from "./GridRect";
+import UserInterface from "../panel/UserInterface";
 
-const GridPanel = ({ currentEmoji }) => {
+const GridPanel = ({ currentEmoji, user }) => {
+
+  
   // make grid
 
   const divArr = [];
@@ -17,6 +20,7 @@ const GridPanel = ({ currentEmoji }) => {
       {divArr.map((item) => {
         return <GridRect key={item.id} id={item.id} currentEmoji={currentEmoji} />;
       })}
+      {user ? <UserInterface/> : null}
     </div>
   );
 };

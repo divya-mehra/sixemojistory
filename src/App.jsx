@@ -26,7 +26,7 @@ function App() {
       <div className="contentWrapper">
         <div className="leftSide">
           <StartPanelLeft />
-          <StoryLeft currentEmoji={currentEmoji} emojis={emojis} />
+          <StoryLeft currentEmoji={currentEmoji} emojis={emojis} user={false}/>
           {/* User Story */}
           <StoryLeft currentEmoji={currentUserEmoji} emojis={userEmojis} user={true} />
         </div>
@@ -36,6 +36,7 @@ function App() {
             currentEmoji={currentEmoji}
             setCurrentEmoji={setCurrentEmoji}
             emojis={emojis}
+            user={false}
           />
           {/* User Story */}
           <StoryRight
