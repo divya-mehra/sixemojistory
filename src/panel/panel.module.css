@@ -59,17 +59,23 @@ hr {
 
 /* Grid Side */
 
+/* .gridPanelWrapper {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+
+} */
+
 .gridPanel {
-    margin: 0 auto;
-    /* change this amount */
-    top: calc(50vh - 240px); 
-    padding-top: 96px;
-    padding-bottom: 96px;
-    /* bottom: calc(50% - 50vh);*/
-    
+  position: sticky;
+  margin: 0 auto;
+  /* change this amount */
+  top: calc(50vh - 240px); 
+  padding-top: 96px;
+  padding-bottom: 96px;
+  /* bottom: calc(50% - 50vh);*/
     
     /* transform: translateY(-50%) */; 
-    position: sticky;
     width: 480px; /* 12 columns * 40px */
     height: 480px;
     display: grid;

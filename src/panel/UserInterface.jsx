@@ -1,8 +1,10 @@
+import styles from "./panel.module.css";
+
 const UserInterface = () => {
     return ( <>
     
-    <button>Fill</button>
-    <button>Erase</button>
+    <button className={styles.interfaceButton}>Fill</button>
+    <button className={styles.interfaceButton}>Erase</button>
 
     </> );
 }
