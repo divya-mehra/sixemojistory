@@ -2,7 +2,7 @@ import styles from "./panel.module.css";
 import { useInView } from 'react-intersection-observer';
 import { useEffect, useRef } from "react";
 
-const TextPanel = ({ emoji, currentEmoji, setCurrentEmoji }) => {
+const TextPanel = ({ emoji, title, currentEmoji, setCurrentEmoji }) => {
 
     console.log(currentEmoji);
     const [ref, inView] = useInView({
@@ -16,7 +16,6 @@ const TextPanel = ({ emoji, currentEmoji, setCurrentEmoji }) => {
         if (inView) {
             // Do something when the card comes into view
             
-            console.log(`${emoji} is in view`);
             setCurrentEmoji(prevEmoji => prevEmoji !== emoji ? emoji : prevEmoji);
             console.log(currentEmoji);
         }
@@ -26,7 +25,7 @@ const TextPanel = ({ emoji, currentEmoji, setCurrentEmoji }) => {
       <div className={`${styles.textPanel}`} ref={ref}>
         <div className={styles.panelHeader}>
           <h4 className={styles.panelTitle}>
-            <b>01</b> | Young ♥️
+            <b>01</b> | {title}
           </h4>
           <h4 className={styles.iconBackToTop}>^</h4>
         </div>
