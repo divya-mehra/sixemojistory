@@ -1,15 +1,7 @@
 import TextPanel from "../panel/TextPanel";
 import styles from "./story.module.css";
 
-const StoryRight = ({ currentEmoji, setCurrentEmoji }) => {
-  const emojis = [
-    { name: "heart",  number: '01', title: "Young ♥️" },
-    { name: "poop",  number: '02', title: "asd <3" },
-    { name: "hand",  number: '03', title: "d <3" },
-    { name: "bomb",  number: '04', title: "sdsdf <3" },
-    { name: "bee",  number: '05', title: "sd <3" },
-    { name: "hand",  number: '06', title: "Yofffung <3" },
-  ];
+const StoryRight = ({ emojis, currentEmoji, setCurrentEmoji }) => {
 
   console.log(currentEmoji);
 
@@ -19,6 +11,7 @@ const StoryRight = ({ currentEmoji, setCurrentEmoji }) => {
         {emojis.map((emoji) => {
           return (
             <TextPanel
+              data-panel-number={emoji.number}
               emoji={emoji.name}
               title={emoji.title}
               number={emoji.number}
