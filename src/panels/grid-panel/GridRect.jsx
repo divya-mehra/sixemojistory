@@ -1,4 +1,4 @@
-import styles from "./panel.module.css";
+import styles from "../panel.module.css";
 import { useState, useEffect } from "react";
 
 const GridRect = ({ id, currentEmoji, buttonSelection, user, mousePressed, setMousePressed }) => {

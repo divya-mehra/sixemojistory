@@ -1,4 +1,4 @@
-import styles from "./panel.module.css";
+import styles from "../panel.module.css";
 
 const UserInterface = ({ buttonSelection, setButtonSelection }) => {
   const handleClick = (selection) => {

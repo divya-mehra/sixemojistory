@@ -1,4 +1,4 @@
-import styles from "./panel.module.css";
+import styles from "../panel.module.css";
 import StartPanelChapter from "./StartPanelChapter";
 
 const StartPanelRight = ({ emojis }) => {

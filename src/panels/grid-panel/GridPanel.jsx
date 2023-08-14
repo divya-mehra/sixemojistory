@@ -1,6 +1,6 @@
-import styles from "./panel.module.css";
+import styles from "../panel.module.css";
 import GridRect from "./GridRect";
-import UserInterface from "../panel/UserInterface";
+import UserInterface from "./UserInterface";
 import { useState } from "react";
 
 const GridPanel = ({ currentEmoji, user }) => {

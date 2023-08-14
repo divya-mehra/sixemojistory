@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./App.css";
 import StoryLeft from "./story/storyLeft";
 import StoryRight from "./story/storyRight";
-import StartPanelLeft from "./panel/StartPanelLeft";
-import StartPanelRight from "./panel/StartPanelRight";
+import StartPanelLeft from "./panels/start-panel/StartPanelLeft";
+import StartPanelRight from "./panels/start-panel/StartPanelRight";
 
 function App() {
   const emojis = [
@@ -16,22 +16,25 @@ function App() {
   ];
 
   const [currentEmoji, setCurrentEmoji] = useState(null);
-  
+
   const [userEmojis, setuserEmojis] = useState([]);
   const [currentUserEmoji, setCurrentUserEmoji] = useState(null);
-
 
   return (
     <>
       <div className="contentWrapper">
         <div className="leftSide">
           <StartPanelLeft />
-          <StoryLeft currentEmoji={currentEmoji} emojis={emojis} user={false}/>
+          <StoryLeft currentEmoji={currentEmoji} emojis={emojis}/>
           {/* User Story */}
-          <StoryLeft currentEmoji={currentUserEmoji} emojis={userEmojis} user={true} />
+          <StoryLeft
+            currentEmoji={currentUserEmoji}
+            emojis={userEmojis}
+            user={true}
+          />
         </div>
         <div className="rightSide">
-          <StartPanelRight emojis={emojis}  />
+          <StartPanelRight emojis={emojis} />
           <StoryRight
             currentEmoji={currentEmoji}
             setCurrentEmoji={setCurrentEmoji}
@@ -44,7 +47,6 @@ function App() {
             setCurrentEmoji={setCurrentUserEmoji}
             emojis={userEmojis}
             user={true}
-            
           />
         </div>
       </div>
