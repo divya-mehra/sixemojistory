@@ -1,12 +1,26 @@
 import styles from "../panel.module.css";
-import { useInView } from 'react-intersection-observer';
-import { useEffect, useRef } from "react";
+import { useState } from "react";
 
 const UserTextPanel = () => {
+  return (
+    <div
+      style={{
+        color: "black",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100%",
+      }}
+    >
+      <textarea
+      className={styles.inputText}
+        type="text"
+        // value={inputValue}
+        // onChange={handleInputChange}
+        placeholder="Enter text here"
+      />
+    </div>
+  );
+};
 
-    return ( <>
-    
-    </> );
-}
- 
 export default UserTextPanel;

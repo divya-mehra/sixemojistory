@@ -6,6 +6,7 @@ import StartPanelLeft from "./panels/start-panel/StartPanelLeft";
 import StartPanelRight from "./panels/start-panel/StartPanelRight";
 import UserStartPanelLeft from "./panels/start-panel/UserStartPanelLeft";
 import UserStartPanelRight from "./panels/start-panel/UserStartpanelRight";
+import SideStickyNav from "./story/SideStickyNav";
 
 function App() {
   const emojis = [
@@ -27,22 +28,28 @@ function App() {
   return (
     <>
       <div className="contentWrapper">
+        <SideStickyNav />
         <div className="leftSide">
-          <StartPanelLeft />
-          <StoryLeft 
-            currentEmoji={currentEmoji} 
-            emojis={emojis} 
-            user={false} 
-          />
-          {/* User Story */}
-          <UserStartPanelLeft/>
-          <StoryLeft
-            currentEmoji={currentUserEmoji}
-            emojis={userEmojis}
-            user={true}
-            numberUserPanels={numberUserPanels}
-            setNumberUserPanels={setNumberUserPanels}
-          />
+          <div id="LearnStory">
+            <StartPanelLeft />
+            <StoryLeft
+              currentEmoji={currentEmoji}
+              emojis={emojis}
+              user={false}
+            />
+
+            {/* User Story */}
+            </div>
+            <div id="CreateStory">
+            <UserStartPanelLeft />
+            <StoryLeft
+              currentEmoji={currentUserEmoji}
+              emojis={userEmojis}
+              user={true}
+              numberUserPanels={numberUserPanels}
+              setNumberUserPanels={setNumberUserPanels}
+            />
+          </div>
         </div>
         <div className="rightSide">
           <StartPanelRight emojis={emojis} />
@@ -53,7 +60,7 @@ function App() {
             user={false}
           />
           {/* User Story */}
-          <UserStartPanelRight/>
+          <UserStartPanelRight />
           <StoryRight
             currentEmoji={currentUserEmoji}
             setCurrentEmoji={setCurrentUserEmoji}

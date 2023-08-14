@@ -1,4 +1,5 @@
 import styles from "../panel.module.css";
+import DownloadButton from "./DownloadButton";
 
 const UserInterface = ({ buttonSelection, setButtonSelection }) => {
   const handleClick = (e, selection) => {
@@ -32,7 +33,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
         </button>
       </div>
       <div>
-        <button>Download</button>
+        <DownloadButton/>
       </div>
     </>
   );

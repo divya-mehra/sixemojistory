@@ -117,3 +117,22 @@ button {
 .buttonActive {
   font-weight: bold;
 }
+
+/* Text Input */
+
+.inputText {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: text;
+  width: 70%;
+  height: 40%;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+
+}
+
+.inputText:focus {
+  border: none;
+  outline: none;
+}

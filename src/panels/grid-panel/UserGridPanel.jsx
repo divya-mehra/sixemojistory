@@ -23,7 +23,7 @@ const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
 
   return (
     <>
-      <div className={`${styles.gridPanel}`}>
+      <div className={`${styles.gridPanel}`} id='user-panel'>
         {divArr.map((item) => {
           return (
             <UserGridRect
