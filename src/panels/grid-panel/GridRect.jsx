@@ -28,8 +28,6 @@ const GridRect = ({ id, currentEmoji }) => {
 
   const [fill, setFill] = useState("transparent");
 
-  console.log(emojis[currentEmoji]);
-
   // for first story
 
   useEffect(() => {
@@ -42,17 +40,12 @@ const GridRect = ({ id, currentEmoji }) => {
     }
   }, [currentEmoji, id]);
 
-
-
   const doNothing = () => {
     // do nothing
   };
 
   return (
-    <div
-      className={styles.gridRect}
-      style={{ backgroundColor: fill }}
-    ></div>
+    <div className={styles.gridRect} style={{ backgroundColor: fill }}></div>
   );
 };
 

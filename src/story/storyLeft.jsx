@@ -8,16 +8,23 @@ const StoryLeft = ({
   numberUserPanels,
   setNumberUserPanels,
 }) => {
-  console.log(currentEmoji);
+  
   return (
     <>
       <div
         className={styles.gridSection}
         style={{
-          height: user ? `${numberUserPanels*100}vh` : "600vh",
+          height: user ? `${numberUserPanels * 100}vh` : "600vh",
         }}
       >
-        {user ? <UserGridPanel /> : <GridPanel currentEmoji={currentEmoji} />}
+        {user ? (
+          <UserGridPanel
+            numberUserPanels={numberUserPanels}
+            setNumberUserPanels={setNumberUserPanels}
+          />
+        ) : (
+          <GridPanel currentEmoji={currentEmoji} />
+        )}
       </div>
     </>
   );

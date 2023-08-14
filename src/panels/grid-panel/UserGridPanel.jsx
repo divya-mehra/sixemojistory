@@ -3,7 +3,7 @@ import { useState } from "react";
 import UserGridRect from "./UserGridRect";
 import UserInterface from "./UserInterface";
 
-const UserGridPanel = () => {
+const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
   const divArr = [];
 
   for (let i = 1; i <= 144; i++) {
@@ -12,6 +12,12 @@ const UserGridPanel = () => {
 
   const [buttonSelection, setButtonSelection] = useState(null);
   const [mousePressed, setMousePressed] = useState(false);
+
+  const addPanelButton = () => {
+    console.log(numberUserPanels);
+    // setNumberUserPanels((prevNumber) => prevNumber + 1);
+    setNumberUserPanels(numberUserPanels + 1);
+  }
 
   return (
     <>
@@ -34,6 +40,7 @@ const UserGridPanel = () => {
           setButtonSelection={setButtonSelection}
         />
       </div>
+      <button className={styles.addPanelButton} onClick={addPanelButton}>(+)</button>
     </>
   );
 };
