@@ -1,34 +1,39 @@
 import styles from "../panel.module.css";
 
 const UserInterface = ({ buttonSelection, setButtonSelection }) => {
-  const handleClick = (selection) => {
-    if (selection === "fill") {
-      console.log(selection);
-      buttonSelection === "fill" ? setButtonSelection(null) : setButtonSelection("fill")
-    } else if (selection === "erase") {
-      console.log(selection);
-      buttonSelection === "erase" ? setButtonSelection(null) : setButtonSelection("erase")
-    }
+  const handleClick = (e, selection) => {
+    buttonSelection === selection
+      ? setButtonSelection(null)
+      : setButtonSelection(selection);
   };
 
   return (
     <>
-      <button
-        className={styles.interfaceButton}
-        onClick={() => {
-          handleClick("fill");
-        }}
-      >
-        Fill
-      </button>
-      <button
-        className={styles.interfaceButton}
-        onClick={() => {
-          handleClick("erase");
-        }}
-      >
-        Erase
-      </button>
+      <div>
+        <button
+          className={`${styles.interfaceButton} ${
+            buttonSelection === "fill" ? styles.buttonActive : ""
+          }`}
+          onClick={(e) => {
+            handleClick(e, "fill");
+          }}
+        >
+          Fill
+        </button>
+        <button
+          className={`${styles.interfaceButton} ${
+            buttonSelection === "erase" ? styles.buttonActive : ""
+          }`}
+          onClick={(e) => {
+            handleClick(e, "erase");
+          }}
+        >
+          Erase
+        </button>
+      </div>
+      <div>
+        <button>Download</button>
+      </div>
     </>
   );
 };

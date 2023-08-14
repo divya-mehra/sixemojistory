@@ -7,7 +7,7 @@ const UserStartPanelLeft = () => {
         <h1 style={{ textTransform: "uppercase" }}>
           <div>Got some-thing to emoji?</div>
         </h1>
-        <h2>User</h2>
+        <h2>Try it out for yourself</h2>
       </div>
     </div>
   );

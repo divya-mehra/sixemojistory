@@ -93,8 +93,8 @@ hr {
     width: 480px; /* 12 columns * 40px */
     margin: 0 auto;
     display: flex;
-    justify-content: flex-start;
-    gap: 16px;
+    justify-content: space-between;
+    
   }
 
 /* Buttons */
@@ -111,4 +111,9 @@ button {
   text-decoration: none;
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.buttonActive {
+  font-weight: bold;
 }

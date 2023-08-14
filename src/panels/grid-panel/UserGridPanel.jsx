@@ -13,11 +13,13 @@ const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
   const [buttonSelection, setButtonSelection] = useState(null);
   const [mousePressed, setMousePressed] = useState(false);
 
-  const addPanelButton = () => {
-    console.log(numberUserPanels);
-    // setNumberUserPanels((prevNumber) => prevNumber + 1);
-    setNumberUserPanels(numberUserPanels + 1);
-  }
+  // Removed the ability to add more panels for now bceause of complexity with storing emoji filled rects
+
+  // const addPanelButton = () => {
+  //   console.log(numberUserPanels);
+  //   // setNumberUserPanels((prevNumber) => prevNumber + 1);
+  //   setNumberUserPanels(numberUserPanels + 1);
+  // }
 
   return (
     <>
@@ -40,7 +42,7 @@ const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
           setButtonSelection={setButtonSelection}
         />
       </div>
-      <button className={styles.addPanelButton} onClick={addPanelButton}>(+)</button>
+      {/* <button className={styles.addPanelButton} onClick={addPanelButton}>(+)</button> */}
     </>
   );
 };
