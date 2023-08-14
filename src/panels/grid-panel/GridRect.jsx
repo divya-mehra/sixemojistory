@@ -1,7 +1,7 @@
 import styles from "../panel.module.css";
 import { useState, useEffect } from "react";
 
-const GridRect = ({ id, currentEmoji, buttonSelection, user, mousePressed, setMousePressed }) => {
+const GridRect = ({ id, currentEmoji }) => {
   const emojis = {
     heart: [
       28, 29, 33, 34, 39, 40, 41, 42, 44, 45, 46, 47, 51, 52, 53, 54, 55, 56,
@@ -33,7 +33,7 @@ const GridRect = ({ id, currentEmoji, buttonSelection, user, mousePressed, setMo
   // for first story
 
   useEffect(() => {
-    if (currentEmoji !== undefined && !user) {
+    if (currentEmoji !== undefined) {
       if (emojis[currentEmoji]?.includes(id)) {
         setFill("black");
       } else {
@@ -42,30 +42,7 @@ const GridRect = ({ id, currentEmoji, buttonSelection, user, mousePressed, setMo
     }
   }, [currentEmoji, id]);
 
-  // for user story
 
-  const startFill = () => {
-    setMousePressed(true);
-    if (buttonSelection === "fill") {
-      setFill("black");
-    } else if (buttonSelection === "erase") {
-      setFill("transparent");
-    }
-  };
-
-  const stopFill = () => {
-    setMousePressed(false);
-  };
-
-  const checkFill = () => {
-    if (mousePressed) {
-      if (buttonSelection === "fill") {
-        setFill("black");
-      } else if (buttonSelection === "erase") {
-        setFill("transparent");
-      }
-    }
-  };
 
   const doNothing = () => {
     // do nothing
@@ -75,9 +52,6 @@ const GridRect = ({ id, currentEmoji, buttonSelection, user, mousePressed, setMo
     <div
       className={styles.gridRect}
       style={{ backgroundColor: fill }}
-      onMouseDown={user ? startFill : doNothing}
-      onMouseEnter={user ? checkFill : doNothing}
-      onMouseUp={user ? stopFill : doNothing}
     ></div>
   );
 };
