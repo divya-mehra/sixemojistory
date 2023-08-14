@@ -4,6 +4,8 @@ import StoryLeft from "./story/storyLeft";
 import StoryRight from "./story/storyRight";
 import StartPanelLeft from "./panels/start-panel/StartPanelLeft";
 import StartPanelRight from "./panels/start-panel/StartPanelRight";
+import UserStartPanelLeft from "./panels/start-panel/UserStartPanelLeft";
+import UserStartPanelRight from "./panels/start-panel/UserStartpanelRight";
 
 function App() {
   const emojis = [
@@ -20,17 +22,26 @@ function App() {
   const [userEmojis, setuserEmojis] = useState([]);
   const [currentUserEmoji, setCurrentUserEmoji] = useState(null);
 
+  const [numberUserPanels, setNumberUserPanels] = useState(1);
+
   return (
     <>
       <div className="contentWrapper">
         <div className="leftSide">
           <StartPanelLeft />
-          <StoryLeft currentEmoji={currentEmoji} emojis={emojis}/>
+          <StoryLeft 
+            currentEmoji={currentEmoji} 
+            emojis={emojis} 
+            user={false} 
+          />
           {/* User Story */}
+          <UserStartPanelLeft/>
           <StoryLeft
             currentEmoji={currentUserEmoji}
             emojis={userEmojis}
             user={true}
+            numberUserPanels={numberUserPanels}
+            setNumberUserPanels={setNumberUserPanels}
           />
         </div>
         <div className="rightSide">
@@ -42,11 +53,14 @@ function App() {
             user={false}
           />
           {/* User Story */}
+          <UserStartPanelRight/>
           <StoryRight
             currentEmoji={currentUserEmoji}
             setCurrentEmoji={setCurrentUserEmoji}
             emojis={userEmojis}
             user={true}
+            numberUserPanels={numberUserPanels}
+            setNumberUserPanels={setNumberUserPanels}
           />
         </div>
       </div>

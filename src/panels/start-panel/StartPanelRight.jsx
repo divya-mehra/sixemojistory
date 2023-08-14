@@ -3,7 +3,12 @@ import StartPanelChapter from "./StartPanelChapter";
 
 const StartPanelRight = ({ emojis }) => {
   return (
-    <div className={styles.startPanelRight}>
+    <div
+      className={styles.startPanelRight}
+      style={{
+        backgroundColor: "#0091f9",
+      }}
+    >
       <div className={styles.chapters}>
         {emojis.map((chapter) => {
           return (
