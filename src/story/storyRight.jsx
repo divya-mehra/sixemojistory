@@ -31,6 +31,7 @@ const StoryRight = ({
                 emoji={emoji.name}
                 title={emoji.title}
                 number={emoji.number}
+                subtitle={emoji.subtitle}
                 currentEmoji={currentEmoji}
                 setCurrentEmoji={setCurrentEmoji}
               />

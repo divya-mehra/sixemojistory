@@ -15,6 +15,9 @@ const StoryLeft = ({
         className={styles.gridSection}
         style={{
           height: user ? `${numberUserPanels * 100}vh` : "600vh",
+          position: "relative",
+          width: "100%"
+          
         }}
       >
         {user ? (

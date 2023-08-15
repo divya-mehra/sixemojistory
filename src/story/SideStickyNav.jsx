@@ -26,18 +26,20 @@ const SideStickyNav = () => {
       onMouseLeave={handleMouseLeave}
     >
       <ul>
-      <Link className={styles.SideStickyNavLink}
-          activeClass="active"
+        <Link
+          className={styles.SideStickyNavLink}
+          activeClass={styles.SideStickyNavLinkActive}
           to="LearnStory"
           spy={true}
           smooth={true}
           offset={-70} // Adjust the offset as needed
           duration={500} // Duration of the scrolling animation in milliseconds
         >
-          Learn
+          View
         </Link>
-        <Link className={styles.SideStickyNavLink}
-          activeClass="active"
+        <Link
+          className={styles.SideStickyNavLink}
+          activeClass={styles.SideStickyNavLinkActive}
           to="CreateStory"
           spy={true}
           smooth={true}

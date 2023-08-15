@@ -23,7 +23,7 @@ const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
 
   return (
     <>
-      <div className={`${styles.gridPanel}`} id='user-panel'>
+      <div className={`${styles.userGridPanel}`} id="userPanel">
         {divArr.map((item) => {
           return (
             <UserGridRect
@@ -42,7 +42,6 @@ const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
           setButtonSelection={setButtonSelection}
         />
       </div>
-      {/* <button className={styles.addPanelButton} onClick={addPanelButton}>(+)</button> */}
     </>
   );
 };

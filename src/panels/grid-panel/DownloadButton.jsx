@@ -3,7 +3,7 @@ import html2canvas from "html2canvas";
 const DownloadButton = () => {
   const handleDownload = async() => {
 
-    const targetDiv = document.getElementById("user-panel"); 
+    const targetDiv = document.getElementById("userPanel"); 
     // const targetDivAll = document.getElementById("user-panel-with-text"); 
 
     console.log('hi')

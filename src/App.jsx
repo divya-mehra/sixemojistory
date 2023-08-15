@@ -10,12 +10,12 @@ import SideStickyNav from "./story/SideStickyNav";
 
 function App() {
   const emojis = [
-    { name: "heart", number: "01", title: "Young ♥️" },
-    { name: "poop", number: "02", title: "You're a Pile of 💩" },
-    { name: "hand", number: "03", title: "✊🏻✊🏼✊🏽✊🏾✊🏿✊ ~ Department of DEI ~" },
-    { name: "bomb", number: "04", title: "What a 💣🐚! 😂" },
-    { name: "bee", number: "05", title: "Becky! Leave Queen 🐝 Alone 🍋" },
-    { name: "hand", number: "06", title: "👍 (I'll see you in court)" },
+    { name: "heart", number: "01", title: "Young ♥️", content: ["hi"], subtitle: "It's always about love" },
+    { name: "poop", number: "02", title: "You're a Pile of 💩", content: ["hi"], subtitle: "Google pays attention emojis when expanding to global markets"  },
+    { name: "hand", number: "03", title: "✊🏻✊🏼✊🏽✊🏾✊🏿✊ ~ Department of DEI ~", subtitle: "Skin tone modifiers move the emoji from symbolic toward representative" },
+    { name: "bomb", number: "04", title: "What a 💣🐚! 😂", content: ["hi"], subtitle: "And with that, each additional emoji invited questions"  },
+    { name: "bee", number: "05", title: "Becky! Leave Queen 🐝 Alone 🍋", content: ["hi"] },
+    { name: "hand", number: "06", title: "👍 (I'll see you in court)", content: ["hi"] },
   ];
 
   const [currentEmoji, setCurrentEmoji] = useState(null);

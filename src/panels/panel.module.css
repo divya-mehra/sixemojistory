@@ -1,60 +1,58 @@
 /* Bookend Panels */
 
 .startPanelLeft {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: white;
-    height: 100vh;
-    padding-left: 48px;
-    padding-right: 48px;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  height: 100vh;
+  padding-left: 48px;
+  padding-right: 48px;
 }
 
 .startPanelRight {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    padding-left: 48px;
-    padding-right: 48px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 48px;
+  padding-right: 48px;
+}
 
-  .chapter {
-    cursor: pointer;
-  }
+.chapter {
+  cursor: pointer;
+}
 
-
- /* Story Panels  */
+/* Story Panels  */
 
 .textPanel {
-    color: white;
-    height: 100vh;
-    /* border: dashed 1px red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 48px;
-    padding-right: 48px;
-    /* delete later */
-    /* border: 1px solid red; */
+  color: white;
+  height: 100vh;
+  /* border: dashed 1px red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 48px;
+  padding-right: 48px;
+  /* delete later */
+  /* border: 1px solid red; */
 }
 
 hr {
-    width: 100%;
-  }
+  width: 100%;
+}
 
 .panelHeader {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 
 .iconBackToTop {
-    cursor: pointer;
-  }
+  cursor: pointer;
+}
 
 /* Grid Side */
 
@@ -69,42 +67,54 @@ hr {
   position: sticky;
   margin: 0 auto;
   /* change this amount */
-  top: calc(50vh - 240px); 
+  top: calc(50vh - 240px);
   padding-top: 96px;
   padding-bottom: 96px;
   /* bottom: calc(50% - 50vh);*/
-    
-    /* transform: translateY(-50%) */; 
-    width: 480px; /* 12 columns * 40px */
-    height: 480px;
-    display: grid;
-    grid-template-columns: repeat(12, 40px);
-    grid-template-rows: repeat(12, 40px);
-  }
 
-  .gridRect {
-    border: 0.5px black solid;
-    transition: background-color 0.5s;
-  }
+  /* transform: translateY(-50%) */
+  width: 480px; /* 12 columns * 40px */
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(12, 40px);
+  grid-template-rows: repeat(12, 40px);
+}
 
-  .gridInterface {
-    position: sticky;
-    top: calc(100vh - 120px); 
-    width: 480px; /* 12 columns * 40px */
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    
-  }
+.userGridPanel {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Move back by half of own dimensions
+  width: 480px; /* 12 columns * 40px */
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(12, 40px);
+  grid-template-rows: repeat(12, 40px);
+}
+
+.gridRect {
+  border: 0.5px black solid;
+  transition: background-color 0.5s;
+}
+
+.gridInterface {
+  position: absolute;
+  top: calc(100vh - 120px);
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 480px; /* 12 columns * 40px */
+  display: flex;
+  justify-content: space-between;
+}
 
 /* Buttons */
 
 .addPanelButton {
   position: sticky;
   left: 50%;
-  top: calc(100vh - 50px); 
+  top: calc(100vh - 50px);
   transform: translate(50%);
-  z-index: 2; 
+  z-index: 2;
 }
 
 button {
@@ -129,10 +139,27 @@ button {
   height: 40%;
   font-family: "Space Grotesk", sans-serif;
   font-size: 21px;
-
 }
 
 .inputText:focus {
   border: none;
   outline: none;
+}
+
+/* Links */
+
+a {
+  color: white;
+}
+
+h4 {
+  margin-bottom: 4px;
+}
+
+.highlightedText {
+  color: #ddb800
+}
+
+.panelContent {
+  line-height: 2em;
 }
