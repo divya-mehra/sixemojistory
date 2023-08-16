@@ -1,5 +1,6 @@
 import styles from "../panel.module.css";
 import DownloadButton from "./DownloadButton";
+import InterfaceTooltip from "./InterfaceTooltip";
 
 const UserInterface = ({ buttonSelection, setButtonSelection }) => {
   const handleClick = (e, selection) => {
@@ -10,6 +11,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
 
   return (
     <>
+      <InterfaceTooltip/>
       <div>
         <button
           className={`${styles.interfaceButton} ${

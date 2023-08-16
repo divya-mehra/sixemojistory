@@ -1,4 +1,6 @@
 import html2canvas from "html2canvas";
+import styles from "../panel.module.css";
+
 
 const DownloadButton = () => {
   const handleDownload = async() => {
@@ -30,7 +32,7 @@ const DownloadButton = () => {
 
   };
 
-  return <button onClick={handleDownload}>Download</button>;
+  return <button className={styles.interfaceButton} onClick={handleDownload}>Download</button>;
 };
 
 export default DownloadButton;

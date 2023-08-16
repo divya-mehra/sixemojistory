@@ -7,7 +7,9 @@ const UserStartPanelRight = () => {
       style={{
         backgroundColor: "#EEC400",
       }}
-    ></div>
+    >
+      Make your own pixel emoji. 
+    </div>
   );
 };
 

@@ -109,6 +109,23 @@ hr {
 
 /* Buttons */
 
+.interfaceButton {
+  font-size: 12px;
+  background-color: white;
+  text-transform: uppercase;
+  color: black;
+  border: 1px black solid;
+  margin: 4px;
+  padding: 8px;
+}
+
+.activeInterfaceButton {
+  background-color: black;
+  color: white;
+}
+
+
+
 .addPanelButton {
   position: sticky;
   left: 50%;
