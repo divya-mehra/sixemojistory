@@ -13,7 +13,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
     <>
       {/* <InterfaceTooltip /> */}
       <div>
-        <Tooltip title="This is a tooltip">
+        <Tooltip title="Drag your mouse over the grid to fill">
           <button
             className={`${styles.interfaceButton} ${
               buttonSelection === "fill" ? styles.buttonActive : ""
@@ -25,7 +25,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
             Fill
           </button>
         </Tooltip>
-        <Tooltip title="This is a tooltip">
+        <Tooltip title="Drag your mouse over the grid to erase">
           <button
             className={`${styles.interfaceButton} ${
               buttonSelection === "erase" ? styles.buttonActive : ""
