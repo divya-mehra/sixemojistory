@@ -1,6 +1,6 @@
 import styles from "../panel.module.css";
 import DownloadButton from "./DownloadButton";
-import InterfaceTooltip from "./InterfaceTooltip";
+import { Button, Tooltip } from "@mui/material";
 
 const UserInterface = ({ buttonSelection, setButtonSelection }) => {
   const handleClick = (e, selection) => {
@@ -11,31 +11,37 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
 
   return (
     <>
-      <InterfaceTooltip/>
+      {/* <InterfaceTooltip /> */}
       <div>
-        <button
-          className={`${styles.interfaceButton} ${
-            buttonSelection === "fill" ? styles.buttonActive : ""
-          }`}
-          onClick={(e) => {
-            handleClick(e, "fill");
-          }}
-        >
-          Fill
-        </button>
-        <button
-          className={`${styles.interfaceButton} ${
-            buttonSelection === "erase" ? styles.buttonActive : ""
-          }`}
-          onClick={(e) => {
-            handleClick(e, "erase");
-          }}
-        >
-          Erase
-        </button>
+        <Tooltip title="This is a tooltip">
+          <button
+            className={`${styles.interfaceButton} ${
+              buttonSelection === "fill" ? styles.buttonActive : ""
+            }`}
+            onClick={(e) => {
+              handleClick(e, "fill");
+            }}
+          >
+            Fill
+          </button>
+        </Tooltip>
+        <Tooltip title="This is a tooltip">
+          <button
+            className={`${styles.interfaceButton} ${
+              buttonSelection === "erase" ? styles.buttonActive : ""
+            }`}
+            onClick={(e) => {
+              handleClick(e, "erase");
+            }}
+          >
+            Erase
+          </button>
+        </Tooltip>
       </div>
       <div>
-        <DownloadButton/>
+      <Tooltip title="This is a tooltip">
+        <DownloadButton />
+        </Tooltip>
       </div>
     </>
   );

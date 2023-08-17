@@ -3,6 +3,7 @@
 
 body {
   font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
 }
 
 /* Global typography styles */
