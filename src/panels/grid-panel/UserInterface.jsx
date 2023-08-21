@@ -1,6 +1,6 @@
 import styles from "../panel.module.css";
 import DownloadButton from "./DownloadButton";
-import { Button, Tooltip } from "@mui/material";
+import {Tooltip } from "@mui/material";
 
 const UserInterface = ({ buttonSelection, setButtonSelection }) => {
   const handleClick = (e, selection) => {
@@ -16,7 +16,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
         <Tooltip title="Drag your mouse over the grid to fill">
           <button
             className={`${styles.interfaceButton} ${
-              buttonSelection === "fill" ? styles.buttonActive : ""
+              buttonSelection === "fill" ? styles.activeInterfaceButton : ""
             }`}
             onClick={(e) => {
               handleClick(e, "fill");
@@ -28,7 +28,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
         <Tooltip title="Drag your mouse over the grid to erase">
           <button
             className={`${styles.interfaceButton} ${
-              buttonSelection === "erase" ? styles.buttonActive : ""
+              buttonSelection === "erase" ? styles.activeInterfaceButton : ""
             }`}
             onClick={(e) => {
               handleClick(e, "erase");
