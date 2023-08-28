@@ -126,10 +126,9 @@ hr {
 
 .interfaceButton {
   font-size: 12px;
-  background-color: white;
   text-transform: uppercase;
-  color: black;
-  border: 1px black solid;
+  color: var(--grid-text);
+  border: 1px var(--grid-text) solid;
   margin: 4px;
   padding: 8px;
 }

@@ -48,8 +48,8 @@ const GridRect = ({ id, currentEmoji }) => {
   useEffect(() => {
     console.log(id);
     if (emojis[currentEmoji]?.includes(id) && fill === "transparent") {
-      setFill("black");
-    } else if (!emojis[currentEmoji]?.includes(id) && fill === "black") {
+      setFill("var(--grid-text)");
+    } else if (!emojis[currentEmoji]?.includes(id) && fill === "var(--grid-text)") {
       setFill("transparent");
     }
   }, [currentEmoji]);

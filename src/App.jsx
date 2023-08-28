@@ -63,7 +63,7 @@ function App() {
 
   return (
     <>
-      <div className="contentWrapper">
+      <div className="contentWrapper textLight">
         <SideStickyNav />
         <div className="leftSide">
           <div id="LearnStory">

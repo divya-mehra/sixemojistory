@@ -7,7 +7,7 @@ const UserGridRect = ({ buttonSelection, mousePressed, setMousePressed }) => {
   const startFill = () => {
     setMousePressed(true);
     if (buttonSelection === "fill") {
-      setFill("black");
+      setFill("var(--grid-text)");
     } else if (buttonSelection === "erase") {
       setFill("transparent");
     }
@@ -20,7 +20,7 @@ const UserGridRect = ({ buttonSelection, mousePressed, setMousePressed }) => {
   const checkFill = () => {
     if (mousePressed) {
       if (buttonSelection === "fill") {
-        setFill("black");
+        setFill("var(--grid-text)");
       } else if (buttonSelection === "erase") {
         setFill("transparent");
       }

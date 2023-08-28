@@ -17,10 +17,11 @@
 }
 
 .textLight {
-
-  /* light theme */
-  --dark-theme-text: #fff;
-  --dark-theme-bg: #000;
+  --body-text: #000;
+  --body-bg: #fff;
+  --grid-bg: #000; 
+  --grid-text: #fff;
+  --grid-border: #000;
 
 }
 
