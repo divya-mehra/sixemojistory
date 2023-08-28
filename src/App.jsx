@@ -64,6 +64,7 @@ function App() {
   return (
     <>
       <div className="contentWrapper textLight">
+      {/* <div className="contentWrapper"> */}
         <SideStickyNav />
         <div className="leftSide">
           <div id="LearnStory">

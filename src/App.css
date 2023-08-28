@@ -8,20 +8,34 @@
   --tertiary-color: #0091f9;
 
 
+  --grid-start-panel-bg: #fff;
+  --grid-user-start-panel-bg: #fff;
+  --body-start-panel-bg: #0091f9;
+  --body-user-start-panel-bg: #ffd500;
+
   /* dark theme */
   --body-text: #fff;
   --body-bg: #000;
   --grid-bg: #fff; 
   --grid-text: #000;
   --grid-border: #fff;
+
+
 }
 
 .textLight {
+
+  --grid-start-panel-bg: #0091f9;
+  --grid-user-start-panel-bg: #ffd500;
+  --body-start-panel-bg: #fff;
+  --body-user-start-panel-bg: #fff;
+
   --body-text: #000;
   --body-bg: #fff;
   --grid-bg: #000; 
   --grid-text: #fff;
   --grid-border: #000;
+
 
 }
 

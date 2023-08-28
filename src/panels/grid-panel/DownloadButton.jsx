@@ -2,6 +2,7 @@ import styles from "../panel.module.css";
 import html2canvas from "html2canvas";
 
 // TODO: adjust dimensions as needed for more/less amounts of text
+// TODO: change background if on dark mode
 
 const DownloadButton = () => {
   const handleDownload = async () => {

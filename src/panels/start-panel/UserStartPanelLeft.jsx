@@ -2,7 +2,7 @@ import styles from "../panel.module.css";
 
 const UserStartPanelLeft = () => {
   return (
-    <div className={styles.startPanelLeft}>
+    <div className={`${styles.startPanelLeft} ${styles.userStartPanelLeft}`}>
       <div>
         <h1 style={{ textTransform: "uppercase", fontSize: "8rem" }}>
           <div>Got a story to emoji?</div>
