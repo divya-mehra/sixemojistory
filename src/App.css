@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Bowlby+One&family=Changa+One&family=Major+Mono+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
+
+/* Styling & Themes Colors */
+
+:root {
+  --secondary-color: #ffd500;
+  --tertiary-color: #0091f9;
+
+
+  /* dark theme */
+  --dark-theme-text: #fff;
+  --dark-theme-bg: #000;
+}
+
+
+
+
 .contentWrapper {
   height: 100vh;
   width: 100vw;

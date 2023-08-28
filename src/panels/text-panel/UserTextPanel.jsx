@@ -5,7 +5,7 @@ const UserTextPanel = () => {
   return (
     <div
       style={{
-        color: "black",
+        color: "white",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

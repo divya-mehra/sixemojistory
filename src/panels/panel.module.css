@@ -10,13 +10,21 @@
   padding-right: 48px;
 }
 
+
+
 .startPanelRight {
+  background-color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
   padding-left: 48px;
   padding-right: 48px;
+}
+
+/* need to come after to override above */
+.userStartPanelRight {
+  background-color: var(--secondary-color);
 }
 
 .chapter {
@@ -26,7 +34,7 @@
 /* Story Panels  */
 
 .textPanel {
-  color: white;
+  color: var(--dark-theme-text);
   height: 100vh;
   /* border: dashed 1px red; */
   display: flex;
@@ -144,6 +152,7 @@ button {
 /* Text Input */
 
 .inputText {
+  color: var(--dark-theme-text);
   background: transparent;
   border: none;
   outline: none;
@@ -170,16 +179,10 @@ h4 {
 }
 
 .highlightedText {
-  color: #ddb800;
+  color: var(--secondary-color);
 }
 
 .panelContent {
   line-height: 2em;
   font-size: 1.1rem;
-}
-
-.detailLink {
-  text-decoration: underline;
-  color: #ddb800;
-  cursor: pointer;
 }
