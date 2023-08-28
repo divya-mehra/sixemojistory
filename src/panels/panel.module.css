@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--grid-bg);
   height: 100vh;
   padding-left: 48px;
   padding-right: 48px;
@@ -34,7 +34,7 @@
 /* Story Panels  */
 
 .textPanel {
-  color: var(--dark-theme-text);
+  color: var(--body-text);
   height: 100vh;
   /* border: dashed 1px red; */
   display: flex;
@@ -103,7 +103,12 @@ hr {
 }
 
 .gridRect {
-  border: 0.5px black solid;
+  border: 0.5px var(--grid-border) solid;
+  transition: background-color 0.5s;
+}
+
+.userGridRect {
+  border: 0.5px var(--grid-text) solid;
   transition: background-color 0.5s;
 }
 
@@ -152,7 +157,7 @@ button {
 /* Text Input */
 
 .inputText {
-  color: var(--dark-theme-text);
+  color: var(--body-text);
   background: transparent;
   border: none;
   outline: none;

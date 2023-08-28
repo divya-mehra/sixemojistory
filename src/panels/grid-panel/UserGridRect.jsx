@@ -29,7 +29,7 @@ const UserGridRect = ({ buttonSelection, mousePressed, setMousePressed }) => {
 
   return (
     <div
-      className={styles.gridRect}
+      className={styles.userGridRect}
       style={{ backgroundColor: fill }}
       onMouseDown={startFill}
       onMouseEnter={checkFill}

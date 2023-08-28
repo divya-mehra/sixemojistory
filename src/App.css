@@ -9,8 +9,19 @@
 
 
   /* dark theme */
+  --body-text: #fff;
+  --body-bg: #000;
+  --grid-bg: #fff; 
+  --grid-text: #000;
+  --grid-border: #fff;
+}
+
+.textLight {
+
+  /* light theme */
   --dark-theme-text: #fff;
   --dark-theme-bg: #000;
+
 }
 
 

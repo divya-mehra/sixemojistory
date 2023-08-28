@@ -1,17 +1,15 @@
 import styles from "../panel.module.css";
 
 const StartPanelChapter = ({ number, title }) => {
-
-    
-
   const moveToPanel = (e) => {
     const clickedChapterNumber = e.currentTarget.getAttribute("data-number");
-    const targetPanel = document.querySelector(`[data-panel-number="${clickedChapterNumber}"]`);
-    
-    if (targetPanel) {
-        targetPanel.scrollIntoView({ behavior: "smooth" });
-      }
+    const targetPanel = document.querySelector(
+      `[data-panel-number="${clickedChapterNumber}"]`
+    );
 
+    if (targetPanel) {
+      targetPanel.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (

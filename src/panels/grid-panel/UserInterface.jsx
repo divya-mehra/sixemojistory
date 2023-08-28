@@ -1,6 +1,6 @@
 import styles from "../panel.module.css";
 import DownloadButton from "./DownloadButton";
-import {Tooltip } from "@mui/material";
+import { Tooltip } from "@mui/material";
 
 const UserInterface = ({ buttonSelection, setButtonSelection }) => {
   const handleClick = (e, selection) => {

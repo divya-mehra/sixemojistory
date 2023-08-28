@@ -46,16 +46,13 @@ const GridRect = ({ id, currentEmoji }) => {
   const intervalRef = useRef(null);
 
   useEffect(() => {
-
-      console.log(id)
-      if(emojis[currentEmoji]?.includes(id) && fill === "transparent") {
-        setFill("black")
-      } else if (!emojis[currentEmoji]?.includes(id) && fill === "black") {
-        setFill("transparent")
-      }
-  
+    console.log(id);
+    if (emojis[currentEmoji]?.includes(id) && fill === "transparent") {
+      setFill("black");
+    } else if (!emojis[currentEmoji]?.includes(id) && fill === "black") {
+      setFill("transparent");
+    }
   }, [currentEmoji]);
-
 
   return (
     <div className={styles.gridRect} style={{ backgroundColor: fill }}></div>
