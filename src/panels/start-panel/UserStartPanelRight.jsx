@@ -8,7 +8,8 @@ const UserStartPanelRight = () => {
         backgroundColor: "#EEC400",
       }}
     >
-      Make your own pixel emoji. 
+      <p>Why don't we go back to when it was all so simple? Just a 12x12 grid, in true Kurita form. (Of course, now we have a computer to do it.)</p>
+      <p>Use the following grid to tell your own emoji story, and browse the ones created by others before you.</p>
     </div>
   );
 };

@@ -7,6 +7,7 @@ const StoryLeft = ({
   user,
   numberUserPanels,
   setNumberUserPanels,
+  handleDownload
 }) => {
   
   return (
@@ -24,6 +25,7 @@ const StoryLeft = ({
           <UserGridPanel
             numberUserPanels={numberUserPanels}
             setNumberUserPanels={setNumberUserPanels}
+            handleDownload={handleDownload}
           />
         ) : (
           <GridPanel currentEmoji={currentEmoji} />

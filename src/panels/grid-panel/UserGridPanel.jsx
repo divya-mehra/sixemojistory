@@ -3,7 +3,7 @@ import { useState } from "react";
 import UserGridRect from "./UserGridRect";
 import UserInterface from "./UserInterface";
 
-const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
+const UserGridPanel = ({ numberUserPanels, setNumberUserPanels, handleDownload }) => {
   const divArr = [];
 
   for (let i = 1; i <= 144; i++) {
@@ -40,6 +40,7 @@ const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
         <UserInterface
           buttonSelection={buttonSelection}
           setButtonSelection={setButtonSelection}
+          handleDownload={handleDownload}
         />
       </div>
     </>

@@ -13,7 +13,8 @@ const UserTextPanel = () => {
       }}
     >
       <textarea
-      className={styles.inputText}
+        className={styles.inputText}
+        id="userTextInput"
         type="text"
         // value={inputValue}
         // onChange={handleInputChange}

@@ -31,7 +31,7 @@
   /* border: dashed 1px red; */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   padding-left: 48px;
   padding-right: 48px;
@@ -66,12 +66,11 @@ hr {
 .gridPanel {
   position: sticky;
   margin: 0 auto;
+  /* margin: 50% auto; */
   /* change this amount */
   top: calc(50vh - 240px);
-  padding-top: 96px;
-  padding-bottom: 96px;
   /* bottom: calc(50% - 50vh);*/
-
+  padding-top: 50%-240px;
   /* transform: translateY(-50%) */
   width: 480px; /* 12 columns * 40px */
   height: 480px;
@@ -84,7 +83,10 @@ hr {
   position: absolute;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Move back by half of own dimensions
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Move back by half of own dimensions
   width: 480px; /* 12 columns * 40px */
   height: 480px;
   display: grid;
@@ -101,7 +103,7 @@ hr {
   position: absolute;
   top: calc(100vh - 120px);
   left: 50%;
-  transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%);
   width: 480px; /* 12 columns * 40px */
   display: flex;
   justify-content: space-between;
@@ -124,8 +126,6 @@ hr {
   color: white;
 }
 
-
-
 .addPanelButton {
   position: sticky;
   left: 50%;
@@ -140,7 +140,6 @@ button {
   background-color: transparent;
   cursor: pointer;
 }
-
 
 /* Text Input */
 
@@ -171,9 +170,15 @@ h4 {
 }
 
 .highlightedText {
-  color: #ddb800
+  color: #ddb800;
 }
 
 .panelContent {
   line-height: 2em;
+}
+
+.detailLink {
+  text-decoration: underline;
+  color: #ddb800;
+  cursor: pointer;
 }

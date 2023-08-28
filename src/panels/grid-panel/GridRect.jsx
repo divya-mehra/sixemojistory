@@ -1,5 +1,5 @@
 import styles from "../panel.module.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const GridRect = ({ id, currentEmoji }) => {
   const emojis = {
@@ -43,18 +43,22 @@ const GridRect = ({ id, currentEmoji }) => {
   };
 
   const [fill, setFill] = useState("transparent");
-
-  // for first story
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    if (currentEmoji !== undefined) {
-      if (emojis[currentEmoji]?.includes(id)) {
-        setFill("black");
-      } else {
-        setFill("transparent");
+
+      console.log(id)
+      if(emojis[currentEmoji]?.includes(id) && fill === "transparent") {
+        setFill("black")
+      } else if (!emojis[currentEmoji]?.includes(id) && fill === "black") {
+        setFill("transparent")
       }
-    }
-  }, [currentEmoji, id]);
+  
+  }, [currentEmoji]);
+
+
+
 
   const doNothing = () => {
     // do nothing

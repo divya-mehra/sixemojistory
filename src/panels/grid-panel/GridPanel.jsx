@@ -3,6 +3,8 @@ import GridRect from "./GridRect";
 import UserInterface from "./UserInterface";
 import { useState } from "react";
 
+// TODO: add padding-bottom for last emoji
+
 const GridPanel = ({ currentEmoji }) => {
   // make grid
 
