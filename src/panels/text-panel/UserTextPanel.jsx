@@ -18,7 +18,7 @@ const UserTextPanel = () => {
         type="text"
         // value={inputValue}
         // onChange={handleInputChange}
-        placeholder="Enter text here"
+        placeholder="Add text to accompany your emoji here."
       />
     </div>
   );

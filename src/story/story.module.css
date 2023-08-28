@@ -8,7 +8,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 32px;
+  width: 3em;
   height: 100vh;
   background-color: #000000;
   transition: opacity 0.5s ease;
@@ -19,26 +19,24 @@
 /* Styling for the menu items */
 ul {
   list-style-type: none;
-  padding: 0px;
-  margin: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 32px;
+  justify-content: center;
+  padding-left: 0.7em;
   height: 100%;
+  gap: 48px;
 }
 
 .SideStickyNavLink {
   color: #fff;
-  padding: 5px;
   cursor: pointer;
   transform: rotate(-90deg);
-  transform-origin: left top; 
-
+  transform-origin: left top;
 }
 
-.SideStickyNavLinkActive
-{
-  text-decoration: underline;
+.SideStickyNavLinkActive {
+  color: #ffd500;
+  font-weight: 600;
+  /* text-decoration: underline; */
   text-underline-offset: 0.3em;
 }

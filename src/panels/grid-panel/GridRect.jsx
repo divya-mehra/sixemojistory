@@ -58,8 +58,6 @@ const GridRect = ({ id, currentEmoji }) => {
   }, [currentEmoji]);
 
 
-
-
   const doNothing = () => {
     // do nothing
   };

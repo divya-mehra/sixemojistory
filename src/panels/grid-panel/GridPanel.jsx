@@ -16,7 +16,11 @@ const GridPanel = ({ currentEmoji }) => {
 
   return (
     <>
-      <div className={`${styles.gridPanel}`}>
+      <div
+        className={`${styles.gridPanel}`}
+        style={{ paddingBottom: currentEmoji === "thumbsup" ? "25%" : "0px",
+       }}
+      >
         {divArr.map((item) => {
           return (
             <GridRect key={item.id} id={item.id} currentEmoji={currentEmoji} />
