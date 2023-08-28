@@ -39,9 +39,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
         </Tooltip>
       </div>
       <div>
-      <Tooltip title="This is a tooltip">
         <DownloadButton />
-        </Tooltip>
       </div>
     </>
   );

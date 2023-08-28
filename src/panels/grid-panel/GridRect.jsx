@@ -43,7 +43,6 @@ const GridRect = ({ id, currentEmoji }) => {
   };
 
   const [fill, setFill] = useState("transparent");
-  const [currentIndex, setCurrentIndex] = useState(0);
   const intervalRef = useRef(null);
 
   useEffect(() => {
@@ -57,10 +56,6 @@ const GridRect = ({ id, currentEmoji }) => {
   
   }, [currentEmoji]);
 
-
-  const doNothing = () => {
-    // do nothing
-  };
 
   return (
     <div className={styles.gridRect} style={{ backgroundColor: fill }}></div>

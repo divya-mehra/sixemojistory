@@ -5,7 +5,6 @@ const StartPanelChapter = ({ number, title }) => {
     
 
   const moveToPanel = (e) => {
-    // let clickedChapterNumber = e.target.id;
     const clickedChapterNumber = e.currentTarget.getAttribute("data-number");
     const targetPanel = document.querySelector(`[data-panel-number="${clickedChapterNumber}"]`);
     

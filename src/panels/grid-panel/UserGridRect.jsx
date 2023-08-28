@@ -21,7 +21,6 @@ const UserGridRect = ({ buttonSelection, mousePressed, setMousePressed }) => {
     if (mousePressed) {
       if (buttonSelection === "fill") {
         setFill("black");
-        
       } else if (buttonSelection === "erase") {
         setFill("transparent");
       }

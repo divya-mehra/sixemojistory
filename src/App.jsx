@@ -59,8 +59,6 @@ function App() {
   const [userEmojis, setuserEmojis] = useState([]);
   const [currentUserEmoji, setCurrentUserEmoji] = useState(null);
 
-  const [numberUserPanels, setNumberUserPanels] = useState(1);
-
   // download button
 
   return (
@@ -84,8 +82,6 @@ function App() {
               currentEmoji={currentUserEmoji}
               emojis={userEmojis}
               user={true}
-              numberUserPanels={numberUserPanels}
-              setNumberUserPanels={setNumberUserPanels}
             />
           </div>
         </div>
@@ -104,8 +100,6 @@ function App() {
             setCurrentEmoji={setCurrentUserEmoji}
             emojis={userEmojis}
             user={true}
-            numberUserPanels={numberUserPanels}
-            setNumberUserPanels={setNumberUserPanels}
           />
         </div>
       </div>

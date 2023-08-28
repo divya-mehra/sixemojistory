@@ -4,9 +4,7 @@ import UserGridPanel from "../panels/grid-panel/UserGridPanel";
 
 const StoryLeft = ({
   currentEmoji,
-  user,
-  numberUserPanels,
-  setNumberUserPanels,
+  user
 }) => {
   
   return (
@@ -14,7 +12,7 @@ const StoryLeft = ({
       <div
         className={styles.gridSection}
         style={{
-          height: user ? `${numberUserPanels * 100}vh` : "600vh",
+          height: user ? `100vh` : "600vh",
           position: "relative",
           width: "100%"
           
@@ -22,9 +20,6 @@ const StoryLeft = ({
       >
         {user ? (
           <UserGridPanel
-            numberUserPanels={numberUserPanels}
-            setNumberUserPanels={setNumberUserPanels}
-          
           />
         ) : (
           <GridPanel currentEmoji={currentEmoji} />

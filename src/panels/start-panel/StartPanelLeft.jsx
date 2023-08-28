@@ -10,7 +10,6 @@ const StartPanelLeft = () => {
             Em<span className={styles.titleEmoji}>😊</span>ji Story
           </h1>
           <h2>A history of the symbol in six emojis</h2>
-          {/* <!-- <p>inspired by the six-word story</p> --> */}
         </div>
 
 

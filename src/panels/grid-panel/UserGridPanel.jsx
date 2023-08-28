@@ -3,7 +3,7 @@ import { useState } from "react";
 import UserGridRect from "./UserGridRect";
 import UserInterface from "./UserInterface";
 
-const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
+const UserGridPanel = () => {
   const divArr = [];
 
   for (let i = 1; i <= 144; i++) {
@@ -12,14 +12,6 @@ const UserGridPanel = ({ numberUserPanels, setNumberUserPanels }) => {
 
   const [buttonSelection, setButtonSelection] = useState(null);
   const [mousePressed, setMousePressed] = useState(false);
-
-  // Removed the ability to add more panels for now bceause of complexity with storing emoji filled rects
-
-  // const addPanelButton = () => {
-  //   console.log(numberUserPanels);
-  //   // setNumberUserPanels((prevNumber) => prevNumber + 1);
-  //   setNumberUserPanels(numberUserPanels + 1);
-  // }
 
   return (
     <>

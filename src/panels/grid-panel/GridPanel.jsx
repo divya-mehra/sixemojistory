@@ -18,8 +18,7 @@ const GridPanel = ({ currentEmoji }) => {
     <>
       <div
         className={`${styles.gridPanel}`}
-        style={{ paddingBottom: currentEmoji === "thumbsup" ? "25%" : "0px",
-       }}
+        style={{ paddingBottom: currentEmoji === "thumbsup" ? "25%" : "0px" }}
       >
         {divArr.map((item) => {
           return (

@@ -7,8 +7,6 @@ const StoryRight = ({
   currentEmoji,
   setCurrentEmoji,
   user,
-  numberUserPanels,
-  setNumberUserPanels,
 }) => {
   console.log(currentEmoji);
 
@@ -18,7 +16,7 @@ const StoryRight = ({
         className={styles.scrollArea}
         style={{
           backgroundColor: user ? "#ffde34" : "black",
-          height: user ? `${numberUserPanels*100}vh` : "600vh",
+          height: user ? `100vh` : "600vh",
         }}
       >
         {user ? (

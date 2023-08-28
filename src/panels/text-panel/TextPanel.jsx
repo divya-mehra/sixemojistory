@@ -52,9 +52,7 @@ const TextPanel = ({
           There were precendents: the emoticon came before, and even before
           that, hand-written symbols and smileys and letters. Nabokov mused that
           we might need :) to indicate a joke at some point, several years
-          before Scott Fahlman's proposal.
-        </p>
-        <p>I wonder if Nabokov foresaw the 3,887 symbols we have today.</p>
+          before Scott Fahlman's proposal. But I wonder if Nabokov foresaw the 3,887 symbols we have today.</p>
       </>
     );
   } else if (number === "03") {
@@ -140,7 +138,7 @@ const TextPanel = ({
     <div className={`${styles.textPanel}`} data-panel-number={number} ref={ref}>
       <div className={styles.panelHeader}>
         <h4 className={styles.panelTitle}>
-          <b>{number}</b> | {title}
+          <b>{number} | {title}</b>
         </h4>
         <h4 className={styles.iconBackToTop} onClick={scrollToTop}>
           ^
@@ -148,8 +146,8 @@ const TextPanel = ({
       </div>
 
       <hr />
-      <h5 style={{ marginTop: 0 }}>{subtitle}</h5>
-      <div className={styles.panelContent}>{content}</div>
+      <h5 style={{ marginTop: 0, fontSize: "1rem" }}>{subtitle}</h5>
+      <div className={styles.panelContent} >{content}</div>
     </div>
   );
 };
