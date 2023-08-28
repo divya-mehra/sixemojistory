@@ -8,8 +8,6 @@ import UserStartPanelLeft from "./panels/start-panel/UserStartPanelLeft";
 import UserStartPanelRight from "./panels/start-panel/UserStartpanelRight";
 import SideStickyNav from "./story/SideStickyNav";
 
-import html2canvas from "html2canvas";
-
 function App() {
   const emojis = [
     {
@@ -65,73 +63,6 @@ function App() {
 
   // download button
 
-  const handleDownload = async () => {
-    CreateStory;
-    const targetDiv = document.getElementById("userPanel");
-
-    // const targetDivAll = document.getElementById("user-panel-with-text");
-    const targetText = document.getElementById("userTextInput");
-    console.log(targetText.value);
-
-    console.log("hi");
-
-    if (targetDiv) {
-      const canvas = await html2canvas(targetDiv);
-
-      // Create a wrapper div to hold the canvas and overlay elements
-      const wrapperDiv = document.createElement("div");
-      wrapperDiv.style.position = "relative";
-      wrapperDiv.appendChild(canvas);
-
-      // Add text on top of the canvas
-      const overlayText = document.createElement("div");
-      overlayText.style.position = "absolute";
-      overlayText.style.top = "50%";
-      overlayText.style.left = "50%";
-      overlayText.style.transform = "translate(-50%, -50%)";
-      overlayText.style.fontSize = "18px";
-      overlayText.style.color = "black";
-      overlayText.innerText = "Text Overlay";
-      wrapperDiv.appendChild(overlayText);
-
-      // Convert wrapper div to image
-      // const wrapperCanvas = await html2canvas(wrapperDiv);
-
-      // Append wrapperDiv to the document body to make it visible
-    document.body.appendChild(wrapperDiv);
-
-    // Wait a bit to allow the content to render
-    await new Promise((resolve) => setTimeout(resolve, 100));
-
-    // Capture the wrapperDiv with overlay
-    const wrapperCanvas = await html2canvas(wrapperDiv);
-
-    // Remove the wrapperDiv from the DOM
-    document.body.removeChild(wrapperDiv);
-
-
-
-
-      // Convert canvas to image URL
-      const imageURL = wrapperCanvas.toDataURL("image/png");
-
-      // Convert canvas to image URL
-      // const imageURL = canvas.toDataURL("image/png");
-
-      // Create a link element for downloading
-      const link = document.createElement("a");
-      link.href = imageURL;
-      link.download = "myemojistory.png"; // Set the desired filename
-
-      // Programmatically click the link to trigger the download
-      document.body.appendChild(link);
-      link.click();
-
-      // Clean up
-      document.body.removeChild(link);
-    }
-  };
-
   return (
     <>
       <div className="contentWrapper">
@@ -155,7 +86,6 @@ function App() {
               user={true}
               numberUserPanels={numberUserPanels}
               setNumberUserPanels={setNumberUserPanels}
-              handleDownload={handleDownload}
             />
           </div>
         </div>
