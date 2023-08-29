@@ -2,6 +2,8 @@ import styles from "../panel.module.css";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef } from "react";
 
+// TODO: make sure text from one panel doesn't crowd into height of another panel
+
 const TextPanel = ({
   emoji,
   title,
@@ -80,15 +82,14 @@ const TextPanel = ({
         <br></br>
         <p>
           <b>
-            <span className={styles.highlightedText}>
               The neutral emoji isn’t neutral.
-            </span>{" "}
+            
             There is no neutral.
           </b>
         </p>
       </>
     );
-  } else if (number === "06") {
+  } else if (number === "06") { // thumbs up 
     content = (
       <>
         <p>
@@ -112,13 +113,8 @@ const TextPanel = ({
           All this begs the question: <br></br>
           <b>
             Do emoji clarify (as Fahlman initially intended), or obscure?
-          </b>{" "}
-          <br></br>
-          When I send a thumbs up, do I mean yes, or do I just mean "ok, cool?"
-          And is better that the message is left ambiguous, just as "ok cool" is
-          itself ambiguous with lack of context?
-        </p>
-        <p>
+          </b>
+        
           They conflate, confuse, or clarify. Their meaning multiples tenfold.
           And while our alphabet is finite (though vocabulary, and certainly,
           language is not), emoji continue to reproduce.

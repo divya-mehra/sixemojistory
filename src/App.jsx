@@ -15,42 +15,40 @@ function App() {
       number: "01",
       title: "Young ♥️",
       content: ["hi"],
-      subtitle: "It's always about love",
+      subtitle: "1997: It's always about love",
     },
     {
       name: "poo",
       number: "02",
       title: "You're a Pile of 💩",
-      content: ["hi"],
-      subtitle: "Google pays attention emojis when expanding to global markets",
+      subtitle: "2007: Google pays attention emojis when expanding to global markets",
     },
     {
       name: "hand",
       number: "03",
-      title: "✊🏻✊🏼✊🏽✊🏾✊🏿✊ ~ Department of DEI ~",
+      title: "✊🏻✊🏼✊🏽✊🏾✊🏿 ~ Department of DEI ~",
       subtitle:
-        "Skin tone modifiers move the emoji from symbolic toward representative",
-    },
-    {
-      name: "pistol",
-      number: "04",
-      title: "What a 💣🐚! 😂",
-      content: ["hi"],
-      subtitle: "And with that, each additional emoji invited questions",
+        "2015: Skin tone modifiers move the emoji from symbolic toward representative",
     },
     {
       name: "bee",
-      number: "05",
+      number: "04",
       title: "Becky! Leave Queen 🐝 Alone 🍋",
-      content: ["hi"],
+      subtitle: "2016: And with that, each additional emoji invited questions",
+    },
+    {
+      name: "pistol",
+      number: "05",
+      title: " Does 🔫 breed real 🔫?",
+      subtitle: "2018: And with that, each additional emoji invited questions",
+      
+      
     },
     {
       name: "thumbsup",
       number: "06",
       title: "👍 (I'll see you in court)",
-      content: [
-        "Emoji is the language of cute, but it becomes less cute when it results in thousands of dollars leaving your bank account. 👍 made the news when a Canadian farmer Chris Achter responded to a contract confirmation with: 👍. When the buyer sued Achter for failing to deliver, the judge ruled that 👍 was just as good as signature and ordered Achter to cough up $61,442 USD.",
-      ],
+      subtitle: "2023: And with that, each additional emoji invited questions",
     },
   ];
 
@@ -63,8 +61,8 @@ function App() {
 
   return (
     <>
-      <div className="contentWrapper textLight">
-      {/* <div className="contentWrapper"> */}
+      {/* <div className="contentWrapper textLight"> */}
+      <div className="contentWrapper">
         <SideStickyNav />
         <div className="leftSide">
           <div id="LearnStory">

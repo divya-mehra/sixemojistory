@@ -46,12 +46,32 @@ const GridRect = ({ id, currentEmoji }) => {
   const intervalRef = useRef(null);
 
   useEffect(() => {
+    // Clear the previous interval if it exists
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
     console.log(id);
+
     if (emojis[currentEmoji]?.includes(id) && fill === "transparent") {
-      setFill("var(--grid-text)");
-    } else if (!emojis[currentEmoji]?.includes(id) && fill === "var(--grid-text)") {
+      let delay = Math.random() * 1000;
+      console.log(delay);
+      intervalRef.current = setInterval(() => {
+        setFill("var(--grid-text)");
+      }, delay);
+    } else if (
+      !emojis[currentEmoji]?.includes(id) &&
+      fill === "var(--grid-text)"
+    ) {
       setFill("transparent");
     }
+
+    // Clear the interval when the component unmounts or when currentEmoji changes
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [currentEmoji]);
 
   return (

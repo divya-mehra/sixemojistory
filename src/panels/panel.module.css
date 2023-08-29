@@ -43,7 +43,7 @@
   /* border: dashed 1px red; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   padding-left: 48px;
   padding-right: 48px;
