@@ -10,8 +10,8 @@
 
   --grid-start-panel-bg: #fff;
   --grid-user-start-panel-bg: #fff;
-  --body-start-panel-bg: #0091f9;
-  --body-user-start-panel-bg: #ffd500;
+  --body-start-panel-bg: #00cbf9;
+  --body-user-start-panel-bg: #f5fc2b;
 
   /* dark theme */
   --body-text: #fff;
@@ -25,9 +25,11 @@
 
 .textLight {
 
-  --grid-start-panel-bg: #0091f9;
-  --grid-user-start-panel-bg: #ffd500;
-  --body-start-panel-bg: #fff;
+  --grid-start-panel-bg: #00cbf9;
+  --grid-user-start-panel-bg: #f5fc2b;
+  /* --body-start-panel-bg: #fff; */
+  --body-start-panel-bg: #ffffff;
+  
   --body-user-start-panel-bg: #fff;
 
   --body-text: #000;

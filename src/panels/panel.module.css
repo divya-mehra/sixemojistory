@@ -1,7 +1,5 @@
 /* Bookend Panels */
 
-
-
 .startPanelLeft {
   display: flex;
   justify-content: center;
@@ -12,10 +10,32 @@
   padding-right: 48px;
 }
 
+/* start panel emoji animation */
+
+.titleEmoji {
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  transition-timing-function: ease-in-out;
+  transform-origin:  center; /* Set the transform origin to the left side */
+  display: inline-block;
+}
+
+@keyframes example {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+/* end of: start panel emoji animation */
+
 .userStartPanelLeft {
   background-color: var(--grid-user-start-panel-bg);
 }
-
 
 .startPanelRight {
   background-color: var(--body-start-panel-bg);

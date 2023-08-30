@@ -35,7 +35,7 @@ const TextPanel = ({
   let content;
   let detail;
 
-  if (number === "01") {
+  if (number === "011") {
     content = (
       <>
         <p>

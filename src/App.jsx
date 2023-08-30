@@ -12,43 +12,43 @@ function App() {
   const emojis = [
     {
       name: "heart",
-      number: "01",
+      number: "1999",
       title: "Young ♥️",
       content: ["hi"],
-      subtitle: "1999: The second* set of emojis is created in Japan",
+      subtitle: "The second* set of emojis is created in Japan",
     },
     {
       name: "poo",
-      number: "02",
+      number: "2007",
       title: "You're a Pile of 💩",
-      subtitle: "2007: Google considers designing for international markets",
+      subtitle: "Google considers designing for international markets",
     },
     {
       name: "hand",
-      number: "03",
+      number: "2015",
       title: "✊🏻✊🏼✊🏽✊🏾✊🏿 ~ Department of DEI ~",
       subtitle:
-        "2015: Unicode adds five skin tone modifiers to its standard yellow",
+        "Unicode adds five skin tone modifiers to its standard yellow",
     },
     {
       name: "bee",
-      number: "04",
-      title: "Becky! Leave Queen 🐝 Alone 🍋",
-      subtitle: "2016: Pop star Beyonce's release of Lemonade leads to a misunderstanding on chef Rachel Ray's Instagram",
+      number: "2016",
+      title: "Becky, Leave Queen 🐝 Alone 🍋",
+      subtitle: "Pop star Beyonce's release of Lemonade leads to a misunderstanding on chef Rachel Ray's Instagram",
     },
     {
       name: "pistol",
-      number: "05",
-      title: " Does 🔫 breed real 🔫?",
-      subtitle: "2018: Apple replaces the gun with a water pistol",
+      number: "2018",
+      title: " Do 🔫 = real 🔫?",
+      subtitle: "Apple replaces the gun with a water pistol",
       
       
     },
     {
       name: "thumbsup",
-      number: "06",
+      number: "2023",
       title: "👍 (I'll see you in court)",
-      subtitle: "2023: A Canadian judge rules that the thumbs up emoji can be considered a contractual signature",
+      subtitle: "A Canadian judge rules that the thumbs up emoji can be considered a contractual signature",
     },
   ];
 
