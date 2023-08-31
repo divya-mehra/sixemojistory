@@ -1,14 +1,18 @@
 import styles from "../panel.module.css";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef, useState } from "react";
-import kurita from "/images/kurita.jpeg";
 
 
 const ImageOnHover = ({isImageVisible, setIsImageVisible}) => {
+
+    console.log(typeof(isImageVisible.imageUrl))
+
+
     
+
     return ( <>
     {isImageVisible.visible && (
-          <img className={styles.hoverImage} src={kurita} alt="Hovered Image" />
+          <img className={styles.hoverImage} src={`/images/${isImageVisible.imageUrl}.png`} alt="Hovered Image" />
         )}
     </> );
 }

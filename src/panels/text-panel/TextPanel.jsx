@@ -48,8 +48,6 @@ const TextPanel = ({
       visible: true,
       imageUrl: image,
     });
-
-    console.log(image);
   };
 
   const hideImage = () => {
@@ -64,8 +62,18 @@ const TextPanel = ({
       <>
         <p>
           In the early 1900s, half of all teenagers in Tokyo owned a pager.
-          Japanese carrier NTT Docomo sold its Pocket Bell pagers with ❤️
-          symbols and when they removed the symbol a few years later, sales
+          Japanese carrier NTT Docomo sold its{" "} 
+          <span
+            className={styles.hoverText}
+            onMouseOver={(e) => {
+              showImage(e, "pocketbell");
+            }}
+            onMouseLeave={hideImage}
+          >
+           Pocket Bell pagers with ❤️
+          symbols 
+          </span>{" "}
+          and when they removed the symbol a few years later, sales
           declined. Employee Shigetaka Kurita, who was working on Docomo’s
           mobile internet platform at the time, took notice.{" "}
         </p>
@@ -106,27 +114,38 @@ const TextPanel = ({
           Incorporating emoji into Gmail became the goal of Project Mojo at
           Google in 2007. The tech behemoth partnered with Japanese telecom
           carrier, KDDI AU, to create an emoji set for Gmail. (It would still be
-          1 year before Apple released its emoji keyboard in Japan, and 2
-           before the Unicode Consortium was formed.)
+          1 year before Apple released its emoji keyboard in Japan, and 2 before
+          the Unicode Consortium was formed.)
         </p>
         <p>
-          One point of contention was the poo emoji. The symbol
-          became popular in Japan through a loveable character in the
-          80s show, Dr Slump. But some at Silicon Valley HQ thought
-          the emoji was offensive. What would people think of them if they added a
-          pile of steaming shit to their vocabulary?
+          One point of contention was the poo emoji. The symbol became popular
+          in Japan through{" "}
+          <span
+            className={styles.hoverText}
+            onMouseOver={(e) => {
+              showImage(e, "drslump");
+            }}
+            onMouseLeave={hideImage}
+          >
+            a loveable character in the 80s show, Dr Slump. 
+          </span>{" "}
+           But some at Silicon Valley HQ thought the emoji was offensive. What
+          would people think of them if they added a pile of steaming shit to
+          their vocabulary?
         </p>
         <p>
           Takeshi Kishimoto, Japanese product manager on the team, argued it was
           essential, adding a sense of playfulness to the mood. It expressed
           more than just a bad day; it did it with a laugh. “It says ‘I don’t
           like that,’ but softly,” said Takeshi. Darick Tong, team lead, called
-          the now-loved emoji “flexible and effective.” They won, poo won, humanity won.
+          the now-loved emoji “flexible and effective.” They won, poo won,
+          humanity won.
         </p>
         <p>
-          <b>Why 💩 is important</b>: Jokes aside, it's a characteristically cute emoji --
-          one that can say something very serious in a very playful way -- that
-          Google's design team surrendered to because of its universal appeal (despite cross-cultural resistance)
+          <b>Why 💩 is important</b>: Jokes aside, it's a characteristically
+          cute emoji -- one that can say something very serious in a very
+          playful way -- that Google's design team surrendered to because of its
+          universal appeal (despite cross-cultural resistance)
         </p>
       </>
     );
