@@ -1,6 +1,7 @@
 import styles from "../panel.module.css";
 import { useInView } from "react-intersection-observer";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import ImageOnHover from "./ImageOnHover";
 
 // TODO: make sure text from one panel doesn't crowd into height of another panel
 
@@ -35,38 +36,107 @@ const TextPanel = ({
   let content;
   let detail;
 
-  if (number === "011") {
+  const [isImageVisible, setImageVisible] = useState({
+    visible: false,
+    imageUrl: "",
+  });
+
+  const showImage = (e, image) => {
+    // console.log(e.clientX);
+    setImageVisible({
+      ...isImageVisible,
+      visible: true,
+      imageUrl: image,
+    });
+
+    console.log(image);
+  };
+
+  const hideImage = () => {
+    setImageVisible({
+      ...isImageVisible,
+      visible: false,
+    });
+  };
+
+  if (number === "1999") {
     content = (
       <>
         <p>
-          In 1995, half of all teenagers in Tokyo had a pager. Pocketbell was
-          one of the major providers. Its pagers came with a ❤️. When Pocketbell
-          removed the ❤️ a few years later, sales went down 💔.{" "}
+          In the early 1900s, half of all teenagers in Tokyo owned a pager.
+          Japanese carrier NTT Docomo sold its Pocket Bell pagers with ❤️
+          symbols and when they removed the symbol a few years later, sales
+          declined. Employee Shigetaka Kurita, who was working on Docomo’s
+          mobile internet platform at the time, took notice.{" "}
         </p>
         <p>
-          Designer S. Kurita noticed this and brought it up to DoCoMo, where he
-          was working at the time. They tasked him with adding images to the
-          keyboard. Limited by constraints of 12x12, he made 176 symbols on
-          paper. Some of his decisions were sound; others were based on personal
-          preference.
+          The company tasked Kurita with adding emojis to the carrier’s set of
+          characters. Limited to 12x12 pixels, he{" "}
+          <span
+            className={styles.hoverText}
+            onMouseOver={(e) => {
+              showImage(e, "kurita");
+            }}
+            onMouseLeave={hideImage}
+          >
+            drew out 176 symbols
+          </span>{" "}
+          on paper and handed them over to the developer. Some of his decisions
+          were based on observations; others were based on personal preference.{" "}
+        </p>
+
+        <p>
+          There’s a misconception that the word emoji comes from emoticon, the
+          practice of using ASCII characters to create pictures (the first
+          suggestion of using :-) to indicate humor is said to have come from
+          Scott Fahlman). The word emoji actually comes from the Japanese
+          characters for picture (絵, e), write(文, mo), and character (字, ji).
         </p>
         <p>
-          There were precendents: the emoticon came before, and even before
-          that, hand-written symbols and smileys and letters. Nabokov mused that
-          we might need :) to indicate a joke at some point, several years
-          before Scott Fahlman's proposal. But I wonder if Nabokov foresaw the
-          3,887 symbols we have today.
+          <b>Why ❤️ is important</b>: Rumor has it that without the popularity
+          of the heart symbol, DoCoMo wouldn't have caught on to the promise of
+          the emoji on mobile devices.
         </p>
       </>
     );
-  } else if (number === "03") {
+  } else if (number === "2007") {
     content = (
       <>
         <p>
-          {" "}
-          In 2015, the standard yellow skin tone 👋 was joined by five more.{" "}
+          Incorporating emoji into Gmail became the goal of Project Mojo at
+          Google in 2007. The tech behemoth partnered with Japanese telecom
+          carrier, KDDI AU, to create an emoji set for Gmail. (It would still be
+          1 year before Apple released its emoji keyboard in Japan, and 2
+           before the Unicode Consortium was formed.)
         </p>
-        <br></br>
+        <p>
+          One point of contention was the poo emoji. The symbol
+          became popular in Japan through a loveable character in the
+          80s show, Dr Slump. But some at Silicon Valley HQ thought
+          the emoji was offensive. What would people think of them if they added a
+          pile of steaming shit to their vocabulary?
+        </p>
+        <p>
+          Takeshi Kishimoto, Japanese product manager on the team, argued it was
+          essential, adding a sense of playfulness to the mood. It expressed
+          more than just a bad day; it did it with a laugh. “It says ‘I don’t
+          like that,’ but softly,” said Takeshi. Darick Tong, team lead, called
+          the now-loved emoji “flexible and effective.” They won, poo won, humanity won.
+        </p>
+        <p>
+          <b>Why 💩 is important</b>: Jokes aside, it's a characteristically cute emoji --
+          one that can say something very serious in a very playful way -- that
+          Google's design team surrendered to because of its universal appeal (despite cross-cultural resistance)
+        </p>
+      </>
+    );
+  } else if (number === "2015") {
+    content = (
+      <>
+        <p>
+          In 2015, the standard yellow skin tone 👋 was joined by five more.
+          There were concerns over how inclusive the emojis were.
+        </p>
         <p>
           {" "}
           One year later, The Atlantic published an article,{" "}
@@ -76,20 +146,14 @@ const TextPanel = ({
           >
             'Is It Okay to Use the White Emoji?'
           </a>
-          ,...Do I want to draw attention to my race? It's a micro-decision.
+          ,...Do I want to draw attention to my race? It's a micro-decision
+          every time you send a message.
         </p>
-
-        <br></br>
-        <p>
-          <b>
-              The neutral emoji isn’t neutral.
-            
-            There is no neutral.
-          </b>
-        </p>
+        <p>There is no neutral.</p>
       </>
     );
-  } else if (number === "06") { // thumbs up 
+  } else if (number === "06") {
+    // thumbs up
     content = (
       <>
         <p>
@@ -111,10 +175,7 @@ const TextPanel = ({
         </p>
         <p>
           All this begs the question: <br></br>
-          <b>
-            Do emoji clarify (as Fahlman initially intended), or obscure?
-          </b>
-        
+          <b>Do emoji clarify (as Fahlman initially intended), or obscure?</b>
           They conflate, confuse, or clarify. Their meaning multiples tenfold.
           And while our alphabet is finite (though vocabulary, and certainly,
           language is not), emoji continue to reproduce.
@@ -147,7 +208,13 @@ const TextPanel = ({
 
       <hr />
       <h5 style={{ marginTop: 0, fontSize: "1rem" }}>{subtitle}</h5>
-      <div className={styles.panelContent}>{content}</div>
+      <div className={styles.panelContent}>
+        {content}
+        <ImageOnHover
+          isImageVisible={isImageVisible}
+          setIsImageVisible={setImageVisible}
+        />
+      </div>
     </div>
   );
 };

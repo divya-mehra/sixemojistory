@@ -10,8 +10,7 @@ const UserStartPanelRight = () => {
         true Kurita form. (Of course, now we have a computer to do it.)
         <br></br>
         <br></br>
-        Use the following grid to tell your own emoji story, and browse the ones
-        created by others before you.
+        Use the following grid to tell your own emoji story, and then download or share.
       </h4>
     </div>
   );

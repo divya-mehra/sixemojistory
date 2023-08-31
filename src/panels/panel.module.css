@@ -14,7 +14,7 @@
 
 .titleEmoji {
   animation-name: example;
-  animation-duration: 4s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   transition-timing-function: ease-in-out;
@@ -200,7 +200,7 @@ button {
 /* Links */
 
 a {
-  color: white;
+  color: var(--body-text);
 }
 
 h4 {
@@ -211,7 +211,21 @@ h4 {
   color: var(--secondary-color);
 }
 
+.hoverText {
+  font-weight: bold;
+  cursor: crosshair;
+}
+
+.hoverImage {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  top: 50%;
+  
+}
+
 .panelContent {
   line-height: 2em;
   font-size: 1.1rem;
+  position: relative;
 }
