@@ -20,6 +20,10 @@
   --grid-text: #000;
   --grid-border: #fff;
 
+  /* TODO: can the theme transition? */
+
+  transition: background-color 0.5s;
+
 
 }
 

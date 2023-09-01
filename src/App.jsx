@@ -40,7 +40,7 @@ function App() {
       name: "pistol",
       number: "2018",
       title: " Do 🔫 = real 🔫?",
-      subtitle: "Apple replaces the gun with a water pistol",
+      subtitle: "Apple replaces the pistol with a water gun",
       
       
     },
@@ -56,14 +56,17 @@ function App() {
 
   const [userEmojis, setuserEmojis] = useState([]);
   const [currentUserEmoji, setCurrentUserEmoji] = useState(null);
+  const [isLight, setToLight] = useState(false);
 
   // download button
 
   return (
     <>
-      <div className="contentWrapper textLight">
-      {/* <div className="contentWrapper"> */}
-        <SideStickyNav />
+        <div className={(isLight) ? "contentWrapper" : "contentWrapper textLight" }>
+        <SideStickyNav 
+        isLight={isLight}
+        setToLight={setToLight}
+        />
         <div className="leftSide">
           <div id="LearnStory">
             <StartPanelLeft />
