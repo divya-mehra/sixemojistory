@@ -49,14 +49,19 @@ const TextPanel = ({
   });
 
   const showImage = (e, image) => {
+    // get position relative to container
+
     const containerRect = containerRef.current.getBoundingClientRect();
     const relativeX = e.clientX - containerRect.left;
     const relativeY = e.clientY - containerRect.top;
 
+    // set mouse position
     setMousePos({
       x: relativeX,
       y: relativeY,
     });
+
+    // set image
     setImageVisible({
       ...isImageVisible,
       visible: true,
@@ -332,7 +337,7 @@ const TextPanel = ({
   };
 
   return (
-    <div className={`${styles.textPanel}`} data-panel-number={number} ref={containerRef}>
+    <div className={`${styles.textPanel}`} data-panel-number={number} ref={ref}>
       <div className={styles.panelHeader}>
         <h4 className={styles.panelTitle}>
           <b>
@@ -346,12 +351,14 @@ const TextPanel = ({
 
       <hr />
       <h5 style={{ marginTop: 0, fontSize: "1rem" }}>{subtitle}</h5>
-      <div className={styles.panelContent}>{content}</div>
-      <ImageOnHover
-        isImageVisible={isImageVisible}
-        setIsImageVisible={setImageVisible}
-        mousePos={mousePos}
-      />
+      <div className={styles.panelContent} ref={containerRef}>
+        {content}
+        <ImageOnHover
+          isImageVisible={isImageVisible}
+          setIsImageVisible={setImageVisible}
+          mousePos={mousePos}
+        />
+      </div>
     </div>
   );
 };

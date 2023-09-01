@@ -4,18 +4,19 @@ import { useEffect, useRef, useState } from "react";
 
 const ImageOnHover = ({ isImageVisible, setIsImageVisible, mousePos }) => {
   // console.log(typeof(isImageVisible.imageUrl))
-  console.log(mousePos);
+  
 
   return (
     <>
-      {isImageVisible.visible && (
+      {/* {isImageVisible.visible && ( */}
         <img
           className={styles.hoverImage}
+          style={{visibility: (isImageVisible.visible) ? "visible" : "hidden", top: mousePos.y+ 50, left: mousePos.x-50}}
           src={`/images/${isImageVisible.imageUrl}.png`}
           alt="Hovered Image"
-          style={{ top: mousePos.y+ 50, left: mousePos.x-50, width: "50%", zIndex: 1000 }}
         />
-      )}
+      {/* )} */}
+      
     </>
   );
 };

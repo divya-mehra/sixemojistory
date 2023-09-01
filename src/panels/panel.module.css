@@ -220,6 +220,16 @@ h4 {
 
 .hoverImage {
   position: absolute;
+  width: 50%; 
+  z-index: 1000;
+}
+
+.hoverImage.visible {
+  opacity: 1;
+}
+
+.hoverImage.hidden {
+  opacity: 0;
 }
 
 .panelContent {
