@@ -20,6 +20,8 @@ const TextPanel = ({
     threshold: 0.35, // Set the threshold to 0.35
   });
 
+  const containerRef = useRef(null);
+
   console.log(currentEmoji);
 
   useEffect(() => {
@@ -41,8 +43,20 @@ const TextPanel = ({
     imageUrl: "",
   });
 
+  const [mousePos, setMousePos] = useState({
+    x: null,
+    y: null,
+  });
+
   const showImage = (e, image) => {
-    // console.log(e.clientX);
+    const containerRect = containerRef.current.getBoundingClientRect();
+    const relativeX = e.clientX - containerRect.left;
+    const relativeY = e.clientY - containerRect.top;
+
+    setMousePos({
+      x: relativeX,
+      y: relativeY,
+    });
     setImageVisible({
       ...isImageVisible,
       visible: true,
@@ -180,12 +194,12 @@ const TextPanel = ({
           message.
         </p>
         <p>
-          <b>Why ✊🏻✊🏼✊🏽✊🏾✊🏿 is important</b>: Jokes aside, it's a characteristically
-          cute emoji -- one that can say something very serious in a very
-          playful way -- that Google's design team surrendered to because of its
-          universal appeal (despite cross-cultural resistance).
+          <b>Why ✊🏻✊🏼✊🏽✊🏾✊🏿 is important</b>: Jokes aside, it's a
+          characteristically cute emoji -- one that can say something very
+          serious in a very playful way -- that Google's design team surrendered
+          to because of its universal appeal (despite cross-cultural
+          resistance).
         </p>
-        
       </>
     );
   } else if (number === "2016") {
@@ -254,13 +268,13 @@ const TextPanel = ({
         </p>
         <p>
           In 2016, there were several cases involving the pistol emoji. A
-          Frenchman went to jail for texting his ex-girlfriend the symbol,
-          which the court called a real threat. The year prior, a teenager was
-          charged for posting a policeman and a pistol emoji and another high
-          school student for posting “meet me in the Library Tuesday,” followed
-          by a pistol, knife, and bomb. (Interestingly, a case that involved a
-          pistol and a 😛 ruled in favor of the defendant, because 😛 latter
-          indicated it was a joke.){" "}
+          Frenchman went to jail for texting his ex-girlfriend the symbol, which
+          the court called a real threat. The year prior, a teenager was charged
+          for posting a policeman and a pistol emoji and another high school
+          student for posting “meet me in the Library Tuesday,” followed by a
+          pistol, knife, and bomb. (Interestingly, a case that involved a pistol
+          and a 😛 ruled in favor of the defendant, because 😛 latter indicated
+          it was a joke.){" "}
         </p>
         <p>
           With rising gun safety concerns, especially in the United States where
@@ -269,9 +283,8 @@ const TextPanel = ({
           removal of the pistol. Apple acquiesced and now we have a water gun.{" "}
         </p>
         <p>
-          <b>Why 🔫 is important</b>: 
+          <b>Why 🔫 is important</b>:
         </p>
-        
       </>
     );
   } else if (number === "2023") {
@@ -303,7 +316,7 @@ const TextPanel = ({
           language is not), emoji continue to reproduce.
         </p>
         <p>
-          <b>Why 👍 is important</b>: 
+          <b>Why 👍 is important</b>:
         </p>
       </>
     );
@@ -319,7 +332,7 @@ const TextPanel = ({
   };
 
   return (
-    <div className={`${styles.textPanel}`} data-panel-number={number} ref={ref}>
+    <div className={`${styles.textPanel}`} data-panel-number={number} ref={containerRef}>
       <div className={styles.panelHeader}>
         <h4 className={styles.panelTitle}>
           <b>
@@ -333,13 +346,12 @@ const TextPanel = ({
 
       <hr />
       <h5 style={{ marginTop: 0, fontSize: "1rem" }}>{subtitle}</h5>
-      <div className={styles.panelContent}>
-        {content}
-        <ImageOnHover
-          isImageVisible={isImageVisible}
-          setIsImageVisible={setImageVisible}
-        />
-      </div>
+      <div className={styles.panelContent}>{content}</div>
+      <ImageOnHover
+        isImageVisible={isImageVisible}
+        setIsImageVisible={setImageVisible}
+        mousePos={mousePos}
+      />
     </div>
   );
 };

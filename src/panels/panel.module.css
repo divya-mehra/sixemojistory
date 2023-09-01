@@ -58,6 +58,8 @@
 /* Story Panels  */
 
 .textPanel {
+  z-index: 1;
+  position: relative;
   color: var(--body-text);
   height: 100vh;
   /* border: dashed 1px red; */
@@ -218,16 +220,13 @@ h4 {
 
 .hoverImage {
   position: absolute;
-  width: 50%;
-  left: 50%;
-  top: 50%;
-  
 }
 
 .panelContent {
+  position: relative;
   line-height: 2em;
   font-size: 1rem;
-  position: relative;
+  z-index: 2;
 }
 
 .panelContent > p {
