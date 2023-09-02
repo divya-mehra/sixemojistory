@@ -46,8 +46,6 @@
 }
 
 
-
-
 .contentWrapper {
   height: 100vh;
   width: 100vw;
@@ -78,4 +76,20 @@
 
 .chapter {
   cursor: pointer;
+}
+
+/* For small screen size */
+
+/* CSS for screens 768px or narrower */
+@media (max-width: 768px) {
+  .leftSide {
+    /* Remove position property */
+    visibility: hidden;
+    width: 100%; /* Make it take the full width */
+  }
+
+  .rightSide {
+    position: static; /* Set it to relative positioning */
+    width: 100%; /* Make it take the full width */
+  }
 }

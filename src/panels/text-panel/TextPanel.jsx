@@ -80,8 +80,8 @@ const TextPanel = ({
     content = (
       <>
         <p>
-          In the early 1900s, half of all teenagers in Tokyo owned a pager.
-          Japanese carrier NTT Docomo sold its{" "}
+          By 1995, the pager was a Japanese sensation amongst teenagers. Carrier
+          NTT Docomo sold its{" "}
           <span
             className={styles.hoverText}
             onMouseOver={(e) => {
@@ -91,13 +91,24 @@ const TextPanel = ({
           >
             Pocket Bell pagers with ❤️ symbols
           </span>{" "}
-          and when they removed the symbol a few years later, sales declined.
-          Employee Shigetaka Kurita, who was working on Docomo’s mobile internet
-          platform at the time, took notice.{" "}
+          The heart is the most cited symbol, but records also say it had
+          numeric codes that would send short pre-programmed messages with
+          illustrations, like “I won’t forgive you” with a crying face.
+          Interestingly, this was part of the “girls’ model” while the boys
+          counterpart came with "I'm sorry,"{" "}
+          <a
+            href="https://www.nytimes.com/1995/04/10/IHT-japan-teens-flip-for-private-pagers.html"
+            target="_blank"
+          >
+            as reported by the International Herald Tribune.
+          </a>
         </p>
         <p>
-          The company tasked Kurita with adding emojis to the carrier’s set of
-          characters. Limited to 12x12 pixels, he{" "}
+          When they removed the symbol a few years later, sales declined.
+          Employee Shigetaka Kurita, who was working on Docomo’s mobile internet
+          platform at the time, took notice and the company tasked him with
+          adding emojis to the carrier’s set of characters. Limited to 12x12
+          pixels, he{" "}
           <span
             className={styles.hoverText}
             onMouseOver={(e) => {
@@ -108,15 +119,9 @@ const TextPanel = ({
             drew out 176 symbols
           </span>{" "}
           on paper and handed them over to the developer. Some of his decisions
-          were based on observations; others were based on personal preference.{" "}
-        </p>
-
-        <p>
-          There’s a misconception that the word emoji comes from emoticon, the
-          practice of using ASCII characters to create pictures (the first
-          suggestion of using :-) to indicate humor is said to have come from
-          Scott Fahlman). The word emoji actually comes from the Japanese
-          characters for picture (絵, e), write(文, mo), and character (字, ji).
+          were based on observations of human behavior, others on personal
+          preference. He likes to ski. So, he made a symbol for a big car that
+          could hold his skis.{" "}
         </p>
         <p>
           <b>Why ❤️ is important</b>: Rumor has it that without the popularity
@@ -129,15 +134,15 @@ const TextPanel = ({
     content = (
       <>
         <p>
-          Incorporating emoji into Gmail became the goal of Project Mojo at
-          Google in 2007. The tech behemoth partnered with Japanese telecom
-          carrier, KDDI AU, to create an emoji set for Gmail. (It would still be
-          1 year before Apple released its emoji keyboard in Japan, and 2 before
-          the Unicode Consortium was formed.)
+          A little over 10 years later, Google joined forces with Japanese
+          telecom carrier, KDDI AU, to create an emoji set for Gmail. This was 1
+          year before Apple released its emoji keyboard in Japan and 2 before
+          the Unicode Consortium, overlord of emoji standardization, formed.
+          Google’s initiative was called Project Mojo.
         </p>
         <p>
-          One point of contention was the poo emoji. The symbol became popular
-          in Japan through{" "}
+          One big point of contention was the poo emoji. The symbol became
+          popular in Japan through{" "}
           <span
             className={styles.hoverText}
             onMouseOver={(e) => {
@@ -147,23 +152,28 @@ const TextPanel = ({
           >
             a loveable character in the 80s show, Dr Slump.
           </span>{" "}
-          But some at Silicon Valley HQ thought the emoji was offensive. What
-          would people think of them if they added a pile of steaming shit to
-          their vocabulary?
+          But some people in Silicon Valley thought the it was offensive. What
+          would people think of them if they added a pile of steaming shit (and
+          that too, a smiling one!) to their vetted vocabulary?
         </p>
         <p>
-          Takeshi Kishimoto, Japanese product manager on the team, argued it was
-          essential, adding a sense of playfulness to the mood. It expressed
-          more than just a bad day; it did it with a laugh. “It says ‘I don’t
-          like that,’ but softly,” said Takeshi. Darick Tong, team lead, called
-          the now-loved emoji “flexible and effective.”
-          <p>They won, poo won, humanity won.</p>
+          Japnese project manager, Takeshi Kishimoto was adamant: the emoji was
+          essential. It said “’I don’t like that,’ but softly,” bringing an air
+          of lighteness. It could express a bad day with a laugh, standing in
+          for the body language we lack in online communication. Derek Tong, the
+          team lead, called the now-loved emoji flexible and effective.
         </p>
+        <p>
+          They won, poo won, humanity won. This may sound like a joke, but what
+          is the true face humanity if not dealing with your feces on a daily
+          basis?
+        </p>
+
         <p>
           <b>Why 💩 is important</b>: Jokes aside, it's a characteristically
           cute emoji -- one that can say something very serious in a very
-          playful way -- that Google's design team surrendered to because of its
-          universal appeal (despite cross-cultural resistance).
+          playful way -- that Google added despite initial cross-cultural
+          differences.
         </p>
       </>
     );
