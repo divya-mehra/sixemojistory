@@ -2,7 +2,7 @@ import styles from "./story.module.css";
 import GridPanel from "../panels/grid-panel/GridPanel";
 import UserGridPanel from "../panels/grid-panel/UserGridPanel";
 
-const StoryLeft = ({ currentEmoji, user }) => {
+const StoryLeft = ({ currentEmoji, user, isLight }) => {
   return (
     <>
       <div
@@ -13,7 +13,7 @@ const StoryLeft = ({ currentEmoji, user }) => {
           width: "100%",
         }}
       >
-        {user ? <UserGridPanel /> : <GridPanel currentEmoji={currentEmoji} />}
+        {user ? <UserGridPanel isLight={isLight} /> : <GridPanel currentEmoji={currentEmoji} />}
       </div>
     </>
   );

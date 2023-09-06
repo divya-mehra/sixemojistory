@@ -1,21 +1,26 @@
+// import { content } from "html2canvas/dist/types/css/property-descriptors/content";
 import styles from "../panel.module.css";
 import html2canvas from "html2canvas";
 
 // TODO: adjust dimensions as needed for more/less amounts of text
 // TODO: change background if on dark mode
 
-const DownloadButton = () => {
+const DownloadButton = ({isLight}) => {
   const handleDownload = async () => {
+
+    
     const targetDiv = document.getElementById("userPanel");
+
+
 
     // const targetDivAll = document.getElementById("user-panel-with-text");
     const targetText = document.getElementById("userTextInput");
     console.log(targetText.value);
 
-    console.log("hi");
-
     if (targetDiv) {
-      const canvas = await html2canvas(targetDiv);
+      const canvas = await html2canvas(targetDiv, 
+        {backgroundColor: (isLight) ? "white" : "black", // Set the canvas background color
+      });
 
       // Create a wrapper div to hold the canvas and overlay elements
       const wrapperDiv = document.createElement("div");
@@ -31,7 +36,7 @@ const DownloadButton = () => {
       // Add text on top of the canvas
       const overlayText = document.createElement("div");
       overlayText.style.fontSize = "18px";
-      overlayText.style.color = "black";
+      overlayText.style.color = (isLight) ? "white" : "black";
       overlayText.innerText = targetText.value;
       wrapperDiv.appendChild(overlayText);
 

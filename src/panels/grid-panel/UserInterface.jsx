@@ -2,7 +2,7 @@ import styles from "../panel.module.css";
 import DownloadButton from "./DownloadButton";
 import { Tooltip } from "@mui/material";
 
-const UserInterface = ({ buttonSelection, setButtonSelection }) => {
+const UserInterface = ({ buttonSelection, setButtonSelection, isLight }) => {
   const handleClick = (e, selection) => {
     buttonSelection === selection
       ? setButtonSelection(null)
@@ -41,7 +41,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
         </Tooltip>
       </div>
       <div>
-        <DownloadButton />
+        <DownloadButton isLight={isLight} />
       </div>
     </>
   );

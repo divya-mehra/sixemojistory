@@ -74,6 +74,7 @@ function App() {
               currentEmoji={currentEmoji}
               emojis={emojis}
               user={false}
+              isLight={isLight}
             />
 
             {/* User Story */}
