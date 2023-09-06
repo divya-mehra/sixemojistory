@@ -135,10 +135,9 @@ const TextPanel = ({
       <>
         <p>
           A little over 10 years later, Google joined forces with Japanese
-          telecom carrier, KDDI AU, to create an emoji set for Gmail. This was 1
-          year before Apple released its emoji keyboard in Japan and 2 before
-          the Unicode Consortium, overlord of emoji standardization, formed.
-          Google’s initiative was called Project Mojo.
+          telecom carrier, KDDI AU, to create an emoji set for Gmail. They
+          called it Project Mojo. (This was before the time of the Unicode
+          Consortium, now overlord of emoji standardization.)
         </p>
         <p>
           One big point of contention was the poo emoji. The symbol became
@@ -154,26 +153,21 @@ const TextPanel = ({
           </span>{" "}
           But some people in Silicon Valley thought the it was offensive. What
           would people think of them if they added a pile of steaming shit (and
-          that too, a smiling one!) to their vetted vocabulary?
-        </p>
-        <p>
-          Japnese project manager, Takeshi Kishimoto was adamant: the emoji was
-          essential. It said “’I don’t like that,’ but softly,” bringing an air
-          of lighteness. It could express a bad day with a laugh, standing in
-          for the body language we lack in online communication. Derek Tong, the
-          team lead, called the now-loved emoji flexible and effective.
+          that too, a smiling one!) to their vetted vocabulary? Japnese project
+          manager, Takeshi Kishimoto was adamant: the emoji is essential. It
+          says “’I don’t like that,’ but softly,” bringing an air of lighteness.
+          It expresses a bad day with a laugh, standing in for the body language
+          we lack in online communication. The team fought for it.
         </p>
         <p>
           They won, poo won, humanity won. This may sound like a joke, but what
-          is the true face humanity if not dealing with your feces on a daily
-          basis?
+          is raw humanity if not dealing with your shit on a daily basis?
         </p>
 
         <p>
-          <b>Why 💩 is important</b>: Jokes aside, it's a characteristically
-          cute emoji -- one that can say something very serious in a very
-          playful way -- that Google added despite initial cross-cultural
-          differences.
+          <b>Why 💩 is important</b>: It's a characteristically cute emoji --
+          one that can say something very serious in a very playful way -- that
+          Google added despite initial cross-cultural differences.
         </p>
       </>
     );
@@ -190,30 +184,32 @@ const TextPanel = ({
         </p>
         <p>In this world, a smiling turd can only go so far. </p>
         <p>
-          It took two more years before the Unicode Consortium added 5 skin tone
-          modifiers to the “standard” yellow. These 5 came from something called
-          the Fitzpatrick scale because it was chosen as the most
-          "technologically neutral" because of its medical origins*.
+          Two years after the campaign appeared, the Unicode Consortium finally
+          added five skin tone modifiers to the “standard” yellow. The colors
+          came from something called the Fitzpatrick scale, chosen for its
+          so-called neutrality derived from its medical origins – but is
+          anything <i>really </i> neutral?
         </p>
         <p>
-          Of course, it might feel a little weird to call out your whiteness.
-          The Atlantic published an article,{" "}
+          Once the modifiers were out, not everyone chose to use them. The
+          Atlantic even published an article,{" "}
           <a
             href="https://www.theatlantic.com/politics/archive/2016/05/white-people-dont-use-white-emoji/481695/"
             target="_blank"
           >
             'Is It Okay to Use the White Emoji?'
-          </a>
-          Irrespective of race, the question remains: do I want to draw
-          attention to my race? It's a micro-decision every time you send a
-          message.
+          </a>{" "}
+          So did many others until the people laughed and said, stop talking
+          about emoji (too late). Regardless of race, the question remains: do I
+          want to draw attention to the color of my skin in every message I send
+          out?
         </p>
         <p>
-          <b>Why ✊🏻✊🏼✊🏽✊🏾✊🏿 is important</b>: Jokes aside, it's a
-          characteristically cute emoji -- one that can say something very
-          serious in a very playful way -- that Google's design team surrendered
-          to because of its universal appeal (despite cross-cultural
-          resistance).
+          <b>Why ✊🏻✊🏼✊🏽✊🏾✊🏿 is important</b>: Our vocabulary is a reflection of
+          societal issues and norms, and representation is one of the most
+          pressing matters we face today. As the emoji became the de facto
+          method of communication, people sought to identify their own
+          personhood with the symbols they used.
         </p>
       </>
     );
