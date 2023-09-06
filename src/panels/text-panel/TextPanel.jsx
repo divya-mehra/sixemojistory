@@ -219,18 +219,17 @@ const TextPanel = ({
         <p>
           {" "}
           Not many pop stars can claim to be synonymous with their own emoji.
-          Beyonce runs with two: 🐝 (a take on Queen Bee, or Bey), and 🍋 (which
-          released the same year as her album tour, Lemonade). Use of the emoji
-          notably spiked in 2016. The most unusually notable of these spikes was
-          on celebrity chef Rachael Ray’s Instagram profile.{" "}
+          Beyonce runs with two: 🐝, for queen bey, and 🍋, which surged in
+          popularity during the tour for her album, Lemonade. Use of the emoji
+          notably spiked in 2016. The most unusual of these spikes was on
+          celebrity chef Rachael Ray’s Instagram profile.{" "}
         </p>
 
         <p>
-          Let’s back track: Lemonade included a song called <i>Sorry</i>, which
-          ended with the line, "He better call Becky with the good hair.” The
-          singer’s fans, also known as the beehive, identified Becky as a woman
-          with whom Jay-Z had an affair, and believed this person to be fashion
-          designer Rachel Roy.{" "}
+          Some key context: Lemonade included a song called <i>Sorry</i>, ending
+          in the line, "He better call Becky with the good hair.” The singer’s
+          fans, aka the beehive, identified Becky as a woman with whom Jay-Z had
+          an affair, and believed this person to be fashion designer Rachel Roy.{" "}
         </p>
 
         <p>
@@ -258,11 +257,13 @@ const TextPanel = ({
             they moved on.
           </span>{" "}
         </p>
+
         <p>
-          <b>Why 🐝🍋 is important</b>: Jokes aside, it's a characteristically
-          cute emoji -- one that can say something very serious in a very
-          playful way -- that Google's design team surrendered to because of its
-          universal appeal (despite cross-cultural resistance).
+          <b>Why 🐝🍋 is important</b>: Emoji are complex characters, and in
+          combination with words, its potential meanings multiply. Imagine
+          seeing a flurry of lemons and bees on a dinner recipe that does not
+          involve citrus nor honey. The subtext lives large, especially online
+          and out of context.
         </p>
       </>
     );
@@ -270,28 +271,41 @@ const TextPanel = ({
     content = (
       <>
         <p>
-          When Scott Fahlman first suggested :-) to indicate a joke, he probably
-          didn’t anticipate 3,664 pictorial variations coming into being. Now
-          judges have to decide: in any given context, how much significance
-          does the emoji hold? <i>Is</i> it a joke or does the cute little
-          symbol bear a relation to concrete, potentially life-threatening,
-          actions?{" "}
+          When Kurita created his first set of emojis, he probably didn’t
+          anticipate 3,664 pictorial variations coming into being. Now judges
+          have to decide: in any given context, how much significance does the
+          emoji hold? <i>Is</i> it a joke or does the cute little symbol bear a
+          relation to concrete, potentially life-threatening, actions?{" "}
         </p>
         <p>
           In 2016, there were several cases involving the pistol emoji. A
           Frenchman went to jail for texting his ex-girlfriend the symbol, which
           the court called a real threat. The year prior, a teenager was charged
-          for posting a policeman and a pistol emoji and another high school
-          student for posting “meet me in the Library Tuesday,” followed by a
-          pistol, knife, and bomb. (Interestingly, a case that involved a pistol
-          and a 😛 ruled in favor of the defendant, because 😛 latter indicated
-          it was a joke.){" "}
+          for posting 👮‍♂️🔫 and another high school student for posting “meet me
+          in the Library Tuesday,” followed by 🔫 🔪 💣. (Interestingly, in a
+          case that involved death threat and a 😛,{"  "}
+          <a
+            href="https://www.socialmedialawbulletin.com/2017/08/legal-implications-emoji-use/"
+            target="_blank"
+          >
+            the defendant argued 😛 indicated it was a joke.)
+          </a>{" "}
         </p>
         <p>
           With rising gun safety concerns, especially in the United States where
-          mass shootings increased ten-fold between 2010 and 2015, New Yorkers
-          Against Gun Violence wrote an open letter to Apple, requesting the
-          removal of the pistol. Apple acquiesced and now we have a water gun.{" "}
+          mass shootings were becoming horrifyingly commonplace relative to
+          other nations, New Yorkers Against Gun Violence{" "}
+          <a href="https://www.youtube.com/watch?v=hbXAXYYZJxM" target="_blank">
+            ran a campaign
+          </a>{" "}
+          to convince Apple to remove the pistol. Apple acquiesced and now we
+          have a water gun.{" "}
+        </p>
+        <p>
+          Other platforms followed, the last being Facebook. Some may ask: well,
+          why do we still have a bomb? For one, lobbying. But also: a bomb can
+          be used to say something is bomb. Again, the language of emoji adapts
+          to our words and behaviors.
         </p>
         <p>
           <b>Why 🔫 is important</b>:
@@ -320,11 +334,11 @@ const TextPanel = ({
           referred to sexual acts or meth.
         </p>
         <p>
-          All this begs the question: <br></br>
-          <b>Do emoji clarify (as Fahlman initially intended), or obscure?</b>
-          They conflate, confuse, or clarify. Their meaning multiples tenfold.
-          And while our alphabet is finite (though vocabulary, and certainly,
-          language is not), emoji continue to reproduce.
+          All this begs the question we've been asking all along: Do emoji
+          clarify or obscure? They conflate, confuse, or clarify. Their meaning
+          multiples tenfold. And while our alphabet is finite (though
+          vocabulary, and certainly, language is not), emoji continue to
+          reproduce.
         </p>
         <p>
           <b>Why 👍 is important</b>:
