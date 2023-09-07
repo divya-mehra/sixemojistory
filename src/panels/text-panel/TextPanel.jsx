@@ -123,11 +123,13 @@ const TextPanel = ({
           preference. He likes to ski. So, he made a symbol for a big car that
           could hold his skis.{" "}
         </p>
+        
         <p>
           <b>Why ❤️ is important</b>: Rumor has it that without the popularity
           of the heart symbol, Docomo wouldn't have caught on to the promise of
           the emoji on mobile devices.
         </p>
+        <p style={{fontSize: '0.75em'}}>*Recent evidence points to an earlier set of emoji in 1997, now available for view on Emojipedia.</p>
       </>
     );
   } else if (number === "2007") {

@@ -15,7 +15,7 @@ function App() {
       number: "1999",
       title: "Young ♥️",
       content: ["hi"],
-      subtitle: "The second* set of emojis is created in Japan",
+      subtitle: "The first* set of emojis is created in Japan",
     },
     {
       name: "poo",
