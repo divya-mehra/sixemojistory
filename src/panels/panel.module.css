@@ -234,9 +234,22 @@ h4 {
 .panelContent {
   position: relative;
   line-height: 2em;
-  font-size: 0.8em;
   z-index: 2;
 }
+
+/* Responsive font size based on viewport width */
+@media screen and (max-width: 1199px) {
+  .panelContent {
+    font-size: 0.8em; 
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .panelContent {
+    font-size: 1em; 
+  }
+}
+
 
 .panelContent > p {
   padding-bottom: 8px;
