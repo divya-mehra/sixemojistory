@@ -68,7 +68,7 @@ const UserInterface = ({
               backgroundColor: "#000000", // Change to your desired color
             },
             "& .Mui-checked .MuiSwitch-track": {
-              backgroundColor: "black", // Track color when switched on
+              backgroundColor: "#000000", // Track color when switched on
             },
           }}
         />

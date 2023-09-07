@@ -308,7 +308,9 @@ const TextPanel = ({
           to our words and behaviors.
         </p>
         <p>
-          <b>Why 🔫 is important</b>:
+          <b>Why 🔫 is important</b>: Just as emoji are added, they are also
+          removed. The campaign to remove certain emoji beg the question of how
+          the visuals available to us influence our behaviors.
         </p>
       </>
     );
@@ -341,7 +343,9 @@ const TextPanel = ({
           reproduce.
         </p>
         <p>
-          <b>Why 👍 is important</b>:
+          <b>Why 👍 is important</b>: The recent court cases serve as a reminder
+          that in font of the law, emoji may hold the same weight as a
+          signature.
         </p>
       </>
     );
