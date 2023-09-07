@@ -8,7 +8,8 @@ import html2canvas from "html2canvas";
 const DownloadButton = ({isLight}) => {
   const handleDownload = async () => {
 
-    
+    console.log(isLight);
+
     const targetDiv = document.getElementById("userPanel");
 
 
@@ -31,12 +32,13 @@ const DownloadButton = ({isLight}) => {
       wrapperDiv.style.flexDirection = "column";
       wrapperDiv.style.alignItems = "center";
       wrapperDiv.style.gap = "24px";
+      wrapperDiv.style.backgroundColor = (isLight) ? "white" : "black";
       wrapperDiv.appendChild(canvas);
 
       // Add text on top of the canvas
       const overlayText = document.createElement("div");
       overlayText.style.fontSize = "18px";
-      overlayText.style.color = (isLight) ? "white" : "black";
+      overlayText.style.color = (isLight) ? "black" : "white";
       overlayText.innerText = targetText.value;
       wrapperDiv.appendChild(overlayText);
 

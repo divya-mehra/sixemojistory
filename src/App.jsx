@@ -64,8 +64,6 @@ function App() {
     <>
         <div className={(isLight) ? "contentWrapper" : "contentWrapper textLight" }>
         <SideStickyNav 
-        isLight={isLight}
-        setToLight={setToLight}
         />
         <div className="leftSide">
           <div id="LearnStory">
@@ -74,7 +72,6 @@ function App() {
               currentEmoji={currentEmoji}
               emojis={emojis}
               user={false}
-              isLight={isLight}
             />
 
             {/* User Story */}
@@ -85,6 +82,8 @@ function App() {
               currentEmoji={currentUserEmoji}
               emojis={userEmojis}
               user={true}
+              isLight={isLight}
+              setToLight={setToLight}
             />
           </div>
         </div>

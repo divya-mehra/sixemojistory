@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import { Switch } from "@mui/material";
 // import { opacity } from "html2canvas/dist/types/css/property-descriptors/opacity";
 
-const SideStickyNav = ({isLight, setToLight}) => {
+const SideStickyNav = () => {
   const [isHovered, setIsHovered] = useState(false);
   
 
@@ -17,12 +17,6 @@ const SideStickyNav = ({isLight, setToLight}) => {
     console.log("Mouse left");
     setIsHovered(false);
   };
-
-  const handleThemeChange = () => {
-    setToLight(!isLight);
-  }
-
-  
 
   return (
     <nav
@@ -58,25 +52,7 @@ const SideStickyNav = ({isLight, setToLight}) => {
         </Link>
 
       </ul>
-               {/* toggle theme */}
-               <Switch
-               checked={isLight}
-               onChange={handleThemeChange}
-      className={styles.SideStickyNavLink}
-          sx={{
-            "& .MuiSwitch-thumb": {
-              color: "var(--secondary-color)", // Change to your desired color
-            },
-            "& .MuiSwitch-track": {
-              backgroundColor: "#000000", // Change to your desired color
-            },
-            "& .Mui-checked .MuiSwitch-track": {
-              backgroundColor: "black", // Track color when switched on
-            },
-            display: "absolute",
-            bottom: 50
-          }}
-        />
+            
      
     </nav>
   );

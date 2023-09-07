@@ -3,7 +3,7 @@ import { useState } from "react";
 import UserGridRect from "./UserGridRect";
 import UserInterface from "./UserInterface";
 
-const UserGridPanel = ({isLight}) => {
+const UserGridPanel = ({setToLight, isLight}) => {
   const divArr = [];
 
   for (let i = 1; i <= 144; i++) {
@@ -32,6 +32,7 @@ const UserGridPanel = ({isLight}) => {
         <UserInterface
           buttonSelection={buttonSelection}
           setButtonSelection={setButtonSelection}
+          setToLight={setToLight}
           isLight={isLight}
         />
       </div>
