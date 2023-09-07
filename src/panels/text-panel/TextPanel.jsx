@@ -303,14 +303,15 @@ const TextPanel = ({
         </p>
         <p>
           Other platforms followed, the last being Facebook. Some may ask: well,
-          why do we still have a bomb? For one, lobbying. But also: a bomb can
-          be used to say something is bomb. Again, the language of emoji adapts
-          to our words and behaviors.
+          why do we still have a bomb? Two hypotheses: 1) the bomb is a more
+          stylized version of the real thing, and 2) a bomb can be used to say
+          something is bomb. Again, the language of emoji adapts to our cultural
+          vernacular.
         </p>
         <p>
           <b>Why 🔫 is important</b>: Just as emoji are added, they are also
           removed. The campaign to remove certain emoji beg the question of how
-          the visuals available to us influence our behaviors.
+          the visuals available to us influence our thinking and behaviors.
         </p>
       </>
     );
