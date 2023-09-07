@@ -207,10 +207,11 @@ const TextPanel = ({
         <p>
           <b>Why ✊🏻✊🏼✊🏽✊🏾✊🏿 is important</b>: Our vocabulary is a reflection of
           societal issues and norms, and representation is one of the most
-          pressing matters we face today. As the emoji became the de facto
-          method of communication, people sought to identify their own
-          personhood with the symbols they used.
+          pressing matters we face today.
         </p>
+        {/* As the emoji became the de facto
+          method of communication, people sought to identify their own
+          personhood with the symbols they used. */}
       </>
     );
   } else if (number === "2016") {
@@ -345,7 +346,7 @@ const TextPanel = ({
         </p>
         <p>
           <b>Why 👍 is important</b>: The recent court cases serve as a reminder
-          that in font of the law, emoji may hold the same weight as a
+          that in front of the law, emoji may hold the same weight as a
           signature.
         </p>
       </>

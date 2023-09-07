@@ -13,7 +13,7 @@ const StartPanelLeft = () => {
         </h1>
         <h2>A brief history of the symbol</h2>
         <h3>
-          <i>(as told through six old-school* emojis)</i>
+          <i>(as told through six old-school emojis)</i>
         </h3>
       </div>
     </div>
