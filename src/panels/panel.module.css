@@ -40,7 +40,12 @@
   padding-bottom: 70vh; /*makes sure there's white space */
 }
 
-.gridPanel {
+.gridContainer {
+  /* position: relative;  */
+  height: 100%;
+}
+
+.grid {
   position: sticky;
   margin: 0 auto;
   top: calc(50vh - 240px);
