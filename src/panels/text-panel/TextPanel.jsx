@@ -25,12 +25,24 @@ const TextPanel = ({
 
   // checking for center
 
-  const contextRef = useRef(null);
-  
+  // const ref1 = useRef(null);
+  // const ref2 = useRef(null);
+  const refs = {
+    ref1: useRef(null),
+    ref2: useRef(null),
+    ref3: useRef(null),
+  };
+
   const [contextElementRef, inViewContext] = useInView({
     threshold: 0,
   });
-  const [isElementInCenter, setIsElementInCenter] = useState(false);
+
+  const [isElementInCenter, setIsElementInCenter] = useState({
+    ref1: false,
+    ref2: false,
+    ref3: false,
+    // Add more refs if needed
+  });
 
   //  end checking for center
 
@@ -54,8 +66,8 @@ const TextPanel = ({
             Carrier NTT Docomo sold its{" "}
             <span
               className={styles.hoverText}
-              ref={contextRef}
-              style={{ background: isElementInCenter ? "red" : "black" }}
+              ref={refs.ref1}
+              style={{ background: isElementInCenter.ref1 ? "red" : "black" }}
             >
               Pocket Bell pagers with ❤️ symbols
             </span>{" "}
@@ -79,8 +91,8 @@ const TextPanel = ({
             to 12x12 pixels, he{" "}
             <span
               className={styles.hoverText}
-              ref={contextRef}
-              style={{ background: isElementInCenter ? "red" : "black" }}
+              ref={refs.ref2}
+              style={{ background: isElementInCenter.ref2 ? "red" : "black" }}
             >
               drew out 176 symbols
             </span>{" "}
@@ -329,23 +341,39 @@ const TextPanel = ({
 
   //
 
+  const checkElementPosition = () => {
+    let refNames = ["ref1", "ref2"]
+    // let refName= "ref1"  
+
+    refNames.forEach((refName) => {
+    let ref = refs[refName];
+    const contextElement = ref.current;
+    if (contextElement) {
+      const elementRect = contextElement.getBoundingClientRect();
+      const centered = window.innerHeight / 2;
+
+      const targetTop = centered + window.innerHeight * 0.1;
+      const targetBottom = centered - window.innerHeight * 0.3;
+
+      // Check if the middle of the element is close to the center of the viewport
+      const isCentered =
+        elementRect.top <= targetTop && elementRect.bottom >= targetBottom;
+
+      // Update the state for the current element
+
+      setIsElementInCenter((prevStates) => ({
+        ...prevStates,
+        [refName]: isCentered,
+      }));
+    }
+  })
+  };
+
   useEffect(() => {
-    const checkElementPosition = () => {
-      const contextElement = contextRef.current;
-      if (contextElement) {
-        const elementRect = contextElement.getBoundingClientRect();
-        const centered = window.innerHeight / 2;
 
-        const targetTop = centered + window.innerHeight * 0.1;
-        const targetBottom = centered - window.innerHeight * 0.3;
 
-        // Check if the middle of the element is close to the center of the viewport
-        const isCentered =
-          elementRect.top <= targetTop && elementRect.bottom >= targetBottom;
 
-        setIsElementInCenter(isCentered);
-      }
-    };
+    
 
     // Initial check when the component mounts
     checkElementPosition();
