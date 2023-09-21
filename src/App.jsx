@@ -8,6 +8,8 @@ import UserStartPanelLeft from "./panels/start-panel/UserStartPanelLeft";
 import UserStartPanelRight from "./panels/start-panel/UserStartpanelRight";
 import SideStickyNav from "./story/SideStickyNav";
 
+import { Grid, Paper } from '@mui/material';
+
 function App() {
   const emojis = [
     {
@@ -63,9 +65,11 @@ function App() {
   return (
     <>
         <div className={(isLight) ? "contentWrapper" : "contentWrapper textLight" }>
+        
         <SideStickyNav 
         />
-        <div className="leftSide">
+        <Grid container spacing={2}>
+        {/* <div className="leftSide"> */}
           <div id="LearnStory">
             <StartPanelLeft />
             <StoryLeft
@@ -86,8 +90,8 @@ function App() {
               setToLight={setToLight}
             />
           </div>
-        </div>
-        <div className="rightSide">
+        {/* </div> */}
+        {/* <div className="rightSide"> */}
           <StartPanelRight emojis={emojis} />
           <StoryRight
             currentEmoji={currentEmoji}
@@ -103,7 +107,8 @@ function App() {
             emojis={userEmojis}
             user={true}
           />
-        </div>
+        {/* </div> */}
+        </Grid>
       </div>
     </>
   );

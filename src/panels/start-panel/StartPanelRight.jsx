@@ -1,5 +1,6 @@
 import styles from "../panel.module.css";
 import StartPanelChapter from "./StartPanelChapter";
+import { Grid, Paper } from '@mui/material';
 
 const StartPanelRight = ({ emojis }) => {
   return (

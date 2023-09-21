@@ -8,6 +8,8 @@
   height: 100vh;
   padding-left: 48px;
   padding-right: 48px;
+  /* width: 50vw;
+  box-sizing: border-box; */
 }
 
 /* start panel emoji animation */
@@ -35,20 +37,30 @@
 
 .userStartPanelLeft {
   background-color: var(--grid-user-start-panel-bg);
+  /* box-sizing: border-box;
+  width: 50vw; */
+
 }
 
 .startPanelRight {
   background-color: var(--body-start-panel-bg);
+  /* box-sizing: border-box;
+  width: 50vw; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100vh;
   padding-left: 48px;
   padding-right: 48px;
+  
+
 }
 
 .userStartPanelRight {
   background-color: var(--body-user-start-panel-bg);
+  /* box-sizing: border-box;
+  width: 50vw; */
+
 }
 
 .chapter {
@@ -60,6 +72,8 @@
 .textPanel {
   z-index: 1;
   position: relative;
+  /* box-sizing: border-box;
+  width: 50vw; */
   color: var(--body-text);
   height: 100vh;
   /* overflow-y:auto; */
@@ -69,6 +83,8 @@
   align-items: flex-start;
   padding-left: 48px;
   padding-right: 48px;
+  
+
 }
 
 /* Responsive font size based on viewport width */

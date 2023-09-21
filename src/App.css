@@ -1,13 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=B612+Mono:wght@700&family=Bowlby+One&family=Changa+One&family=Major+Mono+Display&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 
-
 /* Styling & Themes Colors */
 
 :root {
   --secondary-color: #f1ed00;
   --tertiary-color: #0091f9;
-  
-
 
   --grid-start-panel-bg: #fff;
   --grid-user-start-panel-bg: #fff;
@@ -17,35 +14,29 @@
   /* dark theme */
   --body-text: #fff;
   --body-bg: #000;
-  --grid-bg: #fff; 
+  --grid-bg: #fff;
   --grid-text: #000;
   --grid-border: #fff;
 
   /* TODO: can the theme transition? */
 
   transition: background-color 0.5s;
-
-
 }
 
 .textLight {
-
   --grid-start-panel-bg: #00cbf9;
   --grid-user-start-panel-bg: #f1ed00;
   /* --body-start-panel-bg: #fff; */
   --body-start-panel-bg: #ffffff;
-  
+
   --body-user-start-panel-bg: #fff;
 
   --body-text: #000;
   --body-bg: #fff;
-  --grid-bg: #000; 
+  --grid-bg: #000;
   --grid-text: #fff;
   --grid-border: #000;
-
-
 }
-
 
 .contentWrapper {
   height: 100vh;
@@ -53,12 +44,12 @@
   display: flex;
   position: relative;
 }
-
+/* 
 .leftSide {
   position: absolute;
   top: 0;
   left: 0;
-  /* bottom: 0; */
+
   width: 50%;
   height: 100%;
   background-color: white;
@@ -68,10 +59,10 @@
   position: absolute;
   top: 0;
   right: 0;
-  /* bottom: 0; */
+
   width: 50%;
   background-color: black;
-}
+} */
 
 /* Move this */
 
@@ -84,13 +75,13 @@
 /* CSS for screens 768px or narrower */
 @media (max-width: 768px) {
   .leftSide {
-    /* Remove position property */
+    
     visibility: hidden;
-    width: 100%; /* Make it take the full width */
+    width: 100%;
   }
 
   .rightSide {
-    position: static; /* Set it to relative positioning */
-    width: 100%; /* Make it take the full width */
+    position: static; 
+    width: 100%; 
   }
 }
