@@ -44,6 +44,16 @@
   display: flex;
   position: relative;
 }
+
+.test {
+  width: 100vw;
+  height: 100vh;
+}
+
+.story {
+  width: 100vw;
+}
+
 /* 
 .leftSide {
   position: absolute;

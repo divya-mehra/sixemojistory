@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import MainStory from "./story/MainStory";
 import StoryLeft from "./story/storyLeft";
 import StoryRight from "./story/storyRight";
 import StartPanelLeft from "./panels/start-panel/StartPanelLeft";
@@ -8,7 +9,8 @@ import UserStartPanelLeft from "./panels/start-panel/UserStartPanelLeft";
 import UserStartPanelRight from "./panels/start-panel/UserStartpanelRight";
 import SideStickyNav from "./story/SideStickyNav";
 
-import { Grid, Paper } from '@mui/material';
+import { Grid, Paper } from "@mui/material";
+import StartPanelChapter from "./panels/start-panel/StartPanelChapter";
 
 function App() {
   const emojis = [
@@ -29,28 +31,27 @@ function App() {
       name: "hand",
       number: "2015",
       title: "✊🏻✊🏼✊🏽✊🏾✊🏿 ~ Department of DEI ~",
-      subtitle:
-        "Unicode adds five skin tone modifiers to its standard yellow",
+      subtitle: "Unicode adds five skin tone modifiers to its standard yellow",
     },
     {
       name: "bee",
       number: "2016",
       title: "Becky, Leave Queen 🐝 Alone 🍋",
-      subtitle: "Pop star Beyonce's release of Lemonade leads to a misunderstanding on chef Rachel Ray's Instagram",
+      subtitle:
+        "Pop star Beyonce's release of Lemonade leads to a misunderstanding on chef Rachel Ray's Instagram",
     },
     {
       name: "pistol",
       number: "2018",
       title: " Do 🔫 = real 🔫?",
       subtitle: "Apple replaces the pistol with a water gun",
-      
-      
     },
     {
       name: "thumbsup",
       number: "2023",
       title: "👍 (I'll see you in court)",
-      subtitle: "A Canadian judge rules that the thumbs up emoji can be considered a contractual signature",
+      subtitle:
+        "A Canadian judge rules that the thumbs up emoji can be considered a contractual signature",
     },
   ];
 
@@ -64,23 +65,31 @@ function App() {
 
   return (
     <>
-        <div className={(isLight) ? "contentWrapper" : "contentWrapper textLight" }>
-        
-        <SideStickyNav 
-        />
-        <Grid container spacing={2}>
-        {/* <div className="leftSide"> */}
-          <div id="LearnStory">
-            <StartPanelLeft />
-            <StoryLeft
-              currentEmoji={currentEmoji}
-              emojis={emojis}
-              user={false}
-            />
+      <div className={isLight ? "contentWrapper" : "contentWrapper textLight"}>
+        <SideStickyNav />
 
-            {/* User Story */}
+        <Grid>
+          {/* first start section */}
+          <div className="test">
+            <Grid container spacing={2}>
+              <Grid item xs={6}>
+                <StartPanelLeft />
+              </Grid>
+              <Grid item xs={6}>
+                <StartPanelRight emojis={emojis} />
+              </Grid>
+            </Grid>
           </div>
-          <div id="CreateStory">
+          {/* end start section */}
+
+          {/* story section */}
+          <div id="LearnStory" className="story">
+            <MainStory currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={emojis} />
+          </div>
+
+          {/* deal with this bit later */}
+
+          {/* <div id="CreateStory">
             <UserStartPanelLeft />
             <StoryLeft
               currentEmoji={currentUserEmoji}
@@ -90,24 +99,16 @@ function App() {
               setToLight={setToLight}
             />
           </div>
-        {/* </div> */}
-        {/* <div className="rightSide"> */}
-          <StartPanelRight emojis={emojis} />
-          <StoryRight
-            currentEmoji={currentEmoji}
-            setCurrentEmoji={setCurrentEmoji}
-            emojis={emojis}
-            user={false}
-          />
-          {/* User Story */}
+
           <UserStartPanelRight />
           <StoryRight
             currentEmoji={currentUserEmoji}
             setCurrentEmoji={setCurrentUserEmoji}
             emojis={userEmojis}
             user={true}
-          />
-        {/* </div> */}
+          /> */}
+
+
         </Grid>
       </div>
     </>
