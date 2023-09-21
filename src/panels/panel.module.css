@@ -31,17 +31,34 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  
+
   color: var(--body-text);
-  
-  
+
   padding-left: 48px;
   padding-right: 48px;
   padding-bottom: 70vh; /*makes sure there's white space */
 }
 
+.textSection p:first-child {
+  margin-top: 10vh; /* Add top margin to the first paragraph */
+}
+
+.textSection p:not(:last-child) {
+  margin-bottom: 30vh; /* Add margin-bottom for all paragraphs except the last one */
+}
+
+.hoverText {
+  font-weight: bold;
+  cursor: crosshair;
+  background-color: transparent;
+}
+
+.highlightedText {
+  background-color: yellow;
+}
+
 .gridContainer {
-  position: relative; 
+  position: relative;
   height: 100%;
 }
 
@@ -67,16 +84,14 @@
   width: 50vw; /* 50% of the viewport width */
   height: auto; /* Maintain aspect ratio */
   position: fixed; /* Position it outside the grid container */
-  top: calc(50vh - 240px);
-  left: calc(24vw - 240px);
+  top: calc(50vh);
   z-index: 2; /* Set a z-index to place it above other elements if necessary */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-
 /* Bookend Panels */
-
 
 /* start panel emoji animation */
 
@@ -86,7 +101,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
   transition-timing-function: ease-in-out;
-  transform-origin:  center; /* Set the transform origin to the left side */
+  transform-origin: center; /* Set the transform origin to the left side */
   display: inline-block;
 }
 
@@ -101,29 +116,21 @@
 
 /* end of: start panel emoji animation */
 
-
-
 /* User Section */
 
 .userStartPanelLeft {
   background-color: var(--grid-user-start-panel-bg);
   /* box-sizing: border-box;
   width: 50vw; */
-
 }
 
 .userStartPanelRight {
   background-color: var(--body-user-start-panel-bg);
   /* box-sizing: border-box;
   width: 50vw; */
-
 }
 
-
-
 /* Story Panels  */
-
-
 
 /* Responsive font size based on viewport width */
 /* @media screen and (max-width: 768px) {
@@ -137,7 +144,6 @@
     font-size: 16px;
   }
 } */
-
 
 hr {
   width: 100%;
@@ -155,9 +161,6 @@ hr {
 }
 
 /* Grid Side */
-
-
-
 
 .userGridPanel {
   position: absolute;
@@ -255,18 +258,9 @@ h4 {
   margin-bottom: 4px;
 }
 
-.highlightedText {
-  color: var(--secondary-color);
-}
-
-.hoverText {
-  font-weight: bold;
-  cursor: crosshair;
-}
-
 .hoverImage {
   position: absolute;
-  width: 60%; 
+  width: 60%;
   /* z-index: 1000; */
   transition: opacity 0.5s ease-in-out;
 }
@@ -280,16 +274,15 @@ h4 {
 /* Responsive font size based on viewport width */
 @media screen and (max-width: 1199px) {
   .panelContent {
-    font-size: 0.8em; 
+    font-size: 0.8em;
   }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1400px) {
   .panelContent {
-    font-size: 1em; 
+    font-size: 1em;
   }
 }
-
 
 .panelContent > p {
   padding-bottom: 8px;

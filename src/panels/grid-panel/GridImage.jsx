@@ -2,7 +2,7 @@ const GridImage = () => {
   return (
     <img
       style={{
-
+        width: "50%"
         // opacity: 1,
         // zIndex: 1000,
       }}

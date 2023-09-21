@@ -24,7 +24,7 @@ const GridPanel = ({ currentEmoji, isElementInCenter }) => {
       <div
         className={`${styles.grid}`}
         // style={{ paddingBottom: currentEmoji === "hand" ? "25%" : "0px" }}
-        style={{ opacity: isElementInCenter.ref1 ? 0.1 : 1,
+        style={{ opacity: isElementInCenter.ref1 ? 0.3 : 1,
           zIndex: isElementInCenter.ref1 ? 1 : 2, }}
       >
         {divArr.map((item) => {

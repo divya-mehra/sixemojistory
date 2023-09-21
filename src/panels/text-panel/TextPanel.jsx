@@ -41,11 +41,18 @@ const TextPanel = ({
     {
       year: "1999",
       content: (
-        <>
+        <div className={styles.textSection}>
           <p>
             By 1995, the pager was a Japanese sensation amongst teenagers.
             Carrier NTT Docomo sold its{" "}
-            <span className={styles.hoverText} ref={refs.ref1} style={{background: (isElementInCenter.ref1) ? "red" : "transparent"}}>
+            <span
+              className={
+                isElementInCenter.ref1
+                  ? `${styles.hoverText} ${styles.highlightedText}`
+                  : `styles.hoverText`
+              }
+              ref={refs.ref1}
+            >
               Pocket Bell pagers with ❤️ symbols
             </span>{" "}
             The heart is the most cited symbol, but records also say it had
@@ -66,7 +73,14 @@ const TextPanel = ({
             internet platform at the time, took notice and the company tasked
             him with adding emojis to the carrier’s set of characters. Limited
             to 12x12 pixels, he{" "}
-            <span className={styles.hoverText} ref={refs.ref2}>
+            <span
+              className={
+                isElementInCenter.ref2
+                  ? `${styles.hoverText} ${styles.highlightedText}`
+                  : `styles.hoverText`
+              }
+              ref={refs.ref2}
+            >
               drew out 176 symbols
             </span>{" "}
             on paper and handed them over to the developer. Some of his
@@ -84,13 +98,13 @@ const TextPanel = ({
             *Recent evidence points to an earlier set of emoji in 1997, now
             available for view on Emojipedia.
           </p>
-        </>
+        </div>
       ),
     },
     {
       year: "2007",
       content: (
-        <>
+        <div className={styles.textSection}>
           <p>
             A little over 10 years later, Google joined forces with Japanese
             telecom carrier, KDDI AU, to create an emoji set for Gmail. They
@@ -122,7 +136,7 @@ const TextPanel = ({
             one that can say something very serious in a very playful way --
             that Google added despite initial cross-cultural differences.
           </p>
-        </>
+        </div>
       ),
     },
     {
