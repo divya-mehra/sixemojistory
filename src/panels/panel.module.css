@@ -1,4 +1,4 @@
-/* Bookend Panels */
+/* First Start Panels */
 
 .startPanelLeft {
   display: flex;
@@ -8,9 +8,56 @@
   height: 100vh;
   padding-left: 48px;
   padding-right: 48px;
-  /* width: 50vw;
-  box-sizing: border-box; */
 }
+
+.startPanelRight {
+  background-color: var(--body-start-panel-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.chapter {
+  cursor: pointer;
+}
+
+/* Sections */
+
+.textPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  
+  color: var(--body-text);
+  
+  
+  padding-left: 48px;
+  padding-right: 48px;
+  padding-bottom: 70vh; /*makes sure there's white space */
+}
+
+.gridPanel {
+  position: sticky;
+  margin: 0 auto;
+  top: calc(50vh - 240px);
+  /* bottom: calc(50% - 50vh);*/
+  padding-top: 50%-240px;
+  /* transform: translateY(-50%) */
+  width: 480px; /* 12 columns * 40px */
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(12, 40px);
+  grid-template-rows: repeat(12, 40px);
+}
+
+
+
+/* Bookend Panels */
+
 
 /* start panel emoji animation */
 
@@ -35,24 +82,14 @@
 
 /* end of: start panel emoji animation */
 
+
+
+/* User Section */
+
 .userStartPanelLeft {
   background-color: var(--grid-user-start-panel-bg);
   /* box-sizing: border-box;
   width: 50vw; */
-
-}
-
-.startPanelRight {
-  background-color: var(--body-start-panel-bg);
-  /* box-sizing: border-box;
-  width: 50vw; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  padding-left: 48px;
-  padding-right: 48px;
-  
 
 }
 
@@ -63,28 +100,11 @@
 
 }
 
-.chapter {
-  cursor: pointer;
-}
+
 
 /* Story Panels  */
 
-.textPanel {
-  z-index: 1;
-  position: relative;
-  /* box-sizing: border-box;
-  width: 50vw; */
-  color: var(--body-text);
-  /* height: 100vh; */
-  /* overflow-y:auto; */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-left: 48px;
-  padding-right: 48px;
-  padding-bottom: 70vh;
-}
+
 
 /* Responsive font size based on viewport width */
 /* @media screen and (max-width: 768px) {
@@ -118,21 +138,7 @@ hr {
 /* Grid Side */
 
 
-.gridPanel {
-  position: sticky;
-  margin: 0 auto;
-  /* margin: 50% auto; */
-  /* change this amount */
-  top: calc(50vh - 240px);
-  /* bottom: calc(50% - 50vh);*/
-  padding-top: 50%-240px;
-  /* transform: translateY(-50%) */
-  width: 480px; /* 12 columns * 40px */
-  height: 480px;
-  display: grid;
-  grid-template-columns: repeat(12, 40px);
-  grid-template-rows: repeat(12, 40px);
-}
+
 
 .userGridPanel {
   position: absolute;

@@ -5,7 +5,7 @@ import styles from "./story.module.css";
 
 const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
   return (
-    <Grid container spacing={2}>
+    <Grid container>
       {/* Grid on Left */}
       <Grid item xs={6} className={styles.gridSection}>
         <GridPanel currentEmoji={currentEmoji} />

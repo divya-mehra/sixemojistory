@@ -1,12 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import MainStory from "./story/MainStory";
-import StoryLeft from "./story/storyLeft";
-import StoryRight from "./story/storyRight";
 import StartPanelLeft from "./panels/start-panel/StartPanelLeft";
 import StartPanelRight from "./panels/start-panel/StartPanelRight";
-import UserStartPanelLeft from "./panels/start-panel/UserStartPanelLeft";
-import UserStartPanelRight from "./panels/start-panel/UserStartpanelRight";
+// import UserStartPanelLeft from "./deal with later_user/UserStartPanelLeft";
+// import UserStartPanelRight from "./deal with later_user/UserStartpanelRight";
 import SideStickyNav from "./story/SideStickyNav";
 
 import { Grid, Paper } from "@mui/material";
@@ -67,7 +65,7 @@ function App() {
         <Grid>
           {/* first start section */}
           <div className="test">
-            <Grid container spacing={2}>
+            <Grid container >
               <Grid item xs={6}>
                 <StartPanelLeft />
               </Grid>

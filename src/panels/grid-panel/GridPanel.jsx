@@ -1,6 +1,5 @@
 import styles from "../panel.module.css";
 import GridRect from "./GridRect";
-import UserInterface from "./UserInterface";
 import { useState } from "react";
 
 // TODO: add padding-bottom for last emoji
@@ -15,7 +14,7 @@ const GridPanel = ({ currentEmoji }) => {
   }
 
   return (
-    <>
+    <div style={{position: "relative", height: "100%", paddingTop: "25vh"}}>
       <div
         className={`${styles.gridPanel}`}
         style={{ paddingBottom: currentEmoji === "thumbsup" ? "25%" : "0px" }}
@@ -26,7 +25,7 @@ const GridPanel = ({ currentEmoji }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 

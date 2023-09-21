@@ -10,7 +10,8 @@ const MainStory = ({emojis}) => {
     const firstSetEmojis =  emojis.slice(0, 3);
 
   return (
-    <Grid container spacing={2}>
+    <Grid container>
+        
         <Section currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={firstSetEmojis}/>
 
     </Grid>
