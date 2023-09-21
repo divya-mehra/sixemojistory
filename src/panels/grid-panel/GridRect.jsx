@@ -51,11 +51,11 @@ const GridRect = ({ id, currentEmoji }) => {
       clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
-    console.log(id);
+    // console.log(id);
 
     if (emojis[currentEmoji]?.includes(id) && fill === "transparent") {
       let delay = Math.random() * 1000;
-      console.log(delay);
+      // console.log(delay);
       intervalRef.current = setInterval(() => {
         setFill("var(--grid-text)");
       }, delay);

@@ -4,6 +4,7 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden; /* Prevent horizontal scrollbar */
+  font-size: 1.3rem;
 }
 
 /* Global typography styles */

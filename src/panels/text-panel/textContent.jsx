@@ -1,6 +1,9 @@
 import styles from "../panel.module.css";
+import { useRef } from "react";
 
-const textContent = [
+
+
+const textContent = (contextRef) => [
   {
     year: "1999",
     content: (
@@ -8,7 +11,7 @@ const textContent = [
         <p>
           By 1995, the pager was a Japanese sensation amongst teenagers. Carrier
           NTT Docomo sold its{" "}
-          <span className={styles.hoverText}>
+          <span className={styles.hoverText} ref={contextRef}>
             Pocket Bell pagers with ❤️ symbols
           </span>{" "}
           The heart is the most cited symbol, but records also say it had
