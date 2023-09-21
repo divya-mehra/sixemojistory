@@ -1,24 +1,18 @@
 import { Grid, Paper } from "@mui/material";
+import { useState } from "react";
 
 import Section from "./Section"
 
-const MainStory = ({currentEmoji, setCurrentEmoji, emojis}) => {
+const MainStory = ({emojis}) => {
+
+    const [currentEmoji, setCurrentEmoji] = useState(null);
+
+    const firstSetEmojis =  emojis.slice(0, 3);
+
   return (
     <Grid container spacing={2}>
-        <Section currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={emojis}/>
+        <Section currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={firstSetEmojis}/>
 
-{/* 
-      <Grid item xs={6}>
-        <StoryLeft currentEmoji={currentEmoji} emojis={emojis} user={false} />
-      </Grid>
-      <Grid item xs={6}>
-        <StoryRight
-          currentEmoji={currentEmoji}
-          setCurrentEmoji={setCurrentEmoji}
-          emojis={emojis}
-          user={false}
-        />
-      </Grid> */}
     </Grid>
   );
 };

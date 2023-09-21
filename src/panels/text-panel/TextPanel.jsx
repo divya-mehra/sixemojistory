@@ -17,7 +17,7 @@ const TextPanel = ({
 
   console.log(currentEmoji);
   const [ref, inView] = useInView({
-    threshold: 0.35, // Set the threshold to 0.35
+    threshold: 0, // Set the threshold to 0.35
   });
 
   const containerRef = useRef(null);

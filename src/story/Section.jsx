@@ -4,8 +4,6 @@ import TextPanel from "../panels/text-panel/TextPanel";
 import styles from "./story.module.css";
 
 const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
-  let emoji = emojis[0];
-
   return (
     <Grid container spacing={2}>
       {/* Grid on Left */}
@@ -14,15 +12,19 @@ const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
       </Grid>
       {/* Text on Right */}
       <Grid item xs={6}>
-        <TextPanel
-          data-panel-number={emoji.number}
-          emoji={emoji.name}
-          title={emoji.title}
-          number={emoji.number}
-          subtitle={emoji.subtitle}
-          currentEmoji={currentEmoji}
-          setCurrentEmoji={setCurrentEmoji}
-        />
+        {emojis.map((emoji) => {
+          return (
+            <TextPanel
+              data-panel-number={emoji.number}
+              emoji={emoji.name}
+              title={emoji.title}
+              number={emoji.number}
+              subtitle={emoji.subtitle}
+              currentEmoji={currentEmoji}
+              setCurrentEmoji={setCurrentEmoji}
+            />
+          );
+        })}
       </Grid>
     </Grid>
   );

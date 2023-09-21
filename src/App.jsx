@@ -55,10 +55,6 @@ function App() {
     },
   ];
 
-  const [currentEmoji, setCurrentEmoji] = useState(null);
-
-  const [userEmojis, setuserEmojis] = useState([]);
-  const [currentUserEmoji, setCurrentUserEmoji] = useState(null);
   const [isLight, setToLight] = useState(false);
 
   // download button
@@ -71,7 +67,7 @@ function App() {
         <Grid>
           {/* first start section */}
           <div className="test">
-            <Grid container>
+            <Grid container spacing={2}>
               <Grid item xs={6}>
                 <StartPanelLeft />
               </Grid>
@@ -84,7 +80,7 @@ function App() {
 
           {/* story section */}
           <div id="LearnStory" className="story">
-            <MainStory currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={emojis} />
+            <MainStory emojis={emojis} />
           </div>
 
           {/* deal with this bit later */}
