@@ -1,12 +1,13 @@
-import { useState } from "react";
 import { Grid, Paper } from "@mui/material";
 
-import StoryLeft from "./storyLeft";
-import StoryRight from "./storyRight";
+import Section from "./Section"
 
 const MainStory = ({currentEmoji, setCurrentEmoji, emojis}) => {
   return (
     <Grid container spacing={2}>
+        <Section currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={emojis}/>
+
+{/* 
       <Grid item xs={6}>
         <StoryLeft currentEmoji={currentEmoji} emojis={emojis} user={false} />
       </Grid>
@@ -17,7 +18,7 @@ const MainStory = ({currentEmoji, setCurrentEmoji, emojis}) => {
           emojis={emojis}
           user={false}
         />
-      </Grid>
+      </Grid> */}
     </Grid>
   );
 };

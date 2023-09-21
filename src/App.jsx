@@ -71,7 +71,7 @@ function App() {
         <Grid>
           {/* first start section */}
           <div className="test">
-            <Grid container spacing={2}>
+            <Grid container>
               <Grid item xs={6}>
                 <StartPanelLeft />
               </Grid>

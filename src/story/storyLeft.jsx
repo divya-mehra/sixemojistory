@@ -8,7 +8,7 @@ const StoryLeft = ({ currentEmoji, user, setToLight, isLight }) => {
       <div
         className={styles.gridSection}
         style={{
-          height: user ? `100vh` : "600vh",
+          height: "600vh",
           position: "relative",
           width: "100%",
         }}
