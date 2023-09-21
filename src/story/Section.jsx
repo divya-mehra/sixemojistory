@@ -1,9 +1,26 @@
-import { Grid, Paper } from "@mui/material";
+import { Grid } from "@mui/material";
+import { useState, useRef } from "react";
 import GridPanel from "../panels/grid-panel/GridPanel";
 import TextPanel from "../panels/text-panel/TextPanel";
 import styles from "./story.module.css";
 
 const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
+
+    const refs = {
+        ref1: useRef(null),
+        ref2: useRef(null),
+        ref3: useRef(null),
+      };
+    
+      const [isElementInCenter, setIsElementInCenter] = useState({
+        ref1: false,
+        ref2: false,
+        ref3: false,
+        // Add more refs if needed
+      });
+
+
+
   return (
     <Grid container>
       {/* Grid on Left */}
@@ -22,6 +39,9 @@ const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
               subtitle={emoji.subtitle}
               currentEmoji={currentEmoji}
               setCurrentEmoji={setCurrentEmoji}
+              refs={refs}
+              isElementInCenter={isElementInCenter}
+              setIsElementInCenter={setIsElementInCenter}
             />
           );
         })}

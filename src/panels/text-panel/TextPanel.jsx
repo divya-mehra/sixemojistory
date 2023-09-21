@@ -2,7 +2,6 @@ import styles from "../panel.module.css";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef, useState } from "react";
 import ImageOnHover from "./ImageOnHover";
-import textContent from "./textContent";
 // TODO: make sure text from one panel doesn't crowd into height of another panel
 
 const TextPanel = ({
@@ -12,6 +11,9 @@ const TextPanel = ({
   subtitle,
   currentEmoji,
   setCurrentEmoji,
+  refs,
+  isElementInCenter,
+  setIsElementInCenter,
 }) => {
   // define refs for intersection observer
 
@@ -21,27 +23,6 @@ const TextPanel = ({
 
   const [startRef, inViewStart] = useInView({
     threshold: 0,
-  });
-
-  // checking for center
-
-  // const ref1 = useRef(null);
-  // const ref2 = useRef(null);
-  const refs = {
-    ref1: useRef(null),
-    ref2: useRef(null),
-    ref3: useRef(null),
-  };
-
-  const [contextElementRef, inViewContext] = useInView({
-    threshold: 0,
-  });
-
-  const [isElementInCenter, setIsElementInCenter] = useState({
-    ref1: false,
-    ref2: false,
-    ref3: false,
-    // Add more refs if needed
   });
 
   //  end checking for center
@@ -64,11 +45,7 @@ const TextPanel = ({
           <p>
             By 1995, the pager was a Japanese sensation amongst teenagers.
             Carrier NTT Docomo sold its{" "}
-            <span
-              className={styles.hoverText}
-              ref={refs.ref1}
-              style={{ background: isElementInCenter.ref1 ? "red" : "black" }}
-            >
+            <span className={styles.hoverText} ref={refs.ref1} style={{background: (isElementInCenter.ref1) ? "red" : "transparent"}}>
               Pocket Bell pagers with ❤️ symbols
             </span>{" "}
             The heart is the most cited symbol, but records also say it had
@@ -89,11 +66,7 @@ const TextPanel = ({
             internet platform at the time, took notice and the company tasked
             him with adding emojis to the carrier’s set of characters. Limited
             to 12x12 pixels, he{" "}
-            <span
-              className={styles.hoverText}
-              ref={refs.ref2}
-              style={{ background: isElementInCenter.ref2 ? "red" : "black" }}
-            >
+            <span className={styles.hoverText} ref={refs.ref2}>
               drew out 176 symbols
             </span>{" "}
             on paper and handed them over to the developer. Some of his
@@ -342,39 +315,34 @@ const TextPanel = ({
   //
 
   const checkElementPosition = () => {
-    let refNames = ["ref1", "ref2"]
-    // let refName= "ref1"  
+    let refNames = ["ref1", "ref2"];
+    // let refName= "ref1"
 
     refNames.forEach((refName) => {
-    let ref = refs[refName];
-    const contextElement = ref.current;
-    if (contextElement) {
-      const elementRect = contextElement.getBoundingClientRect();
-      const centered = window.innerHeight / 2;
+      let ref = refs[refName];
+      const contextElement = ref.current;
+      if (contextElement) {
+        const elementRect = contextElement.getBoundingClientRect();
+        const centered = window.innerHeight / 2;
 
-      const targetTop = centered + window.innerHeight * 0.1;
-      const targetBottom = centered - window.innerHeight * 0.3;
+        const targetTop = centered + window.innerHeight * 0.1;
+        const targetBottom = centered - window.innerHeight * 0.3;
 
-      // Check if the middle of the element is close to the center of the viewport
-      const isCentered =
-        elementRect.top <= targetTop && elementRect.bottom >= targetBottom;
+        // Check if the middle of the element is close to the center of the viewport
+        const isCentered =
+          elementRect.top <= targetTop && elementRect.bottom >= targetBottom;
 
-      // Update the state for the current element
+        // Update the state for the current element
 
-      setIsElementInCenter((prevStates) => ({
-        ...prevStates,
-        [refName]: isCentered,
-      }));
-    }
-  })
+        setIsElementInCenter((prevStates) => ({
+          ...prevStates,
+          [refName]: isCentered,
+        }));
+      }
+    });
   };
 
   useEffect(() => {
-
-
-
-    
-
     // Initial check when the component mounts
     checkElementPosition();
 
@@ -437,15 +405,15 @@ const TextPanel = ({
   if (number === "1999") {
     content = textContent[0].content;
   } else if (number === "2007") {
-    content = textContent[0].content;
+    content = textContent[1].content;
   } else if (number === "2015") {
-    content = textContent[0].content;
+    content = textContent[2].content;
   } else if (number === "2016") {
-    content = textContent[0].content;
+    content = textContent[3].content;
   } else if (number === "2018") {
-    content = textContent[0].content;
+    content = textContent[4].content;
   } else if (number === "2023") {
-    content = textContent[0].content;
+    content = textContent[5].content;
   }
 
   // scroll back to top
