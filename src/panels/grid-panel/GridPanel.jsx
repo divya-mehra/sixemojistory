@@ -15,11 +15,13 @@ const GridPanel = ({ currentEmoji }) => {
 
   return (
     <div className={styles.gridContainer}
-    style={{ paddingTop: currentEmoji === "heart" ? "25vh" : "0px" }}
+    style={{ paddingTop: currentEmoji === "heart" ? "25vh" : "0px", 
+    
+   }}
     >
       <div
         className={`${styles.grid}`}
-        style={{ paddingBottom: currentEmoji === "hand" ? "25%" : "0px" }}
+        // style={{ paddingBottom: currentEmoji === "hand" ? "25%" : "0px" }}
         
       >
         {divArr.map((item) => {
