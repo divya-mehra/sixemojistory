@@ -41,7 +41,7 @@
 }
 
 .gridContainer {
-  /* position: relative;  */
+  position: relative; 
   height: 100%;
 }
 
@@ -50,14 +50,28 @@
   margin: 0 auto;
   top: calc(50vh - 240px);
   /* bottom: calc(50% - 50vh);*/
-  padding-top: 50%-240px;
+  /* padding-top: 50%-240px; */
   /* transform: translateY(-50%) */
   width: 480px; /* 12 columns * 40px */
   height: 480px;
   display: grid;
   grid-template-columns: repeat(12, 40px);
   grid-template-rows: repeat(12, 40px);
+  transition: opacity 1s;
+  z-index: -1;
 }
+
+.gridImage {
+  margin: 0 auto;
+  transition: opacity 0.3s;
+  width: 50vw; /* 50% of the viewport width */
+  height: auto; /* Maintain aspect ratio */
+  position: fixed; /* Position it outside the grid container */
+  top: calc(50vh - 240px);
+  left: calc(24vw - 240px);
+  z-index: 2; /* Set a z-index to place it above other elements if necessary */
+}
+
 
 
 

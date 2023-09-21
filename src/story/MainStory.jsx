@@ -11,7 +11,7 @@ const MainStory = ({emojis}) => {
 
   return (
     <Grid container>
-        
+        <Grid item xs={12} style={{height: "70vh", backgroundColor: "blue"}}></Grid>
         <Section currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={firstSetEmojis}/>
 
     </Grid>
