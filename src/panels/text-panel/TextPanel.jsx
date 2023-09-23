@@ -147,16 +147,17 @@ const TextPanel = ({
     {
       year: "2015",
       content: (
-        <>
+        <div className={styles.textSection}>
           <p>
             In 2013, a DoSomething campaign called Diversify My Emoji showed up
             online, stating the obvious: "If you look at Apple's Emoji keyboard,
             what do you see? Two different camels. A smiling turd. EVERY PHASE
             OF THE MOON. But of the more than 800 Emojis, the only two
             resembling people of color are a guy who looks vaguely Asian and
-            another in a turban."
+            another in a turban." In this world, a smiling turd can only go so
+            far.
           </p>
-          <p>In this world, a smiling turd can only go so far. </p>
+
           <p>
             Two years after the campaign appeared, the Unicode Consortium
             finally added five skin tone modifiers to the “standard” yellow. The
@@ -183,13 +184,13 @@ const TextPanel = ({
             of societal issues and norms, and representation is one of the most
             pressing matters we face today.
           </p>
-        </>
+        </div>
       ),
     },
     {
       year: "2016",
       content: (
-        <>
+        <div className={styles.textSection}>
           <p>
             {" "}
             Not many pop stars can claim to be synonymous with their own emoji.
@@ -226,13 +227,13 @@ const TextPanel = ({
             involve citrus nor honey. The subtext lives large, especially online
             and out of context.
           </p>
-        </>
+        </div>
       ),
     },
     {
       year: "2018",
       content: (
-        <>
+        <div className={styles.textSection}>
           <p>
             When Kurita created his first set of emojis, he probably didn’t
             anticipate 3,664 pictorial variations coming into being. Now judges
@@ -280,13 +281,13 @@ const TextPanel = ({
             how the visuals available to us influence our thinking and
             behaviors.
           </p>
-        </>
+        </div>
       ),
     },
     {
       year: "2023",
       content: (
-        <>
+        <div className={styles.textSection}>
           <p>
             Emoji may the language of cuteness, but it becomes less cute when
             thousands of dollars are at stake. Last month, Canadian farmer Chris
@@ -316,11 +317,10 @@ const TextPanel = ({
             reminder that in front of the law, emoji may hold the same weight as
             a signature.
           </p>
-        </>
+        </div>
       ),
     },
   ];
-
 
   // intersection observer
   // what to do when element observed

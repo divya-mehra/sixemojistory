@@ -23,29 +23,8 @@ const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
 
   // preload the pictures
 
-  const images = {};
+  
 
-  const preloadImages = (imageUrls) => {
-
-
-
-    for (const key in imageUrls) {
-      const imageUrl = `/images/${imageUrls[key]}.png`;
-      const img = new Image();
-      img.src = imageUrl;
-
-      img.onload = () => {
-        // Image is loaded, you can choose to do something when an image is ready
-        // For example, update state to indicate that the image is ready to be displayed
-        images[key] = true;
-        // You can set a state variable or some data structure to track image loading
-        // and use it in your component to decide when to display images.
-      };
-    }
-  };
-
-  // Call preloadImages with your image URLs before rendering your component
-  preloadImages(ref_data);
 
   return (
     <Grid container>
@@ -55,7 +34,6 @@ const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
           currentEmoji={currentEmoji}
           isElementInCenter={isElementInCenter}
           ref_data={ref_data}
-          images={images}
         />
       </Grid>
       {/* Text on Right */}

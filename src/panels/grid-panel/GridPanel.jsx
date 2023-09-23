@@ -65,7 +65,9 @@ const GridPanel = ({ currentEmoji, isElementInCenter, ref_data }) => {
           zIndex: isElementInCenter[`${activeElement}`] ? 5 : 1,
         }}
       >
-        {activeElement && <GridImage activeElement={activeElement} ref_data={ref_data} />}
+        {activeElement && (
+          <GridImage activeElement={activeElement} ref_data={ref_data} />
+        )}
       </div>
     </div>
   );
