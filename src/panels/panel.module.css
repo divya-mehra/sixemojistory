@@ -84,7 +84,7 @@
   width: 50vw; /* 50% of the viewport width */
   height: auto; /* Maintain aspect ratio */
   position: fixed; /* Position it outside the grid container */
-  top: calc(50vh);
+  top: calc(40vh); /* 50vh - need to discount half the width */
   z-index: 2; /* Set a z-index to place it above other elements if necessary */
   display: flex;
   justify-content: center;

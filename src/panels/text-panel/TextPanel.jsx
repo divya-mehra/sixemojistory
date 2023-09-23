@@ -2,8 +2,10 @@ import styles from "../panel.module.css";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef, useState } from "react";
 import ImageOnHover from "./ImageOnHover";
+import debounce from 'lodash/debounce';
 // TODO: make sure text from one panel doesn't crowd into height of another panel
 // TODO: replace list of refs with a dynamically generated array of keys 
+// TODO: fix intesection observer when scrolling up
 
 const TextPanel = ({
   emoji,
@@ -329,11 +331,21 @@ const TextPanel = ({
   // what to do when element observed
   // change grid when panel comes into view
 
-  useEffect(() => {
+  // Debouncing to make sure state change registers
+  const debouncedStateChange = debounce(() => {
     if (inViewStart) {
       setCurrentEmoji((prevEmoji) => (prevEmoji !== emoji ? emoji : prevEmoji));
     }
-  }, [inViewStart, emoji, setCurrentEmoji]);
+
+
+  }, 200)
+
+  useEffect(() => {
+    debouncedStateChange();
+    // if (inViewStart) {
+    //   setCurrentEmoji((prevEmoji) => (prevEmoji !== emoji ? emoji : prevEmoji));
+    // }
+  }, [inViewStart, emoji, setCurrentEmoji, debouncedStateChange]);
 
   //
 
