@@ -1,4 +1,4 @@
-//TODO: make sure all images are loaded
+//TODO: make sure all images are loaded (preload at a higher component)
 
 const GridImage = ({activeElement, ref_data}) => {
 

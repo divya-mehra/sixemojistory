@@ -5,7 +5,6 @@ import ImageOnHover from "./ImageOnHover";
 import debounce from 'lodash/debounce';
 // TODO: make sure text from one panel doesn't crowd into height of another panel
 // TODO: replace list of refs with a dynamically generated array of keys 
-// TODO: fix intesection observer when scrolling up
 
 const TextPanel = ({
   emoji,
@@ -22,6 +21,7 @@ const TextPanel = ({
   // define refs for intersection observer
 
   console.log(currentEmoji);
+  console.log(Object.keys(isElementInCenter))
 
   // elements to observe: check when these are in view; then inView const sets to true
 
@@ -342,15 +342,13 @@ const TextPanel = ({
 
   useEffect(() => {
     debouncedStateChange();
-    // if (inViewStart) {
-    //   setCurrentEmoji((prevEmoji) => (prevEmoji !== emoji ? emoji : prevEmoji));
-    // }
+
   }, [inViewStart, emoji, setCurrentEmoji, debouncedStateChange]);
 
   //
 
   const checkElementPosition = () => {
-    let refNames = ["ref1", "ref2", "ref3"];
+    let refNames = Object.keys(isElementInCenter)
     // let refName= "ref1"
 
     refNames.forEach((refName) => {
