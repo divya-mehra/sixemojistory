@@ -1,12 +1,19 @@
-const GridImage = () => {
+//TODO: make sure all images are loaded
+
+const GridImage = ({activeElement, ref_data}) => {
+
+    let imageUrl = ref_data[activeElement]
+    // console.log()
+
   return (
     <img
       style={{
-        width: "50%"
+        width: "50%",
+        border: "1px white solid"
         // opacity: 1,
         // zIndex: 1000,
       }}
-      src={`/images/pocketbell.png`}
+      src={`/images/${imageUrl}.png`}
       alt=" Image"
     ></img>
   );

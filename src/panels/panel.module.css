@@ -48,7 +48,7 @@
 }
 
 .hoverText {
-  font-weight: bold;
+  /* font-weight: bold; */
   cursor: crosshair;
   background-color: transparent;
 }

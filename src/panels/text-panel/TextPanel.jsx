@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect, useRef, useState } from "react";
 import ImageOnHover from "./ImageOnHover";
 // TODO: make sure text from one panel doesn't crowd into height of another panel
+// TODO: replace list of refs with a dynamically generated array of keys 
 
 const TextPanel = ({
   emoji,
@@ -12,6 +13,7 @@ const TextPanel = ({
   currentEmoji,
   setCurrentEmoji,
   refs,
+  ref_data,
   isElementInCenter,
   setIsElementInCenter,
 }) => {
@@ -114,7 +116,14 @@ const TextPanel = ({
           <p>
             One big point of contention was the poo emoji. The symbol became
             popular in Japan through{" "}
-            <span className={styles.hoverText}>
+            <span
+              className={
+                isElementInCenter.ref3
+                  ? `${styles.hoverText} ${styles.highlightedText}`
+                  : `styles.hoverText`
+              }
+              ref={refs.ref3}
+            >
               a loveable character in the 80s show, Dr Slump.
             </span>{" "}
             But some people in Silicon Valley thought the it was offensive. What
@@ -329,7 +338,7 @@ const TextPanel = ({
   //
 
   const checkElementPosition = () => {
-    let refNames = ["ref1", "ref2"];
+    let refNames = ["ref1", "ref2", "ref3"];
     // let refName= "ref1"
 
     refNames.forEach((refName) => {
@@ -348,6 +357,7 @@ const TextPanel = ({
 
         // Update the state for the current element
 
+        // UNLESS [TODO:] next section is not fully at the top
         setIsElementInCenter((prevStates) => ({
           ...prevStates,
           [refName]: isCentered,

@@ -5,7 +5,7 @@ import { useState } from "react";
 
 // TODO: add padding-bottom for last emoji
 
-const GridPanel = ({ currentEmoji, isElementInCenter }) => {
+const GridPanel = ({ currentEmoji, isElementInCenter, ref_data }) => {
   // make grid
 
   const divArr = [];
@@ -13,6 +13,24 @@ const GridPanel = ({ currentEmoji, isElementInCenter }) => {
   for (let i = 1; i <= 144; i++) {
     divArr.push({ id: i });
   }
+
+
+  const anyElementActive = Object.values(isElementInCenter).some(value => value === true);
+
+  let activeElement;
+
+  // find the activeElement if an element in center state reads as true and get the key (ref1, ref2, etc.)
+  for (const key in isElementInCenter) {
+    if (isElementInCenter[key] === true) {
+      activeElement = key;
+      
+      break; // Break the loop once a true value is found
+    }
+  }
+
+  console.log(Object.keys(isElementInCenter)) // all keys (ref1, ref2, etc.)
+
+
 
   return (
     <div
@@ -24,8 +42,8 @@ const GridPanel = ({ currentEmoji, isElementInCenter }) => {
       <div
         className={`${styles.grid}`}
         // style={{ paddingBottom: currentEmoji === "hand" ? "25%" : "0px" }}
-        style={{ opacity: isElementInCenter.ref1 ? 0.3 : 1,
-          zIndex: isElementInCenter.ref1 ? 1 : 2, }}
+        style={{ opacity: isElementInCenter[`${activeElement}`] ? 0.3 : 1,
+          zIndex: isElementInCenter[`${activeElement}`] ? 1 : 2, }}
       >
         {divArr.map((item) => {
           return (
@@ -36,12 +54,13 @@ const GridPanel = ({ currentEmoji, isElementInCenter }) => {
         <div
         className={styles.gridImage}
         style={{ 
-          opacity: isElementInCenter.ref1 ? 1 : 0, 
-          zIndex: isElementInCenter.ref1 ? 5 : 1,
+          
+          opacity: isElementInCenter[`${activeElement}`] ? 1 : 0, 
+          zIndex: isElementInCenter[`${activeElement}`] ? 5 : 1,
         
         }}
         >
-          <GridImage/>
+          <GridImage activeElement={activeElement} ref_data={ref_data}/>
         </div>
 
 

@@ -5,18 +5,26 @@ import TextPanel from "../panels/text-panel/TextPanel";
 import styles from "./story.module.css";
 
 const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
+
+    // here are the refs
+
   const refs = {
     ref1: useRef(null),
     ref2: useRef(null),
     ref3: useRef(null),
+    
+
   };
 
   const [isElementInCenter, setIsElementInCenter] = useState({
     ref1: false,
     ref2: false,
     ref3: false,
-    // Add more refs if needed
+
+    
   });
+
+  const ref_data = {ref1: 'pocketbell', ref2: 'kurita', ref3: 'drslump'}
 
   return (
     
@@ -26,6 +34,7 @@ const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
         <GridPanel
           currentEmoji={currentEmoji}
           isElementInCenter={isElementInCenter}
+          ref_data={ref_data}
         />
       </Grid>
       {/* Text on Right */}
@@ -41,6 +50,7 @@ const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
               currentEmoji={currentEmoji}
               setCurrentEmoji={setCurrentEmoji}
               refs={refs}
+              ref_data={ref_data}
               isElementInCenter={isElementInCenter}
               setIsElementInCenter={setIsElementInCenter}
             />
