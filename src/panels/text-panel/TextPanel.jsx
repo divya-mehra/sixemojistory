@@ -1,10 +1,8 @@
 import styles from "../panel.module.css";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useRef, useState } from "react";
-import ImageOnHover from "./ImageOnHover";
-import debounce from 'lodash/debounce';
+import debounce from "lodash/debounce";
 // TODO: make sure text from one panel doesn't crowd into height of another panel
-// TODO: replace list of refs with a dynamically generated array of keys 
 
 const TextPanel = ({
   emoji,
@@ -21,7 +19,7 @@ const TextPanel = ({
   // define refs for intersection observer
 
   console.log(currentEmoji);
-  console.log(Object.keys(isElementInCenter))
+  console.log(Object.keys(isElementInCenter));
 
   // elements to observe: check when these are in view; then inView const sets to true
 
@@ -97,10 +95,6 @@ const TextPanel = ({
             <b>Why ❤️ is important</b>: Rumor has it that without the popularity
             of the heart symbol, Docomo wouldn't have caught on to the promise
             of the emoji on mobile devices.
-          </p>
-          <p style={{ fontSize: "0.75em" }}>
-            *Recent evidence points to an earlier set of emoji in 1997, now
-            available for view on Emojipedia.
           </p>
         </div>
       ),
@@ -327,6 +321,7 @@ const TextPanel = ({
     },
   ];
 
+
   // intersection observer
   // what to do when element observed
   // change grid when panel comes into view
@@ -336,19 +331,16 @@ const TextPanel = ({
     if (inViewStart) {
       setCurrentEmoji((prevEmoji) => (prevEmoji !== emoji ? emoji : prevEmoji));
     }
-
-
-  }, 200)
+  }, 200);
 
   useEffect(() => {
     debouncedStateChange();
-
   }, [inViewStart, emoji, setCurrentEmoji, debouncedStateChange]);
 
   //
 
   const checkElementPosition = () => {
-    let refNames = Object.keys(isElementInCenter)
+    let refNames = Object.keys(isElementInCenter);
     // let refName= "ref1"
 
     refNames.forEach((refName) => {
@@ -480,11 +472,6 @@ const TextPanel = ({
 
       <div className={styles.panelContent} ref={containerRef}>
         {content}
-        <ImageOnHover
-          isImageVisible={isImageVisible}
-          setIsImageVisible={setImageVisible}
-          mousePos={mousePos}
-        />
       </div>
     </div>
   );
