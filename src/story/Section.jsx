@@ -5,26 +5,33 @@ import TextPanel from "../panels/text-panel/TextPanel";
 import styles from "./story.module.css";
 
 const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
-  // here are the refs
+  // here are the refs & all the ref info!
 
   const refs = {
     ref1: useRef(null),
     ref2: useRef(null),
     ref3: useRef(null),
+    ref4: useRef(null),
+    ref5: useRef(null),
   };
 
   const [isElementInCenter, setIsElementInCenter] = useState({
     ref1: false,
     ref2: false,
     ref3: false,
+    ref4: false,
+    ref5: false,
   });
 
-  const ref_data = { ref1: "pocketbell", ref2: "kurita", ref3: "drslump" };
+  const ref_data = {
+    ref1: "pocketbell",
+    ref2: "kurita",
+    ref3: "drslump",
+    ref4: "rachael",
+    ref5: "rita",
+  };
 
   // preload the pictures
-
-  
-
 
   return (
     <Grid container>

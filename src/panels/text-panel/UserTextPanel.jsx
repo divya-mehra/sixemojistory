@@ -1,5 +1,4 @@
 import styles from "../panel.module.css";
-import { useState } from "react";
 
 const UserTextPanel = () => {
   return (

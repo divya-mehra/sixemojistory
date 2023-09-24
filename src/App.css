@@ -4,16 +4,17 @@
 
 body, html {
   margin: 0;
-  padding: 0}
+  padding: 0;
+}
 
 :root {
-  --secondary-color: #f1ed00;
+  --secondary-color: #d9d501;
   --tertiary-color: #0091f9;
 
   --grid-start-panel-bg: #fff;
   --grid-user-start-panel-bg: #fff;
   --body-start-panel-bg: #00cbf9;
-  --body-user-start-panel-bg: #f1ed00;
+  --body-user-start-panel-bg: #d9d501;
 
   /* dark theme */
   --body-text: #fff;
@@ -51,34 +52,7 @@ body, html {
   position: relative;
 }
 
-.test {
-  height: 100vh;
-  
-}
 
-.story {
-  
-}
-
-/* 
-.leftSide {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 50%;
-  height: 100%;
-  background-color: white;
-}
-
-.rightSide {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  width: 50%;
-  background-color: black;
-} */
 
 /* Move this */
 

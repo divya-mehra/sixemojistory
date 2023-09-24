@@ -91,7 +91,7 @@ const TextPanel = ({
             car that could hold his skis.{" "}
           </p>
 
-          <p>
+          <p className={styles.important}>
             <b>Why ❤️ is important</b>: Rumor has it that without the popularity
             of the heart symbol, Docomo wouldn't have caught on to the promise
             of the emoji on mobile devices.
@@ -136,7 +136,7 @@ const TextPanel = ({
             what is raw humanity if not dealing with your shit on a daily basis?
           </p>
 
-          <p>
+          <p className={styles.important}>
             <b>Why 💩 is important</b>: It's a characteristically cute emoji --
             one that can say something very serious in a very playful way --
             that Google added despite initial cross-cultural differences.
@@ -179,7 +179,7 @@ const TextPanel = ({
             I want to draw attention to the color of my skin in every message I
             send out?
           </p>
-          <p>
+          <p className={styles.important}>
             <b>Why ✊🏻✊🏼✊🏽✊🏾✊🏿 is important</b>: Our vocabulary is a reflection
             of societal issues and norms, and representation is one of the most
             pressing matters we face today.
@@ -213,14 +213,30 @@ const TextPanel = ({
             and the beehive mistakenly unleashed itself on the innocent Rachael
             Ray, whose name rings similar to Rachel Roy. What followed was a
             string of cryptic emoji on a{" "}
-            <span className={styles.hoverText}>
-              seemingly innocent picture of...gazpaacho.
+            <span
+              className={
+                isElementInCenter.ref4
+                  ? `${styles.hoverText} ${styles.highlightedText}`
+                  : `styles.hoverText`
+              }
+              ref={refs.ref4}
+            >
+              seemingly innocent picture of gazpaacho.
             </span>{" "}
             Once the beehive realized she wasn't the Becky they were seeking,{" "}
-            <span className={styles.hoverText}>they moved on.</span>{" "}
+            <span
+              className={
+                isElementInCenter.ref5
+                  ? `${styles.hoverText} ${styles.highlightedText}`
+                  : `styles.hoverText`
+              }
+              ref={refs.ref5}
+            >
+              they moved on.
+            </span>{" "}
           </p>
 
-          <p>
+          <p className={styles.important}>
             <b>Why 🐝🍋 is important</b>: Emoji are complex characters, and in
             combination with words, its potential meanings multiply. Imagine
             seeing a flurry of lemons and bees on a dinner recipe that does not
@@ -275,7 +291,7 @@ const TextPanel = ({
             to say something is bomb. Again, the language of emoji adapts to our
             cultural vernacular.
           </p>
-          <p>
+          <p className={styles.important}>
             <b>Why 🔫 is important</b>: Just as emoji are added, they are also
             removed. The campaign to remove certain emoji beg the question of
             how the visuals available to us influence our thinking and
@@ -312,7 +328,7 @@ const TextPanel = ({
             vocabulary, and certainly, language is not), emoji continue to
             reproduce.
           </p>
-          <p>
+          <p className={styles.important}>
             <b>Why 👍 is important</b>: The recent court cases serve as a
             reminder that in front of the law, emoji may hold the same weight as
             a signature.

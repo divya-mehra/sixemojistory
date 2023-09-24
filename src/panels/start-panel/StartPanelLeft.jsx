@@ -1,10 +1,12 @@
 import styles from "../panel.module.css";
 import { useEffect, useState } from "react";
+import { Grid, Paper } from '@mui/material';
 
 const StartPanelLeft = () => {
   const [titleEmoji, setTitleEmoji] = useState("😊");
 
   return (
+    
     <div className={styles.startPanelLeft}>
       <div>
         <h1 style={{ textTransform: "uppercase" }}>
@@ -17,6 +19,7 @@ const StartPanelLeft = () => {
         </h3>
       </div>
     </div>
+    
   );
 };
 

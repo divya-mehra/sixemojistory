@@ -1,7 +1,7 @@
 import styles from "../panel.module.css";
 import { useState } from "react";
 import UserGridRect from "./UserGridRect";
-import UserInterface from "./UserInterface";
+import UserInterface from "../src/panels/grid-panel/UserInterface";
 
 const UserGridPanel = ({setToLight, isLight}) => {
   const divArr = [];

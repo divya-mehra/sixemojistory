@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./App.css";
-import MainStory from "./story/MainStory";
+import SideStickyNav from "./story/SideStickyNav";
+
 import StartPanelLeft from "./panels/start-panel/StartPanelLeft";
 import StartPanelRight from "./panels/start-panel/StartPanelRight";
-// import UserStartPanelLeft from "./deal with later_user/UserStartPanelLeft";
-// import UserStartPanelRight from "./deal with later_user/UserStartpanelRight";
-import SideStickyNav from "./story/SideStickyNav";
+import MainStory from "./story/MainStory";
+import UserStory from "./story/UserStory";
+import UserStartPanelLeft from "./panels/start-panel/UserStartPanelLeft";
+import UserStartPanelRight from "./panels/start-panel/UserStartPanelRight";
 
 import { Grid, Paper } from "@mui/material";
 import StartPanelChapter from "./panels/start-panel/StartPanelChapter";
@@ -64,45 +66,34 @@ function App() {
 
         <Grid>
           {/* first start section */}
-          <div className="test">
-            <Grid container >
-              <Grid item xs={6}>
-                <StartPanelLeft />
-              </Grid>
-              <Grid item xs={6}>
-                <StartPanelRight emojis={emojis} />
-              </Grid>
+          <Grid container id="LearnStory">
+            <Grid item xs={6}>
+              <StartPanelLeft />
             </Grid>
-          </div>
+            <Grid item xs={6}>
+              <StartPanelRight emojis={emojis} />
+            </Grid>
+          </Grid>
           {/* end start section */}
 
-          {/* story section */}
-          <div id="LearnStory" className="story">
+          {/* first story section */}
+          <div>
             <MainStory emojis={emojis} />
           </div>
 
-          {/* deal with this bit later */}
-
-          {/* <div id="CreateStory">
-            <UserStartPanelLeft />
-            <StoryLeft
-              currentEmoji={currentUserEmoji}
-              emojis={userEmojis}
-              user={true}
-              isLight={isLight}
-              setToLight={setToLight}
-            />
-          </div>
-
-          <UserStartPanelRight />
-          <StoryRight
-            currentEmoji={currentUserEmoji}
-            setCurrentEmoji={setCurrentUserEmoji}
-            emojis={userEmojis}
-            user={true}
-          /> */}
+          {/* user  section */}
+          <Grid container id="CreateStory">
+          <Grid item xs={6}>
+              <UserStartPanelLeft />
+            </Grid>
+            <Grid item xs={6}>
+              <UserStartPanelRight  />
+            </Grid>
 
 
+          </Grid>
+
+          <UserStory />
         </Grid>
       </div>
     </>

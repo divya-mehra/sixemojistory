@@ -1,32 +1,16 @@
 import styles from "../panel.module.css";
-import DownloadButton from "./DownloadButton";
 import { Tooltip } from "@mui/material";
-import { Switch } from "@mui/material";
+import DownloadButton from "./DownloadButton";
 
-const UserInterface = ({
-  buttonSelection,
-  setButtonSelection,
-  isLight,
-  setToLight,
-}) => {
+const UserInterface = ({ buttonSelection, setButtonSelection }) => {
   const handleClick = (e, selection) => {
     buttonSelection === selection
       ? setButtonSelection(null)
       : setButtonSelection(selection);
   };
 
-  console.log(isLight);
-  console.log(setToLight)
-
-  const handleThemeChange = () => {
-
-
-    setToLight(!isLight);
-  };
-
   return (
-    <>
-      {/* <InterfaceTooltip /> */}
+    <div className={styles.interfaceContainer}>
       <div>
         <Tooltip title="Drag your mouse over the grid to fill">
           <button
@@ -56,26 +40,9 @@ const UserInterface = ({
       <div>
         {/* toggle theme */}
 
-        <Switch
-          checked={isLight}
-          onChange={handleThemeChange}
-          className={styles.SideStickyNavLink}
-          sx={{
-            "& .MuiSwitch-thumb": {
-              color: "var(--secondary-color)", // Change to your desired color
-            },
-            "& .MuiSwitch-track": {
-              backgroundColor: "#000000", // Change to your desired color
-            },
-            "& .Mui-checked .MuiSwitch-track": {
-              backgroundColor: "#000000", // Track color when switched on
-            },
-          }}
-        />
-
-        <DownloadButton isLight={isLight} />
+        <DownloadButton />
       </div>
-    </>
+    </div>
   );
 };
 

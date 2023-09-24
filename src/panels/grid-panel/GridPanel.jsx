@@ -45,6 +45,7 @@ const GridPanel = ({ currentEmoji, isElementInCenter, ref_data }) => {
           style={{
             opacity: isElementInCenter[`${activeElement}`] ? 0.2 : 1,
             zIndex: isElementInCenter[`${activeElement}`] ? 1 : 2,
+            paddingBottom: currentEmoji === "thumbsup" ? "25vh" : "0px",
           }}
         >
           {divArr.map((item) => {

@@ -4,15 +4,27 @@
 body {
   font-family: "Space Grotesk", sans-serif;
   overflow-x: hidden; /* Prevent horizontal scrollbar */
-  font-size: 1.3rem;
+  font-size: 1.1rem;
+}
+
+img,
+.container {
+  max-width: 100%;
 }
 
 /* Global typography styles */
 h1 {
   font-family: "Changa One";
   font-weight: 800;
-  font-size: 8rem;
+  font-size: 3rem;
+
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 960px) {
+  h1 {
+    font-size: 8rem;
+  }
 }
 
 h2 {
@@ -21,7 +33,13 @@ h2 {
 
 h4 {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 960px) {
+  h4 {
+    font-size: 1.3rem;
+  }
 }
 
 h5 {

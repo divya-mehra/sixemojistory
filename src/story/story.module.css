@@ -6,7 +6,15 @@
 
 .gridSection {
   background-color: var(--grid-bg);
+  
+}
 
+.userGridSection {
+  background-color: var(--grid-bg);
+}
+
+.userTextSection {
+  background-color: var(--body-bg);
 }
 
 /* Styling for the sticky navigation */
