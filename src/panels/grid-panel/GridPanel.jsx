@@ -2,10 +2,11 @@ import styles from "../panel.module.css";
 import GridRect from "./GridRect";
 import GridImage from "./GridImage";
 import { useState } from "react";
+import { Grid } from "@mui/material";
 
 // TODO: add padding-bottom for last emoji
 
-const GridPanel = ({ currentEmoji, isElementInCenter, ref_data }) => {
+const GridPanel = ({ currentEmoji, isElementInCenter, ref_data, isMobile }) => {
   // make grid
 
   const divArr = [];
@@ -32,7 +33,10 @@ const GridPanel = ({ currentEmoji, isElementInCenter, ref_data }) => {
   console.log(Object.keys(isElementInCenter)); // all keys (ref1, ref2, etc.)
 
   return (
-    <div
+    <Grid
+      item
+      xs={0}
+      sm={12}
       className={styles.gridContainer}
       style={{
         paddingTop: currentEmoji === "heart" ? "25vh" : "0px",
@@ -59,18 +63,20 @@ const GridPanel = ({ currentEmoji, isElementInCenter, ref_data }) => {
           })}
         </div>
       }
-      <div
-        className={styles.gridImage}
-        style={{
-          opacity: isElementInCenter[`${activeElement}`] ? 1 : 0,
-          zIndex: isElementInCenter[`${activeElement}`] ? 5 : 1,
-        }}
-      >
-        {activeElement && (
-          <GridImage activeElement={activeElement} ref_data={ref_data} />
-        )}
-      </div>
-    </div>
+      {!isMobile && (
+        <div
+          className={styles.gridImage}
+          style={{
+            opacity: isElementInCenter[`${activeElement}`] ? 1 : 0,
+            zIndex: isElementInCenter[`${activeElement}`] ? 5 : 1,
+          }}
+        >
+          {activeElement && (
+            <GridImage activeElement={activeElement} ref_data={ref_data} />
+          )}
+        </div>
+      )}
+    </Grid>
   );
 };
 

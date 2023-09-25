@@ -4,7 +4,7 @@ import GridPanel from "../panels/grid-panel/GridPanel";
 import TextPanel from "../panels/text-panel/TextPanel";
 import styles from "./story.module.css";
 
-const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
+const Section = ({ currentEmoji, setCurrentEmoji, emojis, isMobile }) => {
   // here are the refs & all the ref info!
 
   const refs = {
@@ -36,15 +36,16 @@ const Section = ({ currentEmoji, setCurrentEmoji, emojis }) => {
   return (
     <Grid container>
       {/* Grid on Left */}
-      <Grid item xs={6} className={styles.gridSection}>
+      <Grid item xs={0} sm={6} className={styles.gridSection}>
         <GridPanel
           currentEmoji={currentEmoji}
           isElementInCenter={isElementInCenter}
           ref_data={ref_data}
+          isMobile={isMobile}
         />
       </Grid>
       {/* Text on Right */}
-      <Grid item xs={6}>
+      <Grid item xs={12} sm={6}>
         {emojis.map((emoji) => {
           return (
             <TextPanel

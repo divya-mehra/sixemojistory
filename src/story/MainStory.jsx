@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Section from "./Section"
 
-const MainStory = ({emojis}) => {
+const MainStory = ({emojis, isMobile}) => {
 
     const [currentEmoji, setCurrentEmoji] = useState(null);
 
@@ -18,7 +18,7 @@ const MainStory = ({emojis}) => {
   return (
     <Grid container>
         {/* <Grid item xs={12} style={{height: "90vh", backgroundColor: "white", }}></Grid> */}
-        <Section currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={emojis}/>
+        <Section currentEmoji={currentEmoji} setCurrentEmoji={setCurrentEmoji} emojis={emojis} isMobile={isMobile}/>
         
     </Grid>
   );

@@ -11,6 +11,7 @@ import UserStartPanelRight from "./panels/start-panel/UserStartPanelRight";
 
 import { Grid, Paper } from "@mui/material";
 import StartPanelChapter from "./panels/start-panel/StartPanelChapter";
+import { useEffect } from "react";
 
 function App() {
   const emojis = [
@@ -57,13 +58,38 @@ function App() {
 
   const [isLight, setToLight] = useState(false);
 
+  // toggling layout for mobile view 
+
+  function SplitScreen() {
+    const [rightSectionVisible, setRightSectionVisible] = useState(false);
+  }
+  
+    const toggleRightSection = () => {
+      setRightSectionVisible(!rightSectionVisible);
+    };
+
+    // is mobile for hiding element visibility
+
+    const breakpoint = 600;
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint)
+
+    useEffect(() => {
+
+      window.addEventListener("resize", () => setIsMobile(window.innerWidth <= breakpoint))
+
+      return () => {
+        window.removeEventListener("resize", () => setIsMobile(window.innerWidth <= breakpoint))
+      }
+
+    }, [])
+
   // download button
 
   return (
     <>
       <div className={isLight ? "contentWrapper" : "contentWrapper textLight"}>
-        <SideStickyNav />
-
+        <SideStickyNav isMobile={isMobile} />
         <Grid>
           {/* first start section */}
           <Grid container id="LearnStory">
@@ -78,7 +104,7 @@ function App() {
 
           {/* first story section */}
           <div>
-            <MainStory emojis={emojis} />
+            <MainStory emojis={emojis} isMobile={isMobile}/>
           </div>
 
           {/* user  section */}
@@ -93,7 +119,7 @@ function App() {
 
           </Grid>
 
-          <UserStory />
+          <UserStory isMobile={isMobile} />
         </Grid>
       </div>
     </>
