@@ -3,7 +3,7 @@ import styles from "../panel.module.css";
 import { useState } from "react";
 import UserInterface from "./UserInterface";
 
-const UserGridPanel = () => {
+const UserGridPanel = ({isLight}) => {
   const divArr = [];
 
   for (let i = 1; i <= 144; i++) {
@@ -25,6 +25,7 @@ const UserGridPanel = () => {
                 buttonSelection={buttonSelection}
                 mousePressed={mousePressed}
                 setMousePressed={setMousePressed}
+                isLight={isLight}
               />
             );
           })}
@@ -33,6 +34,7 @@ const UserGridPanel = () => {
       <UserInterface
         buttonSelection={buttonSelection}
         setButtonSelection={setButtonSelection}
+        isLight={isLight}
       />
     </div>
   );

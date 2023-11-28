@@ -15,6 +15,7 @@ const TextPanel = ({
   ref_data,
   isElementInCenter,
   setIsElementInCenter,
+  isMobile,
 }) => {
   // define refs for intersection observer
 

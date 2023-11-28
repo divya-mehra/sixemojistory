@@ -60,6 +60,7 @@ const Section = ({ currentEmoji, setCurrentEmoji, emojis, isMobile }) => {
               ref_data={ref_data}
               isElementInCenter={isElementInCenter}
               setIsElementInCenter={setIsElementInCenter}
+              isMobile={isMobile}
             />
           );
         })}

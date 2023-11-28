@@ -42,7 +42,7 @@ const GridPanel = ({ currentEmoji, isElementInCenter, ref_data, isMobile }) => {
         paddingTop: currentEmoji === "heart" ? "25vh" : "0px",
       }}
     >
-      {
+      {!isMobile && (
         <div
           className={`${styles.grid}`}
           // style={{ paddingBottom: currentEmoji === "hand" ? "25%" : "0px" }}
@@ -62,7 +62,7 @@ const GridPanel = ({ currentEmoji, isElementInCenter, ref_data, isMobile }) => {
             );
           })}
         </div>
-      }
+      )}
       {!isMobile && (
         <div
           className={styles.gridImage}

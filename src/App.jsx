@@ -12,6 +12,7 @@ import UserStartPanelRight from "./panels/start-panel/UserStartPanelRight";
 import { Grid, Paper } from "@mui/material";
 import StartPanelChapter from "./panels/start-panel/StartPanelChapter";
 import { useEffect } from "react";
+import SideToggleOnMobile from "./story/SideToggleOnMobile";
 
 function App() {
   const emojis = [
@@ -58,37 +59,40 @@ function App() {
 
   const [isLight, setToLight] = useState(false);
 
-  // toggling layout for mobile view 
+  // toggling layout for mobile view
 
   function SplitScreen() {
     const [rightSectionVisible, setRightSectionVisible] = useState(false);
   }
-  
-    const toggleRightSection = () => {
-      setRightSectionVisible(!rightSectionVisible);
+
+  const toggleRightSection = () => {
+    setRightSectionVisible(!rightSectionVisible);
+  };
+
+  // is mobile for hiding element visibility
+
+  const breakpoint = 600;
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
+
+  useEffect(() => {
+    window.addEventListener("resize", () =>
+      setIsMobile(window.innerWidth <= breakpoint)
+    );
+
+    return () => {
+      window.removeEventListener("resize", () =>
+        setIsMobile(window.innerWidth <= breakpoint)
+      );
     };
-
-    // is mobile for hiding element visibility
-
-    const breakpoint = 600;
-
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint)
-
-    useEffect(() => {
-
-      window.addEventListener("resize", () => setIsMobile(window.innerWidth <= breakpoint))
-
-      return () => {
-        window.removeEventListener("resize", () => setIsMobile(window.innerWidth <= breakpoint))
-      }
-
-    }, [])
+  }, []);
 
   // download button
 
   return (
     <>
       <div className={isLight ? "contentWrapper" : "contentWrapper textLight"}>
+        {/* {isMobile && <SideToggleOnMobile/>} */}
         <SideStickyNav isMobile={isMobile} />
         <Grid>
           {/* first start section */}
@@ -104,19 +108,17 @@ function App() {
 
           {/* first story section */}
           <div>
-            <MainStory emojis={emojis} isMobile={isMobile}/>
+            <MainStory emojis={emojis} isMobile={isMobile} />
           </div>
 
           {/* user  section */}
           <Grid container id="CreateStory">
-          <Grid item xs={6}>
+            <Grid item xs={6}>
               <UserStartPanelLeft />
             </Grid>
             <Grid item xs={6}>
-              <UserStartPanelRight  />
+              <UserStartPanelRight />
             </Grid>
-
-
           </Grid>
 
           <UserStory isMobile={isMobile} />
