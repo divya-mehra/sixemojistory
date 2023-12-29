@@ -3,7 +3,7 @@ import styles from "../panel.module.css";
 import { useState } from "react";
 import UserInterface from "./UserInterface";
 
-const UserGridPanel = ({isLight}) => {
+const UserGridPanel = ({isLight, isMobile}) => {
   const divArr = [];
 
   for (let i = 1; i <= 144; i++) {
@@ -35,6 +35,7 @@ const UserGridPanel = ({isLight}) => {
         buttonSelection={buttonSelection}
         setButtonSelection={setButtonSelection}
         isLight={isLight}
+        isMobile={isMobile}
       />
     </div>
   );

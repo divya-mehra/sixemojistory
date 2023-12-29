@@ -19,7 +19,6 @@
   height: 100vh;
   padding-left: 5%;
   padding-right: 5%;
-  width: 100%;
 
   @media (min-width: 768px) {
     width: 60%; /* Take up 60% width on screens wider than 768px */

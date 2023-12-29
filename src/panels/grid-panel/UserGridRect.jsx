@@ -18,7 +18,7 @@ const UserGridRect = ({buttonSelection, mousePressed, setMousePressed}) => {
   };
 
   const checkFill = () => {
-    if (mousePressed) {
+    if (mousePressed || touchPressed) {
       if (buttonSelection === "fill") {
         setFill("var(--grid-text)");
       } else if (buttonSelection === "erase") {
@@ -34,6 +34,9 @@ const UserGridRect = ({buttonSelection, mousePressed, setMousePressed}) => {
       onMouseDown={startFill}
       onMouseEnter={checkFill}
       onMouseUp={stopFill}
+      onTouchStart={startFill}
+      onTouchMove={checkFill}
+      onTouchEnd={stopFill}
     ></div>
   );
 };

@@ -2,7 +2,7 @@ import styles from "../panel.module.css";
 import { Tooltip } from "@mui/material";
 import DownloadButton from "./DownloadButton";
 
-const UserInterface = ({ buttonSelection, setButtonSelection }) => {
+const UserInterface = ({ buttonSelection, setButtonSelection, isMobile }) => {
   const handleClick = (e, selection) => {
     buttonSelection === selection
       ? setButtonSelection(null)
@@ -20,6 +20,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
             onClick={(e) => {
               handleClick(e, "fill");
             }}
+            onTouchStart={(e) => handleClick(e, "fill")}
           >
             Fill
           </button>
@@ -32,6 +33,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
             onClick={(e) => {
               handleClick(e, "erase");
             }}
+            onTouchStart={(e) => handleClick(e, "erase")}
           >
             Erase
           </button>
@@ -40,7 +42,7 @@ const UserInterface = ({ buttonSelection, setButtonSelection }) => {
       <div>
         {/* toggle theme */}
 
-        <DownloadButton />
+        {isMobile ? null : <DownloadButton />}
       </div>
     </div>
   );

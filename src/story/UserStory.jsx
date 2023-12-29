@@ -7,7 +7,7 @@ const UserStory = ({ isMobile }) => {
   return (
     <Grid container className={styles.userGridSection}>
       <Grid item xs={12} md={6}>
-        <UserGridPanel isLight={false} />
+        <UserGridPanel isLight={false} isMobile={isMobile} />
       </Grid>
       <Grid item xs={0} md={6} className={styles.userTextSection}>
         <UserTextPanel  isMobile={isMobile}/>
