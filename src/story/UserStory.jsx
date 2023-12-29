@@ -6,10 +6,10 @@ import UserTextPanel from "../panels/text-panel/UserTextPanel";
 const UserStory = ({ isMobile }) => {
   return (
     <Grid container className={styles.userGridSection}>
-      <Grid item xs={12} sm={6}>
+      <Grid item xs={12} md={6}>
         <UserGridPanel isLight={false} />
       </Grid>
-      <Grid item xs={0} sm={6} className={styles.userTextSection}>
+      <Grid item xs={0} md={6} className={styles.userTextSection}>
         <UserTextPanel  isMobile={isMobile}/>
       </Grid>
     </Grid>

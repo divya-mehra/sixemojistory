@@ -97,10 +97,10 @@ function App() {
         <Grid>
           {/* first start section */}
           <Grid container id="LearnStory">
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <StartPanelLeft />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <StartPanelRight emojis={emojis} />
             </Grid>
           </Grid>
@@ -113,10 +113,10 @@ function App() {
 
           {/* user  section */}
           <Grid container id="CreateStory">
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <UserStartPanelLeft />
             </Grid>
-            <Grid item xs={6}>
+            <Grid item xs={12} md={6}>
               <UserStartPanelRight />
             </Grid>
           </Grid>

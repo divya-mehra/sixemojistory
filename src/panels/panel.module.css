@@ -6,9 +6,8 @@
   flex-direction: column;
   background-color: var(--grid-start-panel-bg);
   height: 100vh;
-  padding-left: 48px;
-  padding-right: 48px;
-
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .startPanelRight {
@@ -18,9 +17,13 @@
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  padding-left: 48px;
-  padding-right: 48px;
-  width: 60%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 60%; /* Take up 60% width on screens wider than 768px */
+  }
 }
 
 .chapter {
@@ -195,12 +198,16 @@
 
 .userStartPanelLeft {
   background-color: var(--grid-user-start-panel-bg);
+  padding-left: 5%;
+  padding-right: 5%;
   /* box-sizing: border-box;
   width: 50vw; */
 }
 
 .userStartPanelRight {
   background-color: var(--body-user-start-panel-bg);
+  padding-left: 5%;
+  padding-right: 5%;
   /* box-sizing: border-box;
   width: 50vw; */
 }
